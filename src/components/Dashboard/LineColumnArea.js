@@ -95,7 +95,7 @@ class LineColumnArea extends React.Component {
 	render() {
 		return (
 			<div>
-				<div id="chart">
+				<div id="line-column-area">
 					<ReactApexChart
 						options={this.state.options}
 						series={this.state.series}
