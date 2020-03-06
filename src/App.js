@@ -4,7 +4,7 @@ import About from "./components/About";
 import Inputs from "./components/Inputs";
 import Definitions from "./components/Definitions";
 import Nav from "./components/Nav";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/Dashboard/Dashboard";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
