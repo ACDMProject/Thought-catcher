@@ -1,5 +1,6 @@
 import React from "react";
 import Bubble from "./Bubble";
+import Donut from "./Donut";
 
 function Dashboard() {
 	return (
@@ -7,6 +8,7 @@ function Dashboard() {
 			<div id="about" className="container">
 				<React.Fragment>
 					<Bubble />
+					<Donut />
 				</React.Fragment>
 			</div>
 		</React.Fragment>
