@@ -2,14 +2,6 @@ import React, { Component } from "react";
 import Chart from "react-apexcharts";
 import ReactApexChart from "react-apexcharts";
 
-// Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
-// Based on https://gist.github.com/blixt/f17b47c62508be59987b
-var _seed = 42;
-Math.random = function() {
-	_seed = (_seed * 16807) % 2147483647;
-	return (_seed - 1) / 2147483646;
-};
-
 /*
           // this function will generate output in this format
           // data = [
@@ -98,7 +90,7 @@ class Bubble extends Component {
 	render() {
 		return (
 			<div>
-				<div id="chart">
+				<div id="bubble">
 					<ReactApexChart
 						options={this.state.options}
 						series={this.state.series}
