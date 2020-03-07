@@ -30,6 +30,7 @@ function generateData(baseval, count, yrange) {
 //     [xaxis,yaxis,size],[xaxis,yaxis,size]
 // ]
 // e.g. we can try to have [date, time of day, mood intensity] with colour representing the type of mood
+// need to update y-axis to be in time format
 
 class Bubble extends Component {
 	constructor(props) {
@@ -40,7 +41,7 @@ class Bubble extends Component {
 				{
 					name: "Anxious",
 					data: [
-						["02-02-2020 GMT", 9, 5],
+						["02-04-2020 GMT", 9, 5],
 						["02-03-2020 GMT", 11, 3],
 						["02-07-2020 GMT", 13, 1],
 						["02-09-2020 GMT", 14, 4],
@@ -52,7 +53,7 @@ class Bubble extends Component {
 				{
 					name: "Overwhelmed",
 					data: [
-						["02-04-2020 GMT", 9.5, 5],
+						["02-04-2020 GMT", 9, 5],
 						["02-08-2020 GMT", 12, 3],
 						["02-18-2020 GMT", 15, 1],
 						["02-19-2020 GMT", 16, 4],
@@ -64,19 +65,19 @@ class Bubble extends Component {
 				{
 					name: "Excited",
 					data: [
-						["02-01-2020 GMT", 6, 5],
-						["02-05-2020 GMT", 12.5, 3],
+						["02-04-2020 GMT", 6, 5],
+						["02-05-2020 GMT", 12, 3],
 						["02-09-2020 GMT", 13, 5],
-						["22-21-2020 GMT", 14, 3],
-						["22-27-2020 GMT", 17.5, 1],
-						["22-28-2020 GMT", 24, 2]
+						["02-21-2020 GMT", 14, 3],
+						["02-27-2020 GMT", 17, 1],
+						["02-28-2020 GMT", 24, 2]
 					]
 				},
 				{
 					name: "Angry",
 					data: [
 						["02-09-2020 GMT", 10, 5],
-						["02-12-2020 GMT", 12.5, 3],
+						["02-12-2020 GMT", 12, 3],
 						["02-13-2020 GMT", 15, 5],
 						["02-19-2020 GMT", 15, 3],
 						["02-11-2020 GMT", 21, 1],
@@ -104,6 +105,11 @@ class Bubble extends Component {
 				},
 				yaxis: {
 					max: 24
+					// labels: {
+					// 	formatter: function(val) {
+					// 		return val + ":00";
+					// 	}
+					//}
 				},
 				tooltip: {
 					x: {
