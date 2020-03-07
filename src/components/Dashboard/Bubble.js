@@ -104,6 +104,23 @@ class Bubble extends Component {
 				},
 				yaxis: {
 					max: 24
+				},
+				tooltip: {
+					x: {
+						show: true,
+						format: "dd MMM",
+						formatter: undefined
+					},
+					y: {
+						formatter: undefined,
+						title: {
+							formatter: (seriesName) => seriesName + ", time"
+						}
+					},
+					z: {
+						formatter: undefined,
+						title: "Intensity: "
+					}
 				}
 			}
 		};
