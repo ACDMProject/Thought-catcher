@@ -114,7 +114,7 @@ class Bubble extends Component {
 					y: {
 						formatter: undefined,
 						title: {
-							formatter: (seriesName) => seriesName + ", time"
+							formatter: (seriesName) => seriesName + " - time"
 						}
 					},
 					z: {
