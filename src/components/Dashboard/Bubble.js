@@ -26,6 +26,10 @@ function generateData(baseval, count, yrange) {
 	}
 	return series;
 }
+// data format for buble chart is [
+//     [xaxis,yaxis,size],[xaxis,yaxis,size]
+// ]
+// e.g. we can try to have [date, time of day, mood intensity] with colour representing the type of mood
 
 class Bubble extends Component {
 	constructor(props) {
@@ -34,32 +38,50 @@ class Bubble extends Component {
 		this.state = {
 			series: [
 				{
-					name: "Bubble1",
-					data: generateData(new Date("11 Feb 2017 GMT").getTime(), 20, {
-						min: 10,
-						max: 60
-					})
+					name: "Anxious",
+					data: [
+						["02-02-2020 GMT", 9, 5],
+						["02-03-2020 GMT", 11, 3],
+						["02-07-2020 GMT", 13, 1],
+						["02-09-2020 GMT", 14, 4],
+						["02-15-2020 GMT", 17, 1],
+						["02-16-2020 GMT", 20, 1],
+						["02-17-2020 GMT", 22, 5]
+					]
 				},
 				{
-					name: "Bubble2",
-					data: generateData(new Date("11 Feb 2017 GMT").getTime(), 20, {
-						min: 10,
-						max: 60
-					})
+					name: "Overwhelmed",
+					data: [
+						["02-04-2020 GMT", 9.5, 5],
+						["02-08-2020 GMT", 12, 3],
+						["02-18-2020 GMT", 15, 1],
+						["02-19-2020 GMT", 16, 4],
+						["02-20-2020 GMT", 18, 2],
+						["02-27-2020 GMT", 22, 1],
+						["02-28-2020 GMT", 23, 5]
+					]
 				},
 				{
-					name: "Bubble3",
-					data: generateData(new Date("11 Feb 2017 GMT").getTime(), 20, {
-						min: 10,
-						max: 60
-					})
+					name: "Excited",
+					data: [
+						["02-01-2020 GMT", 6, 5],
+						["02-05-2020 GMT", 12.5, 3],
+						["02-09-2020 GMT", 13, 5],
+						["22-21-2020 GMT", 14, 3],
+						["22-27-2020 GMT", 17.5, 1],
+						["22-28-2020 GMT", 24, 2]
+					]
 				},
 				{
-					name: "Bubble4",
-					data: generateData(new Date("11 Feb 2017 GMT").getTime(), 20, {
-						min: 10,
-						max: 60
-					})
+					name: "Angry",
+					data: [
+						["02-09-2020 GMT", 10, 5],
+						["02-12-2020 GMT", 12.5, 3],
+						["02-13-2020 GMT", 15, 5],
+						["02-19-2020 GMT", 15, 3],
+						["02-11-2020 GMT", 21, 1],
+						["02-02-2020 GMT", 24, 2]
+					]
 				}
 			],
 			options: {
@@ -74,14 +96,14 @@ class Bubble extends Component {
 					opacity: 0.8
 				},
 				title: {
-					text: "Simple Bubble Chart"
+					text: "Monthly moods"
 				},
 				xaxis: {
 					tickAmount: 12,
-					type: "category"
+					type: "datetime"
 				},
 				yaxis: {
-					max: 70
+					max: 24
 				}
 			}
 		};
