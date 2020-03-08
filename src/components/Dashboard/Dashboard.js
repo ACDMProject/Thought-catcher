@@ -1,7 +1,7 @@
 import React from "react";
 import Bubble from "./Bubble";
 import Donut from "./Donut";
-import LineColumnArea from "./LineColumnArea";
+import HeatMap from "./HeatMap";
 
 function Dashboard() {
 	return (
@@ -10,7 +10,7 @@ function Dashboard() {
 				<React.Fragment>
 					<Bubble />
 					<Donut />
-					<LineColumnArea />
+					<HeatMap />
 				</React.Fragment>
 			</div>
 		</React.Fragment>
