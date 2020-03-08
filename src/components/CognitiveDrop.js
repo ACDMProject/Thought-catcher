@@ -1,8 +1,8 @@
 import React from "react";
 
-function CognitiveRadio() {
+function CognitiveDrop() {
   return (
-    <div className="container Radios">
+    <div className="container drop">
       <h5 className="m-3">Can you identify this distortion?</h5>
       <select class="form-control">
         <option>All or Nothing</option>
@@ -20,4 +20,4 @@ function CognitiveRadio() {
   );
 }
 
-export default CognitiveRadio;
+export default CognitiveDrop;
