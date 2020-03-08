@@ -2,7 +2,7 @@ import React from "react";
 
 function Login() {
   return (
-    <form className="m-3 justify-content-center loginForm">
+    <form className="justify-content-center loginForm">
       <h2 className="loginHead mb-5">Let's catch some thoughts!</h2>
       <div class="form-group">
         <label for="emailHome">Email address</label>
@@ -32,7 +32,7 @@ function Login() {
           Remember me
         </label>
       </div>
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" class="btn btnLogin btn-lg btn-block btn-primary">
         Login
       </button>
     </form>

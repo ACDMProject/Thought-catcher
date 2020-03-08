@@ -26,7 +26,7 @@ function Inputs() {
                 rows="3"
                 placeholder="Now try to rationally respond to this thought..."
               ></textarea>
-              <button type="button" class="btn btn-outline-secondary">
+              <button type="button" class="btn-outline-secondary">
                 Submit
               </button>
             </form>

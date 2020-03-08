@@ -50,6 +50,11 @@
   transform: translate(-50%, -50%);
 }
 
+.btnLogin {
+  border-radius: 81% 19% 73% 27% / 69% 30% 70% 31%;
+  width: 70%;
+}
+
 #textArea {
   border-radius: 5px 20px 5px;
 }

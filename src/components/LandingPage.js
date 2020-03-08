@@ -3,7 +3,7 @@ import Login from "./Login";
 
 function LandingPage() {
   return (
-    <div className="container-fluid LandingpaGE">
+    <div className="container-fluid LandingPage">
       <div className="row homeRow">
         <div className="col-7">
           <img
@@ -13,7 +13,7 @@ function LandingPage() {
             className="img-fluid"
           />
         </div>
-        <div className="col-4 m-3 loginCol">
+        <div className="col-4 loginCol">
           <Login />
         </div>
       </div>
