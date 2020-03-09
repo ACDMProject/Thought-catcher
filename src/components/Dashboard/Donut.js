@@ -50,7 +50,7 @@ class Donut extends React.Component {
 				},
 				legend: {
 					show: true,
-					position: "bottom"
+					position: "right"
 				},
 				responsive: [
 					{
