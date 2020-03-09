@@ -2,9 +2,9 @@ import React from "react";
 
 function NumberRadio() {
   return (
-    <div className="container radios">
+    <div className="radios">
       <h5 className="m-3">How intense is this feeling?</h5>
-      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
         <label class="btn btn-secondary active">
           <input
             type="radio"

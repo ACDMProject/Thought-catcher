@@ -2,7 +2,7 @@ import React from "react";
 
 function CognitiveDrop() {
   return (
-    <div className="container drop">
+    <div className="drop">
       <h5 className="m-3">Can you identify this distortion?</h5>
       <select class="form-control">
         <option>All or Nothing</option>
