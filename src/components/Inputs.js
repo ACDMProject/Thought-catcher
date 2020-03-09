@@ -1,34 +1,26 @@
 import React from "react";
-import NumberRadio from "./NumberRadio";
-import MoodRadio from "./MoodRadio";
-import CognitiveRadio from "./CognitiveRadio";
+import InputForm from "./InputForm";
 
 function Inputs() {
   return (
-    <div className="container Inputs">
-      <h3>Page for inputting mood/intensity/thoughts/category & response</h3>
+    <div className="container-fluid inputs">
+      <h3 className="dummyHeader">
+        Page for inputting mood/intensity/thoughts/category & response
+      </h3>
       <div>
-        <form className="form-group">
-          <MoodRadio />
-          <NumberRadio />
-          <label for="moodTextArea"></label>
-          <textarea
-            className="form-control"
-            id="moodTextArea"
-            rows="3"
-            placeholder="Write a bit more about how you're feeling..."
-          ></textarea>
-          <CognitiveRadio />
-          <textarea
-            className="form-control m-3"
-            id="response"
-            rows="3"
-            placeholder="Now try to rationally respond to this thought..."
-          ></textarea>
-          <button type="button" class="btn btn-secondary">
-            Submit
-          </button>
-        </form>
+        <div className="row ">
+          <div className="col-lg-5 ">
+            <InputForm />
+          </div>
+
+          <div className="col-lg-7">
+            <img
+              src="/images/inputThought.png"
+              alt="catchThought"
+              id="catchThought"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
