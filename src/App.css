@@ -1,7 +1,15 @@
 .App {
-  text-align: center;
-  color: #40514e;
+  color: #261943;
   font-family: "Titillium Web", sans-serif;
+  background: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: left;
+}
+.dummyHeader {
+  height: 70px;
 }
 
 .nav-links {
@@ -12,6 +20,60 @@
   list-style: none;
 }
 
-.Radios {
+.navbar-brand {
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.navbar {
+  background-color: white;
+  margin: 15px;
+}
+
+.homeRow {
+  margin-top: 5rem;
+}
+
+.drop {
   width: 50%;
+}
+
+.loginHead {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.loginCol {
+  position: relative;
+}
+
+.loginForm {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btnLogin {
+  border-radius: 81% 19% 73% 27% / 69% 30% 70% 31%;
+  width: 70%;
+}
+
+.thoughtForm {
+  justify-self: center;
+}
+
+#textArea {
+  border-radius: 5px 20px 5px;
+}
+
+.box {
+  border-radius: 5px 20px 5px;
+  margin: 5px;
+}
+
+#catchThought {
+  width: 90%;
+  height: auto;
 }
