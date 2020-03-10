@@ -1,6 +1,19 @@
 import React from "react";
 import NumberRadio from "./NumberRadio";
 
+const emotions = [
+  { id: 1, name: "Happy" },
+  { id: 2, name: "Excited" },
+  { id: 3, name: "Inspired" },
+  { id: 4, name: "Calm" },
+  { id: 5, name: "Netural" },
+  { id: 6, name: "Stressed" },
+  { id: 7, name: "Anxious" },
+  { id: 8, name: "Sad" },
+  { id: 9, name: "Angry" },
+  { id: 10, name: "Overwhelmed" }
+];
+
 class MoodSelect extends React.Component {
   continue = e => {
     e.preventDefault();
@@ -8,17 +21,15 @@ class MoodSelect extends React.Component {
   };
 
   render() {
-    const { values } = this.props;
+    const { values, handleChange } = this.props;
 
-    let emotionList =
-      values.emotion.length > 0 &&
-      values.emotion.map((item, i) => {
-        return (
-          <option key={i} value={item.id}>
-            {item.name}
-          </option>
-        );
-      }, this);
+    let emotionList = emotions.map(item => {
+      return (
+        <option key={item.id} value={item.id}>
+          {item.name}
+        </option>
+      );
+    }, this);
 
     //need to retrieve intensity selected from radio button
 
@@ -27,7 +38,11 @@ class MoodSelect extends React.Component {
         <label htmlFor="moodDropdown" className="mt-4">
           Select your current mood:{" "}
         </label>
-        <select className="custom-select" id="moodDropdown">
+        <select
+          className="custom-select"
+          id="moodDropdown"
+          onChange={handleChange("emotion")}
+        >
           {emotionList}
         </select>
 

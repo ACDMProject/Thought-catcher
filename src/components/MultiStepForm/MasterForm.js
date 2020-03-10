@@ -8,33 +8,10 @@ import Summary from "./Summary";
 class MasterForm extends Component {
   state = {
     step: 1,
-    emotion: [
-      { id: 1, name: "Happy" },
-      { id: 2, name: "Excited" },
-      { id: 3, name: "Inspired" },
-      { id: 4, name: "Calm" },
-      { id: 5, name: "Netural" },
-      { id: 6, name: "Stressed" },
-      { id: 7, name: "Anxious" },
-      { id: 8, name: "Sad" },
-      { id: 9, name: "Angry" },
-      { id: 10, name: "Overwhelmed" }
-    ],
+    emotion: "",
     intensity: "",
     moodLog: "",
-    distortion: [
-      { id: 1, name: "All or Nothing" },
-      { id: 2, name: "Jumping to Conclusions" },
-      { id: 3, name: "Overgeneralisation" },
-      { id: 4, name: "Catastrophising" },
-      { id: 5, name: "Mental Filtering" },
-      { id: 6, name: "Disqualifying the Positive" },
-      { id: 7, name: "Personalisation" },
-      { id: 8, name: "Shoulds & Oughts" },
-      { id: 9, name: "Emotional Reasoning" },
-      { id: 10, name: "Labelling" },
-      { id: 11, name: "Unsure" }
-    ],
+    distortion: "",
     response: ""
   };
 
@@ -92,6 +69,7 @@ class MasterForm extends Component {
           <DistortionSelect
             nextStep={this.nextStep}
             prevStep={this.prevStep}
+            handleChange={this.handleChange}
             values={values}
           />
         );

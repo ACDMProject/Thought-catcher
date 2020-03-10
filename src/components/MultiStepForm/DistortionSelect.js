@@ -1,5 +1,19 @@
 import React from "react";
 
+const distortions = [
+  { id: 1, name: "All or Nothing" },
+  { id: 2, name: "Jumping to Conclusions" },
+  { id: 3, name: "Overgeneralisation" },
+  { id: 4, name: "Catastrophising" },
+  { id: 5, name: "Mental Filtering" },
+  { id: 6, name: "Disqualifying the Positive" },
+  { id: 7, name: "Personalisation" },
+  { id: 8, name: "Shoulds & Oughts" },
+  { id: 9, name: "Emotional Reasoning" },
+  { id: 10, name: "Labelling" },
+  { id: 11, name: "Unsure" }
+];
+
 class DistortionSelect extends React.Component {
   continue = e => {
     e.preventDefault();
@@ -12,26 +26,27 @@ class DistortionSelect extends React.Component {
   };
 
   render() {
-    const { values } = this.props;
+    const { values, handleChange } = this.props;
 
-    let distortionList =
-      values.distortion.length > 0 &&
-      values.distortion.map((item, i) => {
-        return (
-          <option key={i} value={item.id}>
-            {item.name}
-          </option>
-        );
-      }, this);
-
+    let distortionList = distortions.map(item => {
+      return (
+        <option key={item.id} value={item.id}>
+          {item.name}
+        </option>
+      );
+    }, this);
     //need to retrieve intensity selected from radio button
 
     return (
       <form>
         <label htmlFor="cognitiveDropdown" className="mt-4">
-          Can you associate this with a congnitive distortion?{" "}
+          Can you associate this with a congnitive distortion?
         </label>
-        <select className="custom-select" id="cognitiveDropdown">
+        <select
+          className="custom-select"
+          id="cognitiveDropdown"
+          onChange={handleChange("distortion")}
+        >
           {distortionList}
         </select>
 
