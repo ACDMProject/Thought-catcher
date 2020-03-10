@@ -1,37 +1,25 @@
 import React from "react";
-import NumberRadio from "./NumberRadio";
-import MoodDrop from "./MoodDrop";
-import CognitiveDrop from "./CognitiveDrop";
+import MasterForm from "./MultiStepForm/MasterForm";
 
 function Inputs() {
   return (
-    <div className="container Inputs">
-      <h3>Page for inputting mood/intensity/thoughts/category & response</h3>
+    <div className="container-fluid inputs">
+      <h3 className="dummyHeader">
+        Page for inputting mood/intensity/thoughts/category & response
+      </h3>
       <div>
-        <div className="row">
-          <div className="col-7">
-            <form className="form-group">
-              <MoodDrop />
-              <NumberRadio />
-              <textarea
-                className="form-control"
-                id="textArea"
-                rows="3"
-                placeholder="Write a bit more about how you're feeling..."
-              ></textarea>
-              <CognitiveDrop />
-              <textarea
-                className="form-control m-3"
-                id="textArea"
-                rows="3"
-                placeholder="Now try to rationally respond to this thought..."
-              ></textarea>
-              <button type="button" class="btn-outline-secondary">
-                Submit
-              </button>
-            </form>
+        <div className="row ">
+          <div className="col-lg-5 ">
+            <MasterForm />
           </div>
-          <div className="col"></div>
+
+          <div className="col-lg-7">
+            <img
+              src="/images/2911196 (1).png"
+              alt="catchThought"
+              id="catchThought"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ function Nav() {
 
   return (
     <nav className="navbar p-2">
-      <a class="navbar-brand" href="/" style={navStyle}>
+      <a className="navbar-brand" href="/" style={navStyle}>
         Thought Catcher
       </a>
       <ul className="nav-links my-auto">

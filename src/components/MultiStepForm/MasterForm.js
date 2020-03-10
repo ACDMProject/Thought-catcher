@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import MoodDrop from "./MoodDrop";
+import MoodSelect from "./MoodSelect";
+import MoodTextArea from "./MoodTextArea";
 
-export class MasterForm extends Component {
+class MasterForm extends Component {
   state = {
     step: 1,
     emotion: [
@@ -40,38 +41,40 @@ export class MasterForm extends Component {
   };
 
   render() {
-    // const { step } = this.state;
+    const { step } = this.state;
     const { emotion, intensity, moodLog, distortion, response } = this.state;
     //we can pass the values into each component & render them in the inputs
     const values = { emotion, intensity, moodLog, distortion, response };
-    // switch (step) {
-    //   case 1:
-    return (
-      <MoodDrop
-        nextStep={this.nextStep}
-        handleChange={this.handleChange}
-        values={values}
-      />
-    );
-    //   case 2:
-    //     return (
-    //       <Form2
-    //         nextStep={this.nextStep}
-    //         prevStep={this.prevStep}
-    //         handleChange={this.handleChange}
-    //         values={values}
-    //       />
-    //     );
-    //   case 3:
-    //     return (
-    //       <Confirm
-    //         nextStep={this.nextStep}
-    //         prevStep={this.prevStep}
-    //         values={values}
-    //       />
-    //     );
-    //   case 4:
-    //     return <Success />;
+
+    switch (step) {
+      case 1:
+        return (
+          <MoodSelect
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 2:
+        return (
+          <MoodTextArea
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      // case 3:
+      //   return (
+      //     <Confirm
+      //       nextStep={this.nextStep}
+      //       prevStep={this.prevStep}
+      //       values={values}
+      //     />
+      //   );
+      // case 4:
+      //   return <Success />;
+    }
   }
 }
 

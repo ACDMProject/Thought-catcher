@@ -4,7 +4,7 @@ function CognitiveDrop() {
   return (
     <div className="container drop">
       <h5 className="m-3">Can you identify this distortion?</h5>
-      <select class="form-control">
+      <select className="form-control">
         <option>All or Nothing</option>
         <option>Jumping to Conclusions</option>
         <option>Overgeneralisation</option>
