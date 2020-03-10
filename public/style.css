@@ -9,4 +9,6 @@
 .info-box {
 	background-color: lightpink;
 	margin: 40px;
+	padding: 50px;
+	border-radius: 100px;
 }
