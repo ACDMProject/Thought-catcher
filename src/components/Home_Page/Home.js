@@ -1,6 +1,6 @@
 import React from "react";
 import Welcome from "./Welcome";
-import Calendar from "./Calendar";
+import HomeCalendar from "./HomeCalendar";
 import Weather from "./Weather";
 import LearnMore from "./LearnMore.js";
 import LetsGo from "./LetsGo.js";
@@ -24,7 +24,7 @@ function Home() {
 					<LetsGo />
 				</div>
 				<div className="col-4">
-					<Calendar />
+					<HomeCalendar />
 				</div>
 			</div>
 		</div>
