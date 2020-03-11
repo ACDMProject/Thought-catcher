@@ -10,11 +10,11 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-	const Home = () => (
-		<div>
-			<h3>Home Page</h3>
-		</div>
-	);
+	// const Home = () => (
+	// 	<div>
+	// 		<Home />
+	// 	</div>
+	// );
 
 	return (
 		<Router>
