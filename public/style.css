@@ -1,3 +1,19 @@
+#bubble {
+	max-width: 650px;
+	margin: 35px auto;
+}
+
+#donut {
+	max-width: 380px;
+	margin: 35px auto;
+	padding: 0;
+}
+
+#line-column-area {
+	max-width: 650px;
+	margin: 35px auto;
+}
+
 #welcome {
 	background-color: lightblue;
 	text-align: center;

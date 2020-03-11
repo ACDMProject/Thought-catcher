@@ -27,6 +27,9 @@ function Nav() {
 				<Link style={navStyle} to="/">
 					<li>Login</li>
 				</Link>
+				<Link style={navStyle} to="/dashboard">
+					<li>Dashboard</li>
+				</Link>
 			</ul>
 		</nav>
 	);
