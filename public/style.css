@@ -13,3 +13,22 @@
 	max-width: 650px;
 	margin: 35px auto;
 }
+
+#welcome {
+	background-color: lightblue;
+	text-align: center;
+	padding: 50px;
+	border-radius: 100px;
+	font-size: 40px;
+}
+
+.info-box {
+	background-color: lightpink;
+	margin: 40px;
+	padding: 50px;
+	border-radius: 100px;
+}
+
+#calendar {
+	padding: 50px;
+}

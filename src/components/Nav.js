@@ -12,7 +12,7 @@ function Nav() {
 				Thought Catcher
 			</a>
 			<ul className="nav-links my-auto">
-				<Link style={navStyle} to="/home2">
+				<Link style={navStyle} to="/home">
 					<li>Home</li>
 				</Link>
 				<Link style={navStyle} to="/about">
