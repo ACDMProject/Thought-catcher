@@ -4,7 +4,7 @@ function Login() {
   return (
     <form className="justify-content-center loginForm">
       <h2 className="loginHead mb-5">Let's catch some thoughts!</h2>
-      <div claclassNamess="form-group">
+      <div className="form-group">
         <label htmlFor="emailHome">Email address</label>
         <input
           type="email"
