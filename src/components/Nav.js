@@ -21,6 +21,9 @@ function Nav() {
         <Link style={navStyle} to="/inputs">
           <li>Inputs</li>
         </Link>
+        <Link style={navStyle} to="/diary">
+          <li>Diary</li>
+        </Link>
         <Link style={navStyle} to="/definitions">
           <li>Definitions</li>
         </Link>
