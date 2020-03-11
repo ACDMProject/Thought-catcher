@@ -46,18 +46,71 @@ class MoodSelect extends React.Component {
           {emotionList}
         </select>
 
-        <NumberRadio onChange={handleRadioChange} values={values} />
+        <div class="btn-group btn-group-toggle form-check">
+          <label class="btn btn-secondary active">
+            <input
+              type="radio"
+              name="options"
+              value="option1"
+              checked={values.selectedIntensity === "option1"}
+              onChange={handleRadioChange}
+            />{" "}
+            1
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="options"
+              value="option2"
+              checked={values.selectedIntensity === "option2"}
+              onChange={handleRadioChange}
+            />{" "}
+            2
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="options"
+              value="option3"
+              checked={values.selectedIntensity === "option3"}
+              onChange={handleRadioChange}
+            />{" "}
+            3
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="options"
+              value="option4"
+              checked={values.selectedIntensity === "option4"}
+              onChange={handleRadioChange}
+            />{" "}
+            4
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="options"
+              value="option5"
+              checked={values.selectedIntensity === "option5"}
+              onChange={handleRadioChange}
+            />{" "}
+            5
+          </label>
 
-        <button
-          type="button"
-          className="btn btn-outline-primary"
-          onClick={this.continue}
-        >
-          Next
-        </button>
+          <button
+            type="button"
+            className="btn btn-outline-primary"
+            onClick={this.continue}
+          >
+            Next
+          </button>
+        </div>
       </form>
     );
   }
 }
+
+// <NumberRadio onChange={handleChange} values={values} />
 
 export default MoodSelect;

@@ -9,7 +9,7 @@ class MasterForm extends Component {
   state = {
     step: 1,
     emotion: "",
-    intensity: "intensity1",
+    selectedIntensity: "option1",
     moodLog: "",
     distortion: "",
     response: ""
@@ -34,9 +34,8 @@ class MasterForm extends Component {
   };
 
   handleRadioChange = e => {
-    this.setState({
-      intensity: e.target.value
-    });
+    this.setState({ selectedIntensity: e.target.value });
+    console.log(this.state.selectedIntensity);
   };
 
   //handle change within the fields
@@ -48,9 +47,21 @@ class MasterForm extends Component {
 
   render() {
     const { step } = this.state;
-    const { emotion, intensity, moodLog, distortion, response } = this.state;
+    const {
+      emotion,
+      selectedIntensity,
+      moodLog,
+      distortion,
+      response
+    } = this.state;
     //we can pass the values into each component & render them in the inputs
-    const values = { emotion, intensity, moodLog, distortion, response };
+    const values = {
+      emotion,
+      selectedIntensity,
+      moodLog,
+      distortion,
+      response
+    };
 
     switch (step) {
       case 1:

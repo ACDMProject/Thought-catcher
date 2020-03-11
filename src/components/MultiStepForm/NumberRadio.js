@@ -1,7 +1,7 @@
 import React from "react";
 
 function NumberRadio() {
-  const { values, handleRadioChange } = this.props;
+  const { values, handleChange } = this.props;
 
   return (
     <div className="container radios mt-4">
@@ -16,7 +16,7 @@ function NumberRadio() {
               name="intensity-check"
               value="intensity1"
               checked={values.intensity === "intensity1"}
-              onChange={handleRadioChange}
+              onChange={handleChange}
               className="form-check-input"
             />
             1
@@ -30,7 +30,7 @@ function NumberRadio() {
               name="intensity-check"
               value="instensity2"
               checked={values.intensity === "intensity2"}
-              onChange={handleRadioChange}
+              onChange={handleChange}
               className="form-check-input"
             />
             2
@@ -44,7 +44,7 @@ function NumberRadio() {
               name="intensity-check"
               value="intensity3"
               checked={values.intensity === "intensity3"}
-              onChange={handleRadioChange}
+              onChange={handleChange}
               className="form-check-input"
             />
             3
