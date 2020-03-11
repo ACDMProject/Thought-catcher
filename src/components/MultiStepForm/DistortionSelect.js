@@ -26,11 +26,11 @@ class DistortionSelect extends React.Component {
   };
 
   render() {
-    const { values, handleChange } = this.props;
+    const { handleChange } = this.props;
 
     let distortionList = distortions.map(item => {
       return (
-        <option key={item.id} value={item.id}>
+        <option key={item.id} value={item.name}>
           {item.name}
         </option>
       );
