@@ -46,18 +46,18 @@ class MoodSelect extends React.Component {
           {emotionList}
         </select>
 
-        <div class="btn-group btn-group-toggle form-check">
-          <label class="btn btn-secondary active">
+        <div className="btn-group btn-group-toggle form-check">
+          <label className="btn btn-secondary active">
             <input
               type="radio"
               name="options"
               value="option1"
               checked={values.selectedIntensity === "option1"}
               onChange={handleRadioChange}
-            />{" "}
+            />
             1
           </label>
-          <label class="btn btn-secondary">
+          <label className="btn btn-secondary">
             <input
               type="radio"
               name="options"
@@ -67,7 +67,7 @@ class MoodSelect extends React.Component {
             />{" "}
             2
           </label>
-          <label class="btn btn-secondary">
+          <label className="btn btn-secondary">
             <input
               type="radio"
               name="options"
@@ -77,7 +77,7 @@ class MoodSelect extends React.Component {
             />{" "}
             3
           </label>
-          <label class="btn btn-secondary">
+          <label className="btn btn-secondary">
             <input
               type="radio"
               name="options"
@@ -87,7 +87,7 @@ class MoodSelect extends React.Component {
             />{" "}
             4
           </label>
-          <label class="btn btn-secondary">
+          <label className="btn btn-secondary">
             <input
               type="radio"
               name="options"
