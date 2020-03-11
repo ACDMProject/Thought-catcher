@@ -4,6 +4,7 @@ import MoodTextArea from "./MoodTextArea";
 import DistortionSelect from "./DistortionSelect";
 import DistortionTextArea from "./DistortionTextArea";
 import Summary from "./Summary";
+import Success from "./Success";
 
 class MasterForm extends Component {
   state = {
@@ -108,6 +109,8 @@ class MasterForm extends Component {
             values={values}
           />
         );
+      case 6:
+        return <Success />;
       default:
     }
   }
