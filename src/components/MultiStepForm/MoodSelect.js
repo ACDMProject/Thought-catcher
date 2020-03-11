@@ -21,7 +21,7 @@ class MoodSelect extends React.Component {
   };
 
   render() {
-    const { values, handleChange } = this.props;
+    const { values, handleChange, handleRadioChange } = this.props;
 
     let emotionList = emotions.map(item => {
       return (
@@ -36,7 +36,7 @@ class MoodSelect extends React.Component {
     return (
       <form>
         <label htmlFor="moodDropdown" className="mt-4">
-          Select your current mood:{" "}
+          Select your current mood:
         </label>
         <select
           className="custom-select"
@@ -46,7 +46,7 @@ class MoodSelect extends React.Component {
           {emotionList}
         </select>
 
-        <NumberRadio />
+        <NumberRadio onChange={handleRadioChange} values={values} />
 
         <button
           type="button"
