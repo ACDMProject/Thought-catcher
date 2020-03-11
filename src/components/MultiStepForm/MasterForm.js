@@ -9,7 +9,7 @@ class MasterForm extends Component {
   state = {
     step: 1,
     emotion: "",
-    selectedIntensity: "option1",
+    selectedIntensity: "",
     moodLog: "",
     distortion: "",
     response: ""
@@ -34,7 +34,7 @@ class MasterForm extends Component {
   };
 
   handleRadioChange = e => {
-    this.setState({ selectedIntensity: e.target.value });
+    this.setState({ selected: e.target.value });
     console.log(this.state.selectedIntensity);
   };
 

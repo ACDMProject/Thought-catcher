@@ -1,5 +1,5 @@
 import React from "react";
-import NumberRadio from "./NumberRadio";
+// import NumberRadio from "./NumberRadio";
 
 const emotions = [
   { id: 1, name: "Happy" },
@@ -25,7 +25,7 @@ class MoodSelect extends React.Component {
 
     let emotionList = emotions.map(item => {
       return (
-        <option key={item.id} value={item.id}>
+        <option key={item.id} value={item.name}>
           {item.name}
         </option>
       );
@@ -51,8 +51,8 @@ class MoodSelect extends React.Component {
             <input
               type="radio"
               name="options"
-              value="option1"
-              checked={values.selectedIntensity === "option1"}
+              value="1"
+              checked={values.selectedIntensity === "1"}
               onChange={handleRadioChange}
             />
             1
@@ -61,8 +61,8 @@ class MoodSelect extends React.Component {
             <input
               type="radio"
               name="options"
-              value="option2"
-              checked={values.selectedIntensity === "option2"}
+              value="2"
+              checked={values.selectedIntensity === "2"}
               onChange={handleRadioChange}
             />{" "}
             2
@@ -71,8 +71,8 @@ class MoodSelect extends React.Component {
             <input
               type="radio"
               name="options"
-              value="option3"
-              checked={values.selectedIntensity === "option3"}
+              value="3"
+              checked={values.selectedIntensity === "3"}
               onChange={handleRadioChange}
             />{" "}
             3
@@ -81,8 +81,8 @@ class MoodSelect extends React.Component {
             <input
               type="radio"
               name="options"
-              value="option4"
-              checked={values.selectedIntensity === "option4"}
+              value="4"
+              checked={values.selectedIntensity === "4"}
               onChange={handleRadioChange}
             />{" "}
             4
@@ -91,8 +91,8 @@ class MoodSelect extends React.Component {
             <input
               type="radio"
               name="options"
-              value="option5"
-              checked={values.selectedIntensity === "option5"}
+              value="5"
+              checked={values.selectedIntensity === "5"}
               onChange={handleRadioChange}
             />{" "}
             5

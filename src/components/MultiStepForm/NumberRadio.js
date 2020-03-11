@@ -5,58 +5,10 @@ function NumberRadio() {
 
   return (
     <div className="container radios mt-4">
-      <label htmlFor="intensityRadioBtn" className="mr-3">
-        How intense is this feeling?
-      </label>
-      <form>
-        <div className="form-check">
-          <label>
-            <input
-              type="radio"
-              name="intensity-check"
-              value="intensity1"
-              checked={values.intensity === "intensity1"}
-              onChange={handleChange}
-              className="form-check-input"
-            />
-            1
-          </label>
-        </div>
-
-        <div className="form-check">
-          <label>
-            <input
-              type="radio"
-              name="intensity-check"
-              value="instensity2"
-              checked={values.intensity === "intensity2"}
-              onChange={handleChange}
-              className="form-check-input"
-            />
-            2
-          </label>
-        </div>
-
-        <div className="form-check">
-          <label>
-            <input
-              type="radio"
-              name="intensity-check"
-              value="intensity3"
-              checked={values.intensity === "intensity3"}
-              onChange={handleChange}
-              className="form-check-input"
-            />
-            3
-          </label>
-        </div>
-
-        <div className="form-group">
-          <button className="btn btn-primary mt-2" type="submit">
-            Save
-          </button>
-        </div>
-      </form>
+      <h2>
+        radio will go here once working in master form - issue with behaviour &
+        passing down props
+      </h2>
     </div>
   );
 }
