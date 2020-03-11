@@ -5,7 +5,7 @@ import Weather from "./Weather";
 import LearnMore from "./LearnMore.js";
 import LetsGo from "./LetsGo.js";
 
-function Home2() {
+function Home() {
 	return (
 		<div className="container-fluid LandingPage">
 			<div className="row homeRow">
@@ -31,4 +31,4 @@ function Home2() {
 	);
 }
 
-export default Home2;
+export default Home;
