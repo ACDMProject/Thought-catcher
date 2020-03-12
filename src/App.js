@@ -5,7 +5,7 @@ import Inputs from "./components/Inputs";
 import Definitions from "./components/Definitions";
 import Home2 from "./components/Home2";
 import LandingPage from "./components/LandingPage";
-import Diary from "./components/Diary";
+import Diary from "./components/diary/Diary";
 import Nav from "./components/Nav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
