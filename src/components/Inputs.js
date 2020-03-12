@@ -1,5 +1,5 @@
 import React from "react";
-import InputForm from "./InputForm";
+import MasterForm from "./MultiStepForm/MasterForm";
 
 function Inputs() {
   return (
@@ -10,12 +10,12 @@ function Inputs() {
       <div>
         <div className="row ">
           <div className="col-lg-5 ">
-            <InputForm />
+            <MasterForm />
           </div>
 
           <div className="col-lg-7">
             <img
-              src="/images/inputThought.png"
+              src="/images/2911196 (1).png"
               alt="catchThought"
               id="catchThought"
             />
