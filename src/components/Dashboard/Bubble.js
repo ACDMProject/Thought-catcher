@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
 import ReactApexChart from "react-apexcharts";
+import axios from "axios";
 
 /*
           // this function will generate output in this format
