@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import Register from "./Register";
 
 export default function Login() {
