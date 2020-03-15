@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import Chart from "react-apexcharts";
 import ReactApexChart from "react-apexcharts";
 import axios from "axios";
+const Moment = require("moment");
+const MomentRange = require("moment-range");
+const moment = MomentRange.extendMoment(Moment);
+moment().format();
 
 class Donut extends React.Component {
 	constructor(props) {
@@ -84,7 +88,32 @@ class Donut extends React.Component {
 				var fullData = response.data.thoughts;
 				console.log(fullData);
 
-				var total = fullData.length;
+				for (let i = 0; i < fullData.length; i++) {
+					let thought = fullData[i];
+					let date = moment.utc(thought.Timestamp).format("YYYY-MM-DD");
+					let time = moment.utc(thought.Timestamp).format("HH:MM");
+					thought.eventDate = date;
+					thought.eventTime = time;
+				}
+				console.log(fullData);
+
+				//create last month in dates
+				var end = moment().format("YYYY-MM-DD");
+				var start = moment()
+					.subtract(1, "months")
+					.format("YYYY-MM-DD");
+				const range = moment.range(start, end);
+
+				console.log(start, end);
+
+				//filter data to be in range of last week
+
+				var lastMonthData = fullData.filter(function(entry) {
+					return range.contains(moment(entry.eventDate)) === true;
+				});
+
+				console.log(lastMonthData);
+				var total = lastMonthData.length;
 
 				const distortions = [
 					"All or Nothing",
@@ -103,10 +132,10 @@ class Donut extends React.Component {
 
 				let sum = [];
 
-				function countDistortions(distortion, fullData) {
+				function countDistortions(distortion, lastMonthData) {
 					let count = 0;
-					for (let i = 0; i < fullData.length; i++) {
-						if (fullData[i].Distortion === distortion) {
+					for (let i = 0; i < lastMonthData.length; i++) {
+						if (lastMonthData[i].Distortion === distortion) {
 							count++;
 						}
 					}
@@ -116,7 +145,7 @@ class Donut extends React.Component {
 				for (let i = 0; i < distortions.length; i++) {
 					let distortion = distortions[i];
 
-					sum.push(countDistortions(distortion, fullData));
+					sum.push(countDistortions(distortion, lastMonthData));
 				}
 				console.log(sum);
 
