@@ -31,13 +31,13 @@ class Bubble extends Component {
 				{
 					name: "Anxious",
 					data: [
-						["02-05-2020", 9, 5],
-						["02-05-2020", 11, 3],
-						["02-07-2020", 13, 1],
-						["02-09-2020", 14, 4],
-						["02-15-2020", 17, 1],
-						["02-16-2020", 20, 1],
-						["02-17-2020", 22, 5]
+						["02-05-2020", "08:11", 5],
+						["02-05-2020", "11:20", 3],
+						["02-07-2020", "13:12", 1],
+						["02-09-2020", "14:10", 4],
+						["02-15-2020", "17:10", 1],
+						["02-16-2020", "20:12", 1],
+						["02-17-2020", "22:12", 5]
 					]
 				}
 			],
@@ -97,8 +97,6 @@ class Bubble extends Component {
 			.then((response) => {
 				// handle success
 
-				var data = [];
-
 				let fullData = response.data.thoughts;
 				//console.log(fullData);
 				for (let i = 0; i < fullData.length; i++) {
@@ -125,27 +123,20 @@ class Bubble extends Component {
 				});
 
 				console.log(grouped);
+				if (grouped.Mood === "Anxiety") {
+					console.log(grouped);
+				}
 
-				var series = {};
+				// var data = [];
+				// data.push
 
-				console.log(series);
+				// var series = {
+				// 	name: "Anxiety",
+				// 	data:
+				// };
+
+				// console.log(series);
 			})
-
-			// function generateData(baseval, count, yrange) {
-			// 	var i = 0;
-			// 	var series = [];
-			// 	while (i < count) {
-			// 		var x = Math.floor(Math.random() * (750 - 1 + 1)) + 1;
-			// 		var y =
-			// 			Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
-			// 		var z = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
-
-			// 		series.push([x, y, z]);
-			// 		baseval += 86400000;
-			// 		i++;
-			// 	}
-			// 	return series;
-			// }
 
 			.catch(function(error) {
 				// handle error
