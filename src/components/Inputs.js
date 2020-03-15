@@ -8,12 +8,12 @@ function Inputs() {
         Page for inputting mood/intensity/thoughts/category & response
       </h3>
       <div>
-        <div className="row ">
+        <div className="row justify-content-around">
           <div className="col-lg-5 ">
             <MasterForm />
           </div>
 
-          <div className="col-lg-7">
+          <div className="col-lg-5">
             <img
               src="/images/2911196 (1).png"
               alt="catchThought"

@@ -38,7 +38,7 @@ class DistortionSelect extends React.Component {
     //need to retrieve intensity selected from radio button
 
     return (
-      <form>
+      <form className="multiStep">
         <label htmlFor="cognitiveDropdown" className="mt-4">
           Can you associate this with a congnitive distortion?
         </label>

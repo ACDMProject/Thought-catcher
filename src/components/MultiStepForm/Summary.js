@@ -19,7 +19,7 @@ export class Summary extends Component {
     } = this.props;
 
     return (
-      <div>
+      <div className="multiStep">
         <h1>Confirm Inputs</h1>
         <ul>
           <li> Emotion Selected: {emotion}></li>

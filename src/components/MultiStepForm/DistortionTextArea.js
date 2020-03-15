@@ -15,7 +15,7 @@ class DistortionTextArea extends React.Component {
     const { values, handleChange } = this.props;
 
     return (
-      <form>
+      <form className="multiStep">
         <div className="form-group mt-3">
           <label htmlFor="distortionTextArea">
             Write a rational response to yourself:
