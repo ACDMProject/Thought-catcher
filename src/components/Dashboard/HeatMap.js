@@ -31,7 +31,7 @@ class HeatMap extends React.Component {
 				},
 				colors: colors,
 				xaxis: {
-					type: "category",
+					type: "datetime",
 					categories: [
 						"Monday",
 						"Tuesday",
@@ -92,25 +92,25 @@ class HeatMap extends React.Component {
 				// create array with each date for last 7 days
 				let lastWeek = [
 					moment()
-						.subtract(1, "days")
-						.format("YYYY-MM-DD"),
-					moment()
-						.subtract(2, "days")
-						.format("YYYY-MM-DD"),
-					moment()
-						.subtract(3, "days")
-						.format("YYYY-MM-DD"),
-					moment()
-						.subtract(4, "days")
-						.format("YYYY-MM-DD"),
-					moment()
-						.subtract(5, "days")
+						.subtract(7, "days")
 						.format("YYYY-MM-DD"),
 					moment()
 						.subtract(6, "days")
 						.format("YYYY-MM-DD"),
 					moment()
-						.subtract(7, "days")
+						.subtract(5, "days")
+						.format("YYYY-MM-DD"),
+					moment()
+						.subtract(4, "days")
+						.format("YYYY-MM-DD"),
+					moment()
+						.subtract(3, "days")
+						.format("YYYY-MM-DD"),
+					moment()
+						.subtract(2, "days")
+						.format("YYYY-MM-DD"),
+					moment()
+						.subtract(1, "days")
 						.format("YYYY-MM-DD")
 				];
 
@@ -190,24 +190,29 @@ class HeatMap extends React.Component {
 				}
 				console.log(sumNegativeThoughts);
 
-				// var updatedData = [
-				// 	{
-				// 		name: "Positive moods",
-				// 		data: positiveMoods
-				// 	},
-				// 	{
-				// 		name: "Negative moods",
-				// 		data: negativeMoods
-				// 	},
-				// 	{
-				// 		name: "Negative Thoughts",
-				// 		data: negativeThoughts
-				// 	}
-				// ];
+				var updatedData = [
+					{
+						name: "Positive moods",
+						data: [1, 3, 4, 3, 2, 4, 5]
+					},
+					{
+						name: "Negative moods",
+						data: [1, 3, 4, 3, 2, 4, 5]
+					},
+					{
+						name: "Negative Thoughts",
+						data: [1, 3, 4, 3, 2, 4, 5]
+					}
+				];
 
-				// this.setState({
-				// 	series: updatedData
-				// });
+				this.setState({
+					series: updatedData,
+					options: {
+						xaxis: {
+							categories: lastWeek
+						}
+					}
+				});
 			})
 
 			.catch(function(error) {
