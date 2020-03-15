@@ -32,15 +32,7 @@ class HeatMap extends React.Component {
 				colors: colors,
 				xaxis: {
 					type: "datetime",
-					categories: [
-						"Monday",
-						"Tuesday",
-						"Wednesday",
-						"Thursday",
-						"Friday",
-						"Saturday",
-						"Sunday"
-					]
+					categories: []
 				},
 				title: {
 					text: "HeatMap of the week"
@@ -89,6 +81,8 @@ class HeatMap extends React.Component {
 					return range.contains(moment(entry.eventDate)) === true;
 				});
 
+				console.log(lastWeekData);
+
 				// create array with each date for last 7 days
 				let lastWeek = [
 					moment()
@@ -113,6 +107,8 @@ class HeatMap extends React.Component {
 						.subtract(1, "days")
 						.format("YYYY-MM-DD")
 				];
+
+				console.log(lastWeek);
 
 				const negativeThoughts = [
 					"All or Nothing",
@@ -141,22 +137,32 @@ class HeatMap extends React.Component {
 				];
 
 				//function to count moods
-				function countMood(mood, fullData) {
+				function countMood(mood, lastWeekData, lastWeek) {
 					let count = 0;
-					for (let i = 0; i < fullData.length; i++) {
-						if (fullData[i].Mood === mood) {
-							count++;
+					for (let j = 0; j < lastWeek.length; j++) {
+						for (let i = 0; i < lastWeekData.length; i++) {
+							if (lastWeek[j] === lastWeekData[i].eventDate) {
+								if (lastWeekData[i].Mood === mood) {
+									count++;
+								}
+							}
 						}
 					}
 					return count;
 				}
 
+				//console.log(countMood("Anxious", fullData, lastWeek));
+
 				//function to count thoughts
-				function countThought(thought, fullData) {
+				function countThought(thought, lastWeekData, lastWeek) {
 					let count = 0;
-					for (let i = 0; i < fullData.length; i++) {
-						if (fullData[i].Distortion === thought) {
-							count++;
+					for (let j = 0; j < lastWeek.length; j++) {
+						for (let i = 0; i < lastWeekData.length; i++) {
+							if (lastWeek[j] === lastWeekData[i].eventDate) {
+								if (lastWeekData[i].Distortion === thought) {
+									count++;
+								}
+							}
 						}
 					}
 					return count;
@@ -170,7 +176,9 @@ class HeatMap extends React.Component {
 				for (let i = 0; i < positiveMoods.length; i++) {
 					let positiveMood = positiveMoods[i];
 
-					sumPositiveMoods.push(countMood(positiveMood, fullData));
+					sumPositiveMoods.push(
+						countMood(positiveMood, lastWeekData, lastWeek)
+					);
 				}
 				console.log(sumPositiveMoods);
 
@@ -178,7 +186,9 @@ class HeatMap extends React.Component {
 				for (let i = 0; i < negativeMoods.length; i++) {
 					let negativeMood = negativeMoods[i];
 
-					sumNegativeMoods.push(countMood(negativeMood, fullData));
+					sumNegativeMoods.push(
+						countMood(negativeMood, lastWeekData, lastWeek)
+					);
 				}
 				console.log(sumNegativeMoods);
 
@@ -186,7 +196,9 @@ class HeatMap extends React.Component {
 				for (let i = 0; i < negativeThoughts.length; i++) {
 					let negativeThought = negativeThoughts[i];
 
-					sumNegativeThoughts.push(countThought(negativeThought, fullData));
+					sumNegativeThoughts.push(
+						countThought(negativeThought, lastWeekData, lastWeek)
+					);
 				}
 				console.log(sumNegativeThoughts);
 
