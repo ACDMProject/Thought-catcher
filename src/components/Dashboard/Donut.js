@@ -86,7 +86,7 @@ class Donut extends React.Component {
 			)
 			.then((response) => {
 				var fullData = response.data.thoughts;
-				console.log(fullData);
+				//console.log(fullData);
 
 				for (let i = 0; i < fullData.length; i++) {
 					let thought = fullData[i];
@@ -95,7 +95,7 @@ class Donut extends React.Component {
 					thought.eventDate = date;
 					thought.eventTime = time;
 				}
-				console.log(fullData);
+				//console.log(fullData);
 
 				//create last month in dates
 				var end = moment().format("YYYY-MM-DD");
@@ -104,7 +104,7 @@ class Donut extends React.Component {
 					.format("YYYY-MM-DD");
 				const range = moment.range(start, end);
 
-				console.log(start, end);
+				//console.log(start, end);
 
 				//filter data to be in range of last week
 
@@ -112,7 +112,7 @@ class Donut extends React.Component {
 					return range.contains(moment(entry.eventDate)) === true;
 				});
 
-				console.log(lastMonthData);
+				//console.log(lastMonthData);
 				var total = lastMonthData.length;
 
 				const distortions = [
@@ -147,7 +147,7 @@ class Donut extends React.Component {
 
 					sum.push(countDistortions(distortion, lastMonthData));
 				}
-				console.log(sum);
+				//console.log(sum);
 
 				// divide each sum by the total and * 100 to make percentages
 				let percentages = [];
@@ -162,7 +162,7 @@ class Donut extends React.Component {
 
 					percentages.push(makePercent(item, total));
 				}
-				console.log(percentages);
+				//console.log(percentages);
 
 				this.setState({
 					series: percentages
