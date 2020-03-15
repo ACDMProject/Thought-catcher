@@ -34,23 +34,23 @@ export default function Register() {
       <React.Fragment>
         <form className="loginForm" onSubmit={handleSubmit}>
           <h2 className="text-left mb-5">Sign up to thought catcher!</h2>
-          <div class="form-row">
-            <div class="form-group col-md-6">
+          <div className="form-row">
+            <div className="form-group col-md-6">
               <label for="firstName">First Name</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="firstName"
                 placeholder="Enter your first name"
                 value={firstName}
                 onChange={e => setFirstName(e.target.value)}
               />
             </div>
-            <div class="form-group col-md-6">
+            <div className="form-group col-md-6">
               <label for="lastName">Last Name</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="lastName"
                 placeholder="Enter your last name"
                 value={lastName}
@@ -58,11 +58,11 @@ export default function Register() {
               />
             </div>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="inputAddress">Email</label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="email"
               placeholder="Enter email"
               value={email}
@@ -72,11 +72,11 @@ export default function Register() {
               We'll never share your email with anyone else.
             </small>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="password">Password</label>
             <input
               type="password"
-              class="form-control mb-4"
+              className="form-control mb-4"
               id="password"
               placeholder="Choose your password"
               value={password}

@@ -50,6 +50,7 @@ export default function Login() {
               placeholder="Choose your password"
               value={password}
               onChange={e => setPassword(e.target.value)}
+              autoComplete="false"
             />
           </div>
           <div className="form-group form-check">
