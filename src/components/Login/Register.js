@@ -63,16 +63,6 @@ export default function Register() {
           onChange={e => setPassword(e.target.value)}
         />
       </div>
-      <div className="form-group form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          id="rememberMeCheckbox"
-        />
-        <label className="form-check-label" htmlFor="rememberMeCheckbox">
-          Remember me
-        </label>
-      </div>
       <button
         type="submit"
         className="btn btnLogin btn-lg btn-block btn-primary"
