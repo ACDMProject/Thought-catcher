@@ -65,11 +65,11 @@ class HeatMap extends React.Component {
 				}
 
 				//create last week in dates
-				var start = moment()
+				var end = moment()
 					.subtract(1, "weeks")
 					.startOf("week")
 					.format("YYYY-MM-DD");
-				var end = moment()
+				var start = moment()
 					.subtract(1, "weeks")
 					.endOf("week")
 					.format("YYYY-MM-DD");
@@ -81,7 +81,7 @@ class HeatMap extends React.Component {
 					return range.contains(moment(entry.eventDate)) === true;
 				});
 
-				console.log(lastWeekData);
+				//console.log(lastWeekData);
 
 				// create array with each date for last 7 days
 				let lastWeek = [
@@ -108,7 +108,7 @@ class HeatMap extends React.Component {
 						.format("YYYY-MM-DD")
 				];
 
-				console.log(lastWeek);
+				//console.log(lastWeek);
 
 				const negativeThoughts = [
 					"All or Nothing",
@@ -180,7 +180,7 @@ class HeatMap extends React.Component {
 						countMood(positiveMood, lastWeekData, lastWeek)
 					);
 				}
-				console.log(sumPositiveMoods);
+				//	console.log(sumPositiveMoods);
 
 				// count negative moods
 				for (let i = 0; i < negativeMoods.length; i++) {
@@ -190,7 +190,7 @@ class HeatMap extends React.Component {
 						countMood(negativeMood, lastWeekData, lastWeek)
 					);
 				}
-				console.log(sumNegativeMoods);
+				//console.log(sumNegativeMoods);
 
 				// count negative thoughts
 				for (let i = 0; i < negativeThoughts.length; i++) {
@@ -200,7 +200,7 @@ class HeatMap extends React.Component {
 						countThought(negativeThought, lastWeekData, lastWeek)
 					);
 				}
-				console.log(sumNegativeThoughts);
+				//console.log(sumNegativeThoughts);
 
 				var updatedData = [
 					{
