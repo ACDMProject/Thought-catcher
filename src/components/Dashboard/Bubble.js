@@ -11,7 +11,33 @@ class Bubble extends Component {
 		super(props);
 
 		this.state = {
-			series: [],
+			series: [
+				//dummy data but it needs to looks like this
+				{
+					name: "Anxious",
+					data: [
+						["02-04-2020 GMT", 9, 5],
+						["02-03-2020 GMT", 11, 3],
+						["02-07-2020 GMT", 13, 1],
+						["02-09-2020 GMT", 14, 4],
+						["02-15-2020 GMT", 17, 1],
+						["02-16-2020 GMT", 20, 1],
+						["02-17-2020 GMT", 22, 5]
+					]
+				},
+				{
+					name: "Overwhelmed",
+					data: [
+						["02-04-2020 GMT", 9, 5],
+						["02-08-2020 GMT", 12, 3],
+						["02-18-2020 GMT", 15, 1],
+						["02-19-2020 GMT", 16, 4],
+						["02-20-2020 GMT", 18, 2],
+						["02-27-2020 GMT", 22, 1],
+						["02-28-2020 GMT", 23, 5]
+					]
+				}
+			],
 			options: {
 				chart: {
 					height: 350,
@@ -109,6 +135,7 @@ class Bubble extends Component {
 					"Calm"
 				];
 
+				// try to filter needed from object
 				var filtered = _.map(lastMonthData, function(object) {
 					return _.pick(object, [
 						"Mood",
@@ -119,6 +146,7 @@ class Bubble extends Component {
 				});
 				console.log(filtered);
 
+				//attempts at grouping by Mood
 				var grouped = _.groupBy(filtered, function(thought) {
 					return thought.Mood;
 				});
@@ -141,19 +169,21 @@ class Bubble extends Component {
 					}
 
 					groups[item.Mood].push({
-						x: item.eventDate,
-						y: item.eventTime,
-						z: item.Mood_intensity
+						name: item.Mood,
+						data: {
+							x: item.eventDate,
+							y: item.eventTime,
+							z: item.Mood_intensity
+						}
 					});
 				});
 
 				let result = Object.entries(groups).map(([k, v]) => ({ [k]: v }));
 
-				console.log(result);
+				console.log(result); /// data is grouped by moods but not in the exact right format!!!
 
 				// this.setState({
-				// 	series: result
-
+				// 	series:
 				// });
 			})
 
