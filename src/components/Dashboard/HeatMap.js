@@ -56,6 +56,7 @@ class HeatMap extends React.Component {
 				var fullData = response.data.thoughts;
 				//console.log(fullData);
 
+				// added eventDate and eventTime into the data
 				for (let i = 0; i < fullData.length; i++) {
 					let thought = fullData[i];
 					let date = moment.utc(thought.Timestamp).format("YYYY-MM-DD");
@@ -136,6 +137,9 @@ class HeatMap extends React.Component {
 					"Exhausted"
 				];
 
+				// NEED TO CREATE FUNCTIONS WHICH COUNTS THE NUMBER OF NEGATIVE MOODS, NEGATIVE THOUGHTS
+				// AND POSITIVE MOODS FOR EACH DAY OF THE LAST 7 DAYS. THE ONES BELOW DON'T WORK RIGHT
+
 				//function to count moods
 				function countMood(mood, lastWeekData, lastWeek) {
 					let count = 0;
@@ -203,6 +207,7 @@ class HeatMap extends React.Component {
 				//console.log(sumNegativeThoughts);
 
 				var updatedData = [
+					// DUMMY DATA BUT THIS IS WHAT IT SHOULD LIKE LOOK WITH A COUNT FOR EACH DAY
 					{
 						name: "Positive moods",
 						data: [1, 3, 4, 3, 2, 4, 5]
