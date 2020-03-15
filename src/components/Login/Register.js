@@ -31,71 +31,78 @@ export default function Register() {
 
   function signUp() {
     return (
-      <form
-        className="justify-content-center loginForm"
-        onSubmit={handleSubmit}
-      >
-        <div className="form-group">
-          <label htmlFor="firstName">First Name</label>
-          <input
-            class="form-control"
-            type="text"
-            placeholder="Enter your first name..."
-            value={firstName}
-            onChange={e => setFirstName(e.target.value)}
-          />
-          <label htmlFor="email">Last Name</label>
-          <input
-            class="form-control"
-            type="text"
-            placeholder="Enter your last name..."
-            value={lastName}
-            onChange={e => setLastName(e.target.value)}
-          />
-          <label htmlFor="email">Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            aria-describedby="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-          />
-          <small id="emailHelp" className="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            placeholder="Choose your password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-          />
-        </div>
+      <React.Fragment>
+        <form className="loginForm" onSubmit={handleSubmit}>
+          <h2 className="text-left mb-5">Sign up to thought catcher!</h2>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder="Enter your first name"
+                value={firstName}
+                onChange={e => setFirstName(e.target.value)}
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                placeholder="Enter your last name"
+                value={lastName}
+                onChange={e => setLastName(e.target.value)}
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
+            <small id="emailHelp" className="form-text text-muted">
+              We'll never share your email with anyone else.
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control mb-4"
+              id="password"
+              placeholder="Choose your password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+            />
+          </div>
 
-        <button
-          type="submit"
-          className="btn btnLogin btn-lg btn-block btn-primary"
-          disabled={!validateForm()}
-        >
-          Login
-        </button>
-        <div>
-          Already registered?{" "}
           <button
-            type="button"
-            className="btn btn-sm btn-outline-primary"
-            onClick={e => setNewUser(true)}
+            type="submit"
+            className="btn btnLogin btn-lg btn-block btn-primary"
+            disabled={!validateForm()}
           >
-            Login
+            Register{" "}
           </button>
-        </div>
-      </form>
+          <div>
+            Already registered?
+            <button
+              type="button"
+              className="btn btn-sm btn-outline-primary m-2"
+              onClick={e => setNewUser(true)}
+            >
+              Login
+            </button>
+          </div>
+        </form>
+      </React.Fragment>
     );
   }
 

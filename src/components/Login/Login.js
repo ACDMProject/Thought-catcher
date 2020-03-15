@@ -24,11 +24,8 @@ export default function Login() {
   function loginForm() {
     return (
       <React.Fragment>
-        <form
-          className="justify-content-center loginForm"
-          onSubmit={handleSubmit}
-        >
-          <h2 className="loginHead mb-5">Let's catch some thoughts!</h2>
+        <form className="loginForm" onSubmit={handleSubmit}>
+          <h2 className="text-left mb-5">Let's catch some thoughts!</h2>
           <div className="form-group">
             <label htmlFor="email">Email address</label>
             <input
@@ -76,7 +73,7 @@ export default function Login() {
             Not yet registered?{" "}
             <button
               type="button"
-              className="btn btn-sm btn-outline-primary"
+              className="btn btn-sm btn-outline-primary m-2"
               onClick={e => setNewUser(true)}
             >
               Sign Up
