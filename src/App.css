@@ -84,3 +84,10 @@
   width: 90%;
   height: auto;
 }
+
+.multiStep {
+  background-color: #ced2e8;
+  border-radius: 5px 20px 5px;
+  padding: 30px 30px;
+  height: 250px;
+}

@@ -7,12 +7,12 @@ import LetsGo from "./LetsGo.js";
 
 function Home() {
   return (
-    <div className="container-fluid landingPage">
+    <div className="container-fluid LandingPage">
       <div className="row homeRow">
-        <div className="col-7">
+        <div className="col-4">
           <Welcome />
         </div>
-        <div className="col-4">
+        <div className="col-3">
           <Weather />
         </div>
       </div>

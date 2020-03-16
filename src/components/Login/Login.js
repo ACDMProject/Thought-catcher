@@ -65,16 +65,16 @@ export default function Login() {
           </div>
           <button
             type="submit"
-            className="btn btnLogin btn-lg btn-block btn-primary"
+            className="btn btnLogin btn-lg btn-block btn-shape"
             disabled={!validateForm()}
           >
             Login
           </button>
-          <div>
+          <div className="form-row form-inline mt-3">
             Not yet registered?{" "}
             <button
               type="button"
-              className="btn btn-sm btn-default m-2"
+              className="btn btn-md btn-simple p-0 m-1"
               onClick={e => setNewUser(true)}
             >
               Sign Up
