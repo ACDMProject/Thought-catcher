@@ -2,13 +2,28 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Thought Catcher
 
-This was a group project to create an application taht could be used in conjunction with Cognitive behaviour therapies, to track thought patterns and moods.
+This was a group project to create an application that could be used in conjunction with Cognitive Behaviour Therapies, to track thought patterns and moods.
 
 ## Summary
 
 - [Built With](#built-with)
 - [Authors](#authors)
 - [Acknowledgments](#Acknowledgments)
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine. 
+
+Simply follow the below instructions if using a Linux operating system or Windows Ubuntu:
+
+```
+$ git clone https://github.com/ACDMProject/thought-catcher.git
+```
+and
+
+```
+npm install
+```
 
 ## Built With
 
