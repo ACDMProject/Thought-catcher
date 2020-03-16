@@ -3,9 +3,9 @@ import Login from "./Login";
 
 function LandingPage() {
   return (
-    <div className="container-fluid login-container">
+    <div className="container-fluid">
       <div className="row">
-        <div className="col-7">
+        <div className="col-lg-7">
           <img
             src="/images/tspCatchThoughtCrop.png"
             alt="catchThought"
@@ -13,7 +13,7 @@ function LandingPage() {
             className="img-fluid"
           />
         </div>
-        <div className="col-4 loginCol">
+        <div className="col-lg-5 loginCol">
           <Login />
         </div>
       </div>

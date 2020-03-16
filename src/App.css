@@ -4,7 +4,8 @@
   background: white;
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 4rem;
+  padding-top: 1rem;
   text-align: left;
   background-color: #343350;
 }
@@ -15,7 +16,7 @@
 .container-fluid {
   background-color: #faf9f9;
   border-radius: 53px 53px 53px 53px;
-  padding: 30px;
+  padding: 4rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -45,9 +46,9 @@
   width: 50%;
 }
 
-.loginHead {
-  margin-top: 20px;
-  text-align: center;
+.headers {
+  font-size: 1.75rem;
+  margin: 1em 0em;
 }
 
 .loginCol {
@@ -55,7 +56,8 @@
 }
 
 .loginForm {
-  width: 80%;
+  width: 100%;
+  padding: 1rem;
   position: absolute;
   top: 50%;
   left: 50%;

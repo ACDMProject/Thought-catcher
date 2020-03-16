@@ -25,7 +25,7 @@ export default function Login() {
     return (
       <React.Fragment>
         <form className="loginForm" onSubmit={handleSubmit}>
-          <h2 className="text-left mb-5">Let's catch some thoughts!</h2>
+          <p className="headers">Let's catch some thoughts!</p>
           <div className="form-group">
             <label htmlFor="email">Email address</label>
             <input
