@@ -22,9 +22,9 @@ $ git clone https://github.com/ACDMProject/thought-catcher.git
 and
 
 ```
-npm install
+npm install 
 ```
-
+This will pull all the relevant dependencies you may need. 
 ## Built With
 
 - HTML
