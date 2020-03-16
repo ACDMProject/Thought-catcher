@@ -2,14 +2,22 @@
   color: #261943;
   font-family: "Titillium Web", sans-serif;
   background: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
   text-align: left;
+  background-color: #343350;
 }
 .dummyHeader {
   height: 70px;
+}
+
+.container-fluid {
+  background-color: #faf9f9;
+  border-radius: 53px 53px 53px 53px;
+  padding: 30px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .nav-links {
@@ -26,13 +34,12 @@
 }
 
 .navbar {
-  background-color: white;
-  margin: 15px;
+  background-color: #343350;
 }
 
-.homeRow {
+/* .homeRow {
   margin-top: 5rem;
-}
+} */
 
 .drop {
   width: 50%;

@@ -3,8 +3,8 @@ import Login from "./Login";
 
 function LandingPage() {
   return (
-    <div className="container-fluid LandingPage">
-      <div className="row homeRow">
+    <div className="container-fluid login-container">
+      <div className="row">
         <div className="col-7">
           <img
             src="/images/tspCatchThoughtCrop.png"

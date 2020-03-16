@@ -95,7 +95,7 @@ export default function Register() {
             Already registered?
             <button
               type="button"
-              className="btn btn-sm btn-outline-primary m-2"
+              className="btn btn-sm btn-default m-2"
               onClick={e => setNewUser(true)}
             >
               Login
