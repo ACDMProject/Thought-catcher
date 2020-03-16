@@ -2,14 +2,23 @@
   color: #261943;
   font-family: "Titillium Web", sans-serif;
   background: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 100%;
+  padding-top: 1rem;
   text-align: left;
+  background-color: #343350;
 }
 .dummyHeader {
   height: 70px;
+}
+
+.container-fluid {
+  background-color: #faf9f9;
+  border-radius: 53px 53px 53px 53px;
+  padding: 2rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .nav-links {
@@ -26,33 +35,24 @@
 }
 
 .navbar {
-  background-color: white;
-  margin: 15px;
+  background-color: #343350;
 }
 
-.homeRow {
+/* .homeRow {
   margin-top: 5rem;
-}
+} */
 
 .drop {
   width: 50%;
 }
 
-.loginHead {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.loginCol {
-  position: relative;
+.headers {
+  font-size: 1.75rem;
+  margin: 2em 0em;
 }
 
 .loginForm {
-  width: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding: 1rem;
 }
 
 .btnLogin {
@@ -76,4 +76,11 @@
 #catchThought {
   width: 90%;
   height: auto;
+}
+
+.multiStep {
+  background-color: #ced2e8;
+  border-radius: 5px 20px 5px;
+  padding: 30px 30px;
+  height: 250px;
 }
