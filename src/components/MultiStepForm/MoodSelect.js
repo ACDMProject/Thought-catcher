@@ -36,10 +36,8 @@ class MoodSelect extends React.Component {
 
     return (
       <form className="multiStep">
-        <div className="row form-group">
-          <label htmlFor="moodDropdown" className="mt-4">
-            Select your current mood:
-          </label>
+        <div className="form-row form-group">
+          <label htmlFor="moodDropdown">Select your current mood:</label>
           <select
             className="custom-select"
             id="moodDropdown"
@@ -48,71 +46,103 @@ class MoodSelect extends React.Component {
             {emotionList}
           </select>
         </div>
-        <div className="row justify-content-between">
-          <div class="col-md-9 form-inline pl-0">
-            <label htmlFor="options">Select the intensity:</label>
-            <div className="ml-2 btn-group btn-group-toggle form-check">
-              <label className="btn btn-secondary">
-                <input
-                  type="radio"
-                  name="options"
-                  value="1"
-                  checked={values.selectedIntensity === "1"}
-                  onChange={handleRadioChange}
-                />
-                1
-              </label>
-              <label className="btn btn-secondary">
-                <input
-                  type="radio"
-                  name="options"
-                  value="2"
-                  checked={values.selectedIntensity === "2"}
-                  onChange={handleRadioChange}
-                />{" "}
-                2
-              </label>
-              <label className="btn btn-secondary">
-                <input
-                  type="radio"
-                  name="options"
-                  value="3"
-                  checked={values.selectedIntensity === "3"}
-                  onChange={handleRadioChange}
-                />{" "}
-                3
-              </label>
-              <label className="btn btn-secondary">
-                <input
-                  type="radio"
-                  name="options"
-                  value="4"
-                  checked={values.selectedIntensity === "4"}
-                  onChange={handleRadioChange}
-                />{" "}
-                4
-              </label>
-              <label className="btn btn-secondary">
-                <input
-                  type="radio"
-                  name="options"
-                  value="5"
-                  checked={values.selectedIntensity === "5"}
-                  onChange={handleRadioChange}
-                />{" "}
-                5
-              </label>
-            </div>
-          </div>
-          <div class="form-group form-inline">
-            <button
-              type="button"
-              className="btn btn-outline-primary"
-              onClick={this.continue}
+        <div className="form-row form-inline mt-4">
+          <label htmlFor="options">Select the intensity:</label>
+          <div className="ml-2 btn-group btn-group-toggle form-check">
+            <label
+              className={
+                values.selectedIntensity === "1"
+                  ? "btn btn-secondary active"
+                  : "btn btn-secondary"
+              }
             >
-              Next
-            </button>
+              <input
+                type="radio"
+                name="options"
+                value="1"
+                checked={values.selectedIntensity === "1"}
+                onChange={handleRadioChange}
+              />
+              1
+            </label>
+            <label
+              className={
+                values.selectedIntensity === "2"
+                  ? "btn btn-secondary active"
+                  : "btn btn-secondary"
+              }
+            >
+              {" "}
+              <input
+                type="radio"
+                name="options"
+                value="2"
+                checked={values.selectedIntensity === "2"}
+                onChange={handleRadioChange}
+              />{" "}
+              2
+            </label>
+            <label
+              className={
+                values.selectedIntensity === "3"
+                  ? "btn btn-secondary active"
+                  : "btn btn-secondary"
+              }
+            >
+              {" "}
+              <input
+                type="radio"
+                name="options"
+                value="3"
+                checked={values.selectedIntensity === "3"}
+                onChange={handleRadioChange}
+              />{" "}
+              3
+            </label>
+            <label
+              className={
+                values.selectedIntensity === "4"
+                  ? "btn btn-secondary active"
+                  : "btn btn-secondary"
+              }
+            >
+              {" "}
+              <input
+                type="radio"
+                name="options"
+                value="4"
+                checked={values.selectedIntensity === "4"}
+                onChange={handleRadioChange}
+              />{" "}
+              4
+            </label>
+            <label
+              className={
+                values.selectedIntensity === "5"
+                  ? "btn btn-secondary active"
+                  : "btn btn-secondary"
+              }
+            >
+              {" "}
+              <input
+                type="radio"
+                name="options"
+                value="5"
+                checked={values.selectedIntensity === "5"}
+                onChange={handleRadioChange}
+              />{" "}
+              5
+            </label>
           </div>
+        </div>
+        <div class="form-row justify-content-end mt-3">
+          <button
+            type="button"
+            className="btn btn-outline-primary"
+            onClick={this.continue}
+          >
+            Next
+          </button>
         </div>
       </form>
     );

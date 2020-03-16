@@ -81,11 +81,19 @@
 .multiStep {
   background-color: #ced2e8;
   border-radius: 5px 20px 5px;
-  padding: 15px 40px;
+  padding: 30px 30px;
+  height: 250px;
 }
 
+.boxShadows {
+  box-shadow: none !important;
+}
+/* 
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
   border-color: #7b1fa2;
   background-color: #7b1fa2;
 }
+
+.btn-outline-radio {
+} */
