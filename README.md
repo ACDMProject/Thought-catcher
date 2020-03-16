@@ -39,13 +39,13 @@ This will pull all the relevant dependencies you may need.
 
 ## Authors
 
-- **Alexandra Nicoladies** 
+- [**Alexandra Nicoladies**](https://github.com/alexandra257)
 
-- **Charlotte House**
+- [**Charlotte House**](https://github.com/lottieh)
 
-- **Dora Radosevic**
+- [**Dora Radosevic**](https://github.com/dorarad17) 
 
-- **Mehnaz Ahmed**
+- [**Mehnaz Ahmed**](https://github.com/MehnazA2019)
 
 See also the list of contributions in this projects [frontend](https://github.com/ACDMProject/thought-catcher/pulse/monthly) and [backend](https://github.com/ACDMProject/Thought-Catcher-Backend/pulse/monthly) here.
 
