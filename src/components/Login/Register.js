@@ -38,7 +38,7 @@ export default function Register() {
           </p>
           <div className="form-row">
             <div className="form-group col-md-6">
-              <label for="firstName">First Name</label>
+              <label htmlFor="firstName">First Name</label>
               <input
                 type="text"
                 className="form-control"

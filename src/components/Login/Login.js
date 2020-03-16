@@ -24,11 +24,11 @@ export default function Login() {
   function loginForm() {
     return (
       <React.Fragment>
-        <form className="loginForm" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <p className="headers text-sm-center text-lg-left ">
             Let's catch some thoughts!
           </p>
-          <div className="form-group">
+          <div className="form-group ">
             <label htmlFor="email">Email address</label>
             <input
               type="email"
