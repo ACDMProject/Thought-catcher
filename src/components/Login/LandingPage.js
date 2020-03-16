@@ -5,7 +5,7 @@ function LandingPage() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-lg-7">
+        <div className="col-lg-7 align-self-center">
           <img
             src="/images/tspCatchThoughtCrop.png"
             alt="catchThought"
@@ -13,7 +13,7 @@ function LandingPage() {
             className="img-fluid"
           />
         </div>
-        <div className="col-lg-5">
+        <div className="col-lg-5 align-self-center login-col">
           <Login />
         </div>
       </div>

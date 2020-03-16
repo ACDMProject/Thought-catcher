@@ -25,7 +25,9 @@ export default function Login() {
     return (
       <React.Fragment>
         <form className="loginForm" onSubmit={handleSubmit}>
-          <p className="headers">Let's catch some thoughts!</p>
+          <p className="headers text-sm-center text-lg-left ">
+            Let's catch some thoughts!
+          </p>
           <div className="form-group">
             <label htmlFor="email">Email address</label>
             <input
@@ -63,14 +65,16 @@ export default function Login() {
               Remember me
             </label>
           </div>
-          <button
-            type="submit"
-            className="btn btnLogin btn-lg btn-block btn-shape"
-            disabled={!validateForm()}
-          >
-            Login
-          </button>
-          <div className="form-row form-inline mt-3">
+          <div className="form-row justify-content-sm-center justify-content-lg-start">
+            <button
+              type="submit"
+              className="btn btnLogin btn-lg btn-block btn-shape "
+              disabled={!validateForm()}
+            >
+              Login
+            </button>
+          </div>
+          <div className="form-row form-inline mt-3 justify-content-sm-center justify-content-lg-start">
             Not yet registered?{" "}
             <button
               type="button"
@@ -86,8 +90,8 @@ export default function Login() {
   }
 
   return (
-    <div className="Signup">
+    <React.Fragment>
       {newUser === null ? loginForm() : registerForm()}
-    </div>
+    </React.Fragment>
   );
 }

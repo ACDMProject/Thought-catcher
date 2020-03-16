@@ -16,7 +16,7 @@
 .container-fluid {
   background-color: #faf9f9;
   border-radius: 53px 53px 53px 53px;
-  padding: 4rem;
+  padding: 2rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -48,7 +48,7 @@
 
 .headers {
   font-size: 1.75rem;
-  margin: 1em0em;
+  margin: 2em 0em;
 }
 
 .loginForm {
