@@ -10,6 +10,7 @@ import Register from "./components/Login/Register";
 import Nav from "./components/Nav";
 import Dashboard from "./components/Dashboard/Dashboard";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ThemeSwitch from "react-theme-switch";
 
 function App() {
   // const Home = () => (
@@ -19,9 +20,11 @@ function App() {
   // );
 
   return (
-    <Router>
-      <div className="App">
-        <Nav />
+    
+     <div className="App">
+   <ThemeSwitch preserveRasters /> 
+   <Router>
+             <Nav />
         <Switch>
           <Route path="/" exact component={LandingPage} />
           <Route path="/login" exact component={Login} />
@@ -32,8 +35,10 @@ function App() {
           <Route path="/definitions" component={Definitions} />
           <Route path="/dashboard" component={Dashboard} />
         </Switch>
-      </div>
+      
     </Router>
+    </div>
+    
   );
 }
 
