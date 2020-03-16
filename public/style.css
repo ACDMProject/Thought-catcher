@@ -31,4 +31,9 @@
 
 #calendar {
 	padding: 50px;
+	
+}
+
+button {
+	border-radius: 81% 19% 73% 27% / 69% 30% 70% 31%;
 }
