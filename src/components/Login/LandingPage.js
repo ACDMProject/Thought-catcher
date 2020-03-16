@@ -13,7 +13,7 @@ function LandingPage() {
             className="img-fluid"
           />
         </div>
-        <div className="col-lg-5 loginCol">
+        <div className="col-lg-5">
           <Login />
         </div>
       </div>

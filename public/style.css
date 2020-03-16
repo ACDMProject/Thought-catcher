@@ -71,7 +71,7 @@
 .btn-simple:hover {
   background-color: #faf9f9 none;
   box-shadow: none;
-  color: orange !important;
+  color: #343350 !important;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -91,7 +91,7 @@
 .btn-shape:hover {
   background-color: #343350;
   box-shadow: none;
-  color: #581774 !important;
+  color: orange !important;
   font-weight: bold;
   text-decoration: underline;
 }

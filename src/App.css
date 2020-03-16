@@ -4,7 +4,7 @@
   background: white;
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 4rem;
+  padding-bottom: 100%;
   padding-top: 1rem;
   text-align: left;
   background-color: #343350;
@@ -48,20 +48,11 @@
 
 .headers {
   font-size: 1.75rem;
-  margin: 1em 0em;
-}
-
-.loginCol {
-  position: relative;
+  margin: 1em0em;
 }
 
 .loginForm {
-  width: 100%;
   padding: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .btnLogin {
