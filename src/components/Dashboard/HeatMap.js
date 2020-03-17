@@ -15,7 +15,7 @@ class HeatMap extends React.Component {
 
 		data.reverse();
 
-		var colors = ["#F27036", "#663F59", "#F3B415"];
+		var colors = ["#F3B415", "#F27036", "#663F59"];
 
 		colors.reverse();
 
