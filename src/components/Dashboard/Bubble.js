@@ -31,12 +31,12 @@ class Bubble extends Component {
 					type: "datetime"
 				},
 				yaxis: {
-					max: 24
-					// labels: {
-					// 	formatter: function(val) {
-					// 		return val + ":00";
-					// 	}
-					//}
+					tickAmount: 12,
+					labels: {
+						formatter: function(val) {
+							return val + ":00";
+						}
+					}
 				},
 				tooltip: {
 					x: {
@@ -47,10 +47,11 @@ class Bubble extends Component {
 					y: {
 						formatter: undefined,
 						title: {
-							formatter: (seriesName) => seriesName + " - time"
+							formatter: (seriesName) => seriesName
 						}
 					},
 					z: {
+						show: true,
 						formatter: undefined,
 						title: "Intensity: "
 					}
