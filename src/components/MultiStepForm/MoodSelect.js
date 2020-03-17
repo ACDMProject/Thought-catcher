@@ -135,10 +135,10 @@ class MoodSelect extends React.Component {
             </label>
           </div>
         </div>
-        <div class="form-row justify-content-end mt-3">
+        <div className="form-row d-flex justify-content-end mt-3">
           <button
             type="button"
-            className="btn btn-outline-primary"
+            className="btn btn-outline-next "
             onClick={this.continue}
           >
             Next

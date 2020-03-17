@@ -23,7 +23,7 @@ class MoodTextArea extends React.Component {
           <textarea
             className="form-control boxShadows"
             id="moodTextArea"
-            rows="4"
+            rows="8"
             value={values.moodLog}
             onChange={handleChange("moodLog")}
           ></textarea>
@@ -31,14 +31,14 @@ class MoodTextArea extends React.Component {
         <div class="form-row justify-content-between mt-3">
           <button
             type="button"
-            className="btn btn-outline-secondary"
+            className="btn btn-outline-back"
             onClick={this.back}
           >
             Back
           </button>
           <button
             type="button"
-            className="btn btn-outline-primary"
+            className="btn btn-outline-next"
             onClick={this.continue}
           >
             Next

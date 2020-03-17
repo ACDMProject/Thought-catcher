@@ -11,7 +11,8 @@ const distortions = [
   { id: 8, name: "Shoulds & Oughts" },
   { id: 9, name: "Emotional Reasoning" },
   { id: 10, name: "Labelling" },
-  { id: 11, name: "Unsure" }
+  { id: 11, name: "Unsure" },
+  { id: 12, name: "None - feeling great!" }
 ];
 
 class DistortionSelect extends React.Component {
@@ -54,7 +55,7 @@ class DistortionSelect extends React.Component {
         <div class="form-row justify-content-between mt-5">
           <button
             type="button"
-            className="btn btn-outline-secondary"
+            className="btn btn-outline-back"
             onClick={this.back}
           >
             Back
@@ -62,7 +63,7 @@ class DistortionSelect extends React.Component {
 
           <button
             type="button"
-            className="btn btn-outline-primary justify-content-end"
+            className="btn btn-outline-next justify-content-end"
             onClick={this.continue}
           >
             Next

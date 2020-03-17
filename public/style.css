@@ -36,26 +36,34 @@
   width: 400px;
 }
 
-.btn-default {
-  background-color: #6c2988;
-  border: 2px solid #ffba5a;
-  color: #ffba5a;
+.btn-outline-back {
+  background-color: #ced2e8;
+  border: 1px solid #74788c;
+  color: #74788c;
 }
 
-.btn-default:active,
-.btn-default:focus {
-  background-color: #581774 !important;
-  border: 2px solid #ffba5a !important;
+.btn-outline-back:active,
+.btn-outline-back:focus,
+.btn-outline-back:hover {
+  background-color: #74788c;
+  border: #74788c 1px solid;
+  color: white;
   box-shadow: none;
-
-  color: #ffba5a !important;
 }
 
-.btn-default:hover {
-  background-color: #581774 !important;
-  border: 2px solid #ffba5a !important;
+.btn-outline-next {
+  background-color: #ced2e8;
+  border: 1px solid #261943;
+  color: #261943;
+}
+
+.btn-outline-next:active,
+.btn-outline-next:focus,
+.btn-outline-next:hover {
+  background-color: #261943;
+  border: #261943 1px solid;
+  color: white;
   box-shadow: none;
-  color: #ffba5a !important;
 }
 
 .btn-simple {

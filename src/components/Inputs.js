@@ -4,22 +4,19 @@ import MasterForm from "./MultiStepForm/MasterForm";
 function Inputs() {
   return (
     <div className="container-fluid inputs">
-      <h3 className="dummyHeader">
-        Page for inputting mood/intensity/thoughts/category & response
-      </h3>
-      <div>
-        <div className="row justify-content-around">
-          <div className="col-lg-5 ">
-            <MasterForm />
-          </div>
+      <div className="row d-flex justify-content-around align-items-center">
+        <div className="col-lg-5 ">
+          <h3 className="mt-5 mb-4">Mood Scriber </h3>
+          <MasterForm />
+        </div>
 
-          <div className="col-lg-5">
-            <img
-              src="/images/2911196 (1).png"
-              alt="catchThought"
-              id="catchThought"
-            />
-          </div>
+        <div className="col-lg-5 mt-5">
+          <img
+            src="/images/3366283.png"
+            alt="catchThought"
+            id="catchThought"
+            className="img-fluid"
+          />
         </div>
       </div>
     </div>

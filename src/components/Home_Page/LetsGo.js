@@ -10,7 +10,7 @@ function LetsGo() {
         It also gives you the tools to track your thoughts and moods, helping
         you keep on top of your mental health.
       </p>
-      <button type="button" className="btn btn-outline-danger">
+      <button type="button" className="btn btn-outline-next">
         Let's go!
       </button>
     </div>
