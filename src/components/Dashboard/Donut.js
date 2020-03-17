@@ -68,10 +68,6 @@ class Donut extends React.Component {
 				legend: {
 					show: true,
 					position: "right"
-					// labels: {
-					// 	colors: undefined,
-					// 	useSeriesColors: false
-					// }
 				},
 				responsive: [
 					{
