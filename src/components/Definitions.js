@@ -1,14 +1,14 @@
 import React from "react";
-import fpHeader from "./FirstPage/fpHeader";
-import fpIntro from "./FirstPage/fpIntro";
-import fpExplanations from "./FirstPage/fpExplanations";
+import Header from "./FirstPage/Header";
+import Intro from "./FirstPage/Intro";
+import Explanations from "./FirstPage/Explanations";
 
 function Definitions() {
   return (
-    <div className="Definitions">
-                <fpHeader/>
-                <fpIntro/>
-                <fpExplanations/>
+    <div className="container-fluid">
+      <Header />
+      <Intro />
+      <Explanations />
     </div>
   );
 }
