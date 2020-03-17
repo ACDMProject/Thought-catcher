@@ -8,7 +8,7 @@ function Nav() {
 
   return (
     <nav className="navbar p-2">
-      <a class="navbar-brand" href="/" style={navStyle}>
+      <a className="navbar-brand" href="/" style={navStyle}>
         Thought Catcher
       </a>
       <ul className="nav-links my-auto">
@@ -18,17 +18,17 @@ function Nav() {
         <Link style={navStyle} to="/about">
           <li>About</li>
         </Link>
-        <Link style={navStyle} to="/inputs">
-          <li>Inputs</li>
-        </Link>
         <Link style={navStyle} to="/definitions">
           <li>Definitions</li>
         </Link>
-        <Link style={navStyle} to="/">
-          <li>Login</li>
+        <Link style={navStyle} to="/inputs">
+          <li>Mood Scriber</li>
         </Link>
         <Link style={navStyle} to="/dashboard">
           <li>Dashboard</li>
+        </Link>
+        <Link style={navStyle} to="/">
+          <li>Login</li>
         </Link>
       </ul>
     </nav>

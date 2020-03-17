@@ -19,30 +19,50 @@ export class Summary extends Component {
     } = this.props;
 
     return (
-      <div>
-        <h1>Confirm Inputs</h1>
-        <ul>
-          <li> Emotion Selected: {emotion}></li>
-          <li> Intensity Selected: {intensity}></li>
-          <li> Expansion on Mood: {moodLog}></li>
-          <li> Associated Distortion: {distortion}></li>
-          <li> Rational Response: {response} </li>
-        </ul>
-        <br />
-        <button
-          type="button"
-          className="btn btn-outline-secondary"
-          onClick={this.back}
-        >
-          Back
-        </button>
-        <button
-          type="button"
-          className="btn btn-outline-primary"
-          onClick={this.continue}
-        >
-          Submit
-        </button>
+      <div className="multiStep">
+        <form>
+          <h4>
+            <u>Confirm Inputs</u>
+          </h4>
+          <ul>
+            <li>
+              <b>Emotion Selected:</b> {emotion}
+            </li>
+            <li>
+              {" "}
+              <b>Intensity Selected:</b> {intensity}
+            </li>
+            <li>
+              {" "}
+              <b>Expansion on Mood:</b> {moodLog}
+            </li>
+            <li>
+              {" "}
+              <b>Associated Distortion:</b> {distortion}
+            </li>
+            <li>
+              {" "}
+              <b>Rational Response:</b> {response}
+            </li>
+          </ul>
+          <br />
+          <div className="form-row justify-content-between">
+            <button
+              type="button"
+              className="btn btn-outline-back"
+              onClick={this.back}
+            >
+              Back
+            </button>
+            <button
+              type="button"
+              className="btn btn-outline-next "
+              onClick={this.continue}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     );
   }

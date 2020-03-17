@@ -1,34 +1,113 @@
 #bubble {
-	max-width: 650px;
-	margin: 35px auto;
+  max-width: 650px;
+  margin: 35px auto;
 }
 
 #donut {
-	max-width: 380px;
-	margin: 35px auto;
-	padding: 0;
+  max-width: 380px;
+  margin: 35px auto;
+  padding: 0;
 }
 
 #line-column-area {
-	max-width: 650px;
-	margin: 35px auto;
+  max-width: 650px;
+  margin: 35px auto;
 }
 
 #welcome {
-	background-color: lightblue;
-	text-align: center;
-	padding: 50px;
-	border-radius: 100px;
-	font-size: 40px;
+  background-color: #ffba5a;
+  border-radius: 5px 20px 5px;
+  height: 70px;
+  padding: 1rem;
 }
 
+/* #catchThought {
+  max-width: 100%;
+  height: auto;
+} */
 .info-box {
-	background-color: lightpink;
-	margin: 40px;
-	padding: 50px;
-	border-radius: 100px;
+  margin-top: 40px;
+  padding: 30px;
+  border: 3px solid;
+  border-color: #ced2e8;
+  background-color: #f7f9ff;
+  border-radius: 5px 20px 5px;
+  height: 400px;
+  width: 400px;
+}
+
+.btn-outline-back {
+  background-color: #ced2e8;
+  border: 1px solid #74788c;
+  color: #74788c;
+}
+
+.btn-outline-back:active,
+.btn-outline-back:focus,
+.btn-outline-back:hover {
+  background-color: #74788c;
+  border: #74788c 1px solid;
+  color: white;
+  box-shadow: none;
+}
+
+.btn-outline-next {
+  background-color: #ced2e8;
+  border: 1px solid #261943;
+  color: #261943;
+}
+
+.btn-outline-next:active,
+.btn-outline-next:focus,
+.btn-outline-next:hover {
+  background-color: #261943;
+  border: #261943 1px solid;
+  color: white;
+  box-shadow: none;
+}
+
+.btn-simple {
+  background-color: #faf9f9;
+  color: orange;
+  font-weight: bold;
+}
+
+.btn-simple:active,
+.btn-simple:focus {
+  background-color: #faf9f9 !important;
+  box-shadow: none;
+  color: orange !important;
+  font-weight: bold;
+}
+
+.btn-simple:hover {
+  background-color: #faf9f9 none;
+  box-shadow: none;
+  color: #343350 !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.btn-shape {
+  background-color: orange;
+  color: #581774 !important;
+}
+
+.btn-shape:active,
+.btn-shape:focus {
+  background-color: #343350 !important;
+  box-shadow: none;
+  color: #581774 !important;
+}
+
+.btn-shape:hover {
+  background-color: #343350;
+  box-shadow: none;
+  color: orange !important;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 #calendar {
-	padding: 50px;
+  padding: 50px;
 }

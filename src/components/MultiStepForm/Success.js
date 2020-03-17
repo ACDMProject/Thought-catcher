@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export class Success extends Component {
   render() {
-    return <h4>Thoughts succesfully logged!</h4>;
+    return <h4 className="multiStep">Thoughts succesfully logged!</h4>;
   }
 }
 

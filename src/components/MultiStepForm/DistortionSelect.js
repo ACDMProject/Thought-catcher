@@ -11,7 +11,8 @@ const distortions = [
   { id: 8, name: "Shoulds & Oughts" },
   { id: 9, name: "Emotional Reasoning" },
   { id: 10, name: "Labelling" },
-  { id: 11, name: "Unsure" }
+  { id: 11, name: "Unsure" },
+  { id: 12, name: "None - feeling great!" }
 ];
 
 class DistortionSelect extends React.Component {
@@ -38,33 +39,36 @@ class DistortionSelect extends React.Component {
     //need to retrieve intensity selected from radio button
 
     return (
-      <form>
-        <label htmlFor="cognitiveDropdown" className="mt-4">
-          Can you associate this with a congnitive distortion?
-        </label>
-        <select
-          className="custom-select"
-          id="cognitiveDropdown"
-          onChange={handleChange("distortion")}
-        >
-          {distortionList}
-        </select>
+      <form className="multiStep">
+        <div class="form-row">
+          <label htmlFor="cognitiveDropdown">
+            Can you associate this with a congnitive distortion?
+          </label>
+          <select
+            className="custom-select boxShadows mb-4"
+            id="cognitiveDropdown"
+            onChange={handleChange("distortion")}
+          >
+            {distortionList}
+          </select>
+        </div>
+        <div class="form-row justify-content-between mt-5">
+          <button
+            type="button"
+            className="btn btn-outline-back"
+            onClick={this.back}
+          >
+            Back
+          </button>
 
-        <button
-          type="button"
-          className="btn btn-outline-secondary"
-          onClick={this.back}
-        >
-          Back
-        </button>
-
-        <button
-          type="button"
-          className="btn btn-outline-primary"
-          onClick={this.continue}
-        >
-          Next
-        </button>
+          <button
+            type="button"
+            className="btn btn-outline-next justify-content-end"
+            onClick={this.continue}
+          >
+            Next
+          </button>
+        </div>
       </form>
     );
   }
