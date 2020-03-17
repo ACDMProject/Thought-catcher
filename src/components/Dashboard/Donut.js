@@ -46,6 +46,7 @@ class Donut extends React.Component {
 					"None - feeling great!",
 					"Unsure"
 				],
+				colors: ["#2E93fA", "#66DA26", "#546E7A", "#E91E63", "#FF9800"],
 				chart: {
 					type: "donut"
 				},
@@ -54,12 +55,23 @@ class Donut extends React.Component {
 						expandOnClick: true
 					}
 				},
+				tooltip: {
+					y: {
+						formatter: function(value) {
+							return "";
+						}
+					}
+				},
 				title: {
 					text: "Monthly distortions"
 				},
 				legend: {
 					show: true,
 					position: "right"
+					// labels: {
+					// 	colors: undefined,
+					// 	useSeriesColors: false
+					// }
 				},
 				responsive: [
 					{
