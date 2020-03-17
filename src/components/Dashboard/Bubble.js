@@ -128,7 +128,6 @@ class Bubble extends Component {
 						const [hour, minute] = record.eventTime.split(":").map(Number);
 						const intensityInt = parseInt(record.Mood_intensity);
 						return [`${month}-${day}-${year}`, hour, intensityInt];
-						//return [record.eventDate, hour, intensityInt];
 					});
 					// All the records for this mood.
 					return { name, data };
