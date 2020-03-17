@@ -31,7 +31,9 @@ class Bubble extends Component {
 					type: "datetime"
 				},
 				yaxis: {
-					tickAmount: 12,
+					show: true,
+					tickAmount: 8,
+					min: 6,
 					labels: {
 						formatter: function(val) {
 							return val + ":00";
