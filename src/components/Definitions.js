@@ -1,11 +1,14 @@
 import React from "react";
+import fpHeader from "./FirstPage/fpHeader";
+import fpIntro from "./FirstPage/fpIntro";
+import fpExplanations from "./FirstPage/fpExplanations";
 
 function Definitions() {
   return (
     <div className="Definitions">
-      <h3>
-        This page will contain the defintions of each cognitive distoriton
-      </h3>
+                <fpHeader/>
+                <fpIntro/>
+                <fpExplanations/>
     </div>
   );
 }
