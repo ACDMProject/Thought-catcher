@@ -79,7 +79,7 @@ class HeatMap extends React.Component {
 					return range.contains(moment(entry.eventDate)) === true;
 				});
 
-				console.log(lastWeekData);
+				//console.log(lastWeekData);
 
 				// create array with each date for last 7 days
 				let lastWeek = [
@@ -106,7 +106,7 @@ class HeatMap extends React.Component {
 						.format("YYYY-MM-DD")
 				];
 
-				console.log(lastWeek);
+				//console.log(lastWeek);
 
 				// create days of week from lastWeek
 
@@ -158,7 +158,7 @@ class HeatMap extends React.Component {
 					};
 				});
 				let negativeMoodresult = negativeMoodDays.map((a) => a.count);
-				console.log(negativeMoodresult);
+				//console.log(negativeMoodresult);
 
 				//negative thoughts
 				const negativeThoughtDays = lastWeek.map((day) => {
@@ -179,7 +179,7 @@ class HeatMap extends React.Component {
 					};
 				});
 				let negativeThoughtresult = negativeThoughtDays.map((a) => a.count);
-				console.log(negativeThoughtresult);
+				//console.log(negativeThoughtresult);
 
 				//positive moods
 				const positiveMoodDays = lastWeek.map((day) => {
@@ -200,7 +200,7 @@ class HeatMap extends React.Component {
 					};
 				});
 				let positiveMoodresult = positiveMoodDays.map((a) => a.count);
-				console.log(positiveMoodresult);
+				//console.log(positiveMoodresult);
 
 				var updatedData = [
 					{
