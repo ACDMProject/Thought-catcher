@@ -31,7 +31,7 @@ class HeatMap extends React.Component {
 				},
 				colors: colors,
 				xaxis: {
-					type: "datetime",
+					type: "date",
 					categories: []
 				},
 				title: {
@@ -66,7 +66,7 @@ class HeatMap extends React.Component {
 				}
 
 				//create last week in dates
-				//create last month in dates
+
 				var end = moment().format("YYYY-MM-DD");
 				var start = moment()
 					.subtract(1, "weeks")
@@ -107,6 +107,8 @@ class HeatMap extends React.Component {
 				];
 
 				console.log(lastWeek);
+
+				// create days of week from lastWeek
 
 				const negativeThoughts = [
 					"All or Nothing",
