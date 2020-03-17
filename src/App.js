@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+
+import FirstPage from "./components/FirstPage/FirstPage" ;
 import About from "./components/About";
 import Inputs from "./components/Inputs";
 import Definitions from "./components/Definitions";
@@ -21,6 +23,7 @@ function App() {
 			<div className="App">
 				<Nav />
 				<Switch>
+					<Route path="/FirstPage" exact component={FirstPage}/>
 					<Route path="/" exact component={LandingPage} />
 					<Route path="/home" exact component={Home} />
 					<Route path="/about" component={About} />

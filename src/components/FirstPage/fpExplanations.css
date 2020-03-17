@@ -1,0 +1,41 @@
+/* CENTRE THE WEBSITE */ 
+body {
+    vertical-align: baseline;
+    max-width: 750px;
+    margin: auto;
+    padding: 10px;
+  }
+
+/* HEADINGS */
+h3{
+    font-family:"Titillium Web", sans-serif;
+    color: rgba(226, 147, 29, 0.87);
+  }
+  
+  h3 { 
+    position: relative; 
+    top: 15px;
+    left: 1px;
+  }
+  
+  h2,p,h4,h5{
+    font-family: "Titillium Web", sans-serif;
+  }
+
+  /*STYLE 1 - LEFT: */
+
+.wrapper-style-1 {
+  vertical-align: baseline;
+  max-width: 750px;
+  margin: auto;
+  padding: 50px;
+
+}
+
+.wrapper-style-2 {
+  vertical-align: baseline;
+  max-width: 750px;
+  margin: auto;
+  padding: 50px;
+
+}
