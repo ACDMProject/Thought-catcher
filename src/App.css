@@ -9,6 +9,26 @@
   text-align: left;
   background-color: #343350;
 }
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+  margin: 1em 0em;
+}
+
+label {
+  font-size: large;
+}
+
+.custom-select:focus {
+  border-color: #ced2e8;
+  box-shadow: 0px 0px 2px #ced2e8 !important;
+}
+
 .dummyHeader {
   height: 70px;
 }
@@ -19,6 +39,9 @@
   padding: 2rem;
   margin-right: auto;
   margin-left: auto;
+  height: 85vh;
+  overflow: auto;
+  overflow-y: scroll;
 }
 
 .nav-links {
@@ -48,7 +71,7 @@
 
 .headers {
   font-size: 1.75rem;
-  margin: 2em 0em;
+  margin: 1em 0em;
 }
 
 .loginForm {
@@ -81,6 +104,12 @@
 .multiStep {
   background-color: #ced2e8;
   border-radius: 5px 20px 5px;
-  padding: 30px 30px;
-  height: 250px;
+  padding: 2em;
+  height: 60vh;
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.btnRow {
+  height: 100vh;
 }
