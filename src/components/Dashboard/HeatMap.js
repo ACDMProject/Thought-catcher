@@ -204,16 +204,16 @@ class HeatMap extends React.Component {
 
 				var updatedData = [
 					{
-						name: "Positive moods",
-						data: positiveMoodresult
-					},
-					{
 						name: "Negative moods",
 						data: negativeMoodresult
 					},
 					{
 						name: "Negative Thoughts",
 						data: negativeThoughtresult
+					},
+					{
+						name: "Positive moods",
+						data: positiveMoodresult
 					}
 				];
 
