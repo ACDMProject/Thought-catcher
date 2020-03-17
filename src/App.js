@@ -23,7 +23,6 @@ function App() {
 			<div className="App">
 				<Nav />
 				<Switch>
-					<Route path="/FirstPage" exact component={FirstPage}/>
 					<Route path="/" exact component={LandingPage} />
 					<Route path="/home" exact component={Home} />
 					<Route path="/about" component={About} />
