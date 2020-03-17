@@ -21,6 +21,10 @@
   padding: 1rem;
 }
 
+overflow-auto {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 /* #catchThought {
   max-width: 100%;
   height: auto;
