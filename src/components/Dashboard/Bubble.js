@@ -115,9 +115,11 @@ class Bubble extends Component {
 					// Format the data into a list of datetimes for this mood.
 					const data = matches.map((record) => {
 						// The library wants time and intentisty to be non-string
+						// The library wants things in MM-DD-YYYY format.
+						const [year, month, day] = record.eventDate.split("-");
 						const [hour, minute] = record.eventTime.split(":").map(Number);
 						const intensityInt = parseInt(record.Mood_intensity);
-						return [record.eventDate, hour, intensityInt];
+						return [`${month}-${day}-${year}`, hour, intensityInt];
 					});
 					// All the records for this mood.
 					return { name, data };
