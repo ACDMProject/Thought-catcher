@@ -27,7 +27,7 @@ class Bubble extends Component {
 					text: "Monthly moods"
 				},
 				xaxis: {
-					tickAmount: 12,
+					tickAmount: 6,
 					type: "datetime"
 				},
 				yaxis: {
@@ -54,6 +54,10 @@ class Bubble extends Component {
 						formatter: undefined,
 						title: "Intensity: "
 					}
+				},
+				legend: {
+					showForNullSeries: false,
+					showForZeroSeries: false
 				}
 			}
 		};
@@ -120,6 +124,7 @@ class Bubble extends Component {
 						const [hour, minute] = record.eventTime.split(":").map(Number);
 						const intensityInt = parseInt(record.Mood_intensity);
 						return [`${month}-${day}-${year}`, hour, intensityInt];
+						//return [record.eventDate, hour, intensityInt];
 					});
 					// All the records for this mood.
 					return { name, data };
@@ -128,33 +133,7 @@ class Bubble extends Component {
 				console.log(plottable);
 
 				this.setState({
-					series: [
-						//DUMMY DATA BUT WE NEED THE DATA IN THIS FORMAT FOR ALL THE MOODS. [DATE, TIME, INTENSITY]
-						{
-							name: "Anxious",
-							data: [
-								["02-04-2020", 9, 5],
-								["02-03-2020", 11, 3],
-								["02-07-2020", 13, 1],
-								["02-09-2020", 14, 4],
-								["02-15-2020", 17, 1],
-								["02-16-2020", 20, 1],
-								["02-17-2020", 22, 5]
-							]
-						},
-						{
-							name: "Overwhelmed",
-							data: [
-								["02-04-2020", 9, 5],
-								["02-08-2020", 12, 3],
-								["02-18-2020", 15, 1],
-								["02-19-2020", 16, 4],
-								["02-20-2020", 18, 2],
-								["02-27-2020", 22, 1],
-								["02-28-2020", 23, 5]
-							]
-						}
-					]
+					series: plottable
 				});
 			})
 
