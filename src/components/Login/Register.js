@@ -33,10 +33,12 @@ export default function Register() {
     return (
       <React.Fragment>
         <form className="loginForm" onSubmit={handleSubmit}>
-          <h2 className="text-left mb-5">Sign up to thought catcher!</h2>
+          <p className="headers text-sm-center text-lg-left">
+            Sign up to thought catcher!
+          </p>
           <div className="form-row">
             <div className="form-group col-md-6">
-              <label for="firstName">First Name</label>
+              <label htmlFor="firstName">First Name</label>
               <input
                 type="text"
                 className="form-control"
@@ -83,19 +85,21 @@ export default function Register() {
               onChange={e => setPassword(e.target.value)}
             />
           </div>
-
-          <button
-            type="submit"
-            className="btn btnLogin btn-lg btn-block btn-primary"
-            disabled={!validateForm()}
-          >
-            Register{" "}
-          </button>
-          <div>
+          <div className="form-row justify-content-sm-center justify-content-lg-start">
+            <button
+              type="submit"
+              className="btn btnLogin btn-lg btn-block btn-shape"
+              disabled={!validateForm()}
+            >
+              Register{" "}
+            </button>
+          </div>
+          <div className="form-row form-inline mt-3 justify-content-sm-center justify-content-lg-start">
+            {" "}
             Already registered?
             <button
               type="button"
-              className="btn btn-sm btn-outline-primary m-2"
+              className="btn btn-md btn-simple p-0 m-1"
               onClick={e => setNewUser(true)}
             >
               Login
@@ -106,5 +110,7 @@ export default function Register() {
     );
   }
 
-  return <div className="Signup">{newUser === null ? signUp() : login()}</div>;
+  return (
+    <React.Fragment>{newUser === null ? signUp() : login()}</React.Fragment>
+  );
 }

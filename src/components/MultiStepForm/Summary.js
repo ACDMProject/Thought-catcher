@@ -20,32 +20,29 @@ export class Summary extends Component {
 
     return (
       <div className="multiStep">
-        <h3>Confirm Inputs</h3>
-        <div className="form-row">
-          <ul>
-            <li> Emotion Selected: {emotion}</li>
-            <li> Intensity Selected: {intensity}</li>
-            <li> Associated Distortion: {distortion}</li>
-            <li> Expansion on Mood: {moodLog}</li>
-            <li> Rational Response: {response} </li>
-          </ul>
-        </div>
-        <div className="form-row justify-content-between">
-          <button
-            type="button"
-            className="btn btn-outline-secondary"
-            onClick={this.back}
-          >
-            Back
-          </button>
-          <button
-            type="button"
-            className="btn btn-outline-primary"
-            onClick={this.continue}
-          >
-            Submit
-          </button>
-        </div>
+        <h1>Confirm Inputs</h1>
+        <ul>
+          <li> Emotion Selected: {emotion}></li>
+          <li> Intensity Selected: {intensity}></li>
+          <li> Expansion on Mood: {moodLog}></li>
+          <li> Associated Distortion: {distortion}></li>
+          <li> Rational Response: {response} </li>
+        </ul>
+        <br />
+        <button
+          type="button"
+          className="btn btn-outline-secondary"
+          onClick={this.back}
+        >
+          Back
+        </button>
+        <button
+          type="button"
+          className="btn btn-outline-primary"
+          onClick={this.continue}
+        >
+          Submit
+        </button>
       </div>
     );
   }
