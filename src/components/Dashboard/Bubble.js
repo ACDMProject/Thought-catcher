@@ -87,7 +87,7 @@ class Bubble extends Component {
 
 				console.log(start, end);
 
-				//filter data to be in range of last week
+				//filter data to be in range of last month
 
 				var lastMonthData = fullData.filter(function(entry) {
 					return range.contains(moment(entry.eventDate)) === true;
@@ -109,54 +109,21 @@ class Bubble extends Component {
 					"Calm"
 				];
 
-				// try to filter which values are needed from object
-				var filtered = _.map(lastMonthData, function(object) {
-					return _.pick(object, [
-						"Mood",
-						"eventDate",
-						"eventTime",
-						"Mood_intensity"
-					]);
-				});
-				console.log(filtered);
-
-				//NEED TO GROUP DATA BY MOOD VARIOUS ATTEMPTS BELOW
-
-				var grouped = _.groupBy(filtered, function(thought) {
-					return thought.Mood;
-				});
-
-				console.log(grouped);
-				// if (grouped.Mood === "Anxiety") {
-				// 	console.log(grouped);
-				// }
-
-				// var data = [];
-				// data.push;
-
-				//need to update series with right data
-
-				// THIS ONE GROUPS DATA INTO OBJECTS BUT DOESN'T SEEM TO BE EXCTLY RIGHT
-				let groups = Object.create(null);
-
-				filtered.forEach((item) => {
-					if (!groups[item.Mood]) {
-						groups[item.Mood] = [];
-					}
-
-					groups[item.Mood].push({
-						name: item.Mood,
-						data: {
-							x: item.eventDate,
-							y: item.eventTime,
-							z: item.Mood_intensity
-						}
+				const plottable = moods.map((name) => {
+					// Filter the data to just data for this mood name.
+					const matches = lastMonthData.filter((datum) => datum.Mood === name);
+					// Format the data into a list of datetimes for this mood.
+					const data = matches.map((record) => {
+						// The library wants time and intentisty to be non-string
+						const [hour, minute] = record.eventTime.split(":").map(Number);
+						const intensityInt = parseInt(record.Mood_intensity);
+						return [record.eventDate, hour, intensityInt];
 					});
+					// All the records for this mood.
+					return { name, data };
 				});
 
-				let result = Object.entries(groups).map(([k, v]) => ({ [k]: v }));
-
-				console.log(result); /// data is grouped by moods but not in the exact right format!!!
+				console.log(plottable);
 
 				this.setState({
 					series: [
