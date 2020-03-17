@@ -15,7 +15,7 @@ class HeatMap extends React.Component {
 
 		data.reverse();
 
-		var colors = ["#F3B415", "#F27036", "#663F59"];
+		var colors = ["#F27036", "#663F59", "#F3B415"];
 
 		colors.reverse();
 
@@ -66,13 +66,10 @@ class HeatMap extends React.Component {
 				}
 
 				//create last week in dates
-				var end = moment()
-					.subtract(1, "weeks")
-					.startOf("week")
-					.format("YYYY-MM-DD");
+				//create last month in dates
+				var end = moment().format("YYYY-MM-DD");
 				var start = moment()
 					.subtract(1, "weeks")
-					.endOf("week")
 					.format("YYYY-MM-DD");
 				const range = moment.range(start, end);
 
@@ -82,7 +79,7 @@ class HeatMap extends React.Component {
 					return range.contains(moment(entry.eventDate)) === true;
 				});
 
-				//console.log(lastWeekData);
+				console.log(lastWeekData);
 
 				// create array with each date for last 7 days
 				let lastWeek = [
@@ -109,7 +106,7 @@ class HeatMap extends React.Component {
 						.format("YYYY-MM-DD")
 				];
 
-				//console.log(lastWeek);
+				console.log(lastWeek);
 
 				const negativeThoughts = [
 					"All or Nothing",
@@ -138,87 +135,83 @@ class HeatMap extends React.Component {
 				];
 
 				// NEED TO CREATE FUNCTIONS WHICH COUNTS THE NUMBER OF NEGATIVE MOODS, NEGATIVE THOUGHTS
-				// AND POSITIVE MOODS FOR EACH DAY OF THE LAST 7 DAYS. THE ONES BELOW DON'T WORK RIGHT
+				// AND POSITIVE MOODS FOR EACH DAY OF THE LAST 7 DAYS.
 
-				//function to count moods
-				function countMood(mood, lastWeekData, lastWeek) {
-					let count = 0;
-					for (let j = 0; j < lastWeek.length; j++) {
-						for (let i = 0; i < lastWeekData.length; i++) {
-							if (lastWeek[j] === lastWeekData[i].eventDate) {
-								if (lastWeekData[i].Mood === mood) {
-									count++;
-								}
-							}
-						}
-					}
-					return count;
-				}
+				//negative moods
+				const negativeMoodDays = lastWeek.map((day) => {
+					// find data that matches day
+					const negativeMoodData = lastWeekData
+						.filter(({ Timestamp }) => {
+							// filter by days where the Timestamp starts with our day
+							return Timestamp.startsWith(day);
+						})
+						.filter(({ Mood }) => {
+							// filter for days where negativeMoods contains our current Mood
+							return negativeMoods.includes(Mood);
+						});
+					//return our new object with a count of those days
+					return {
+						day: day,
+						count: negativeMoodData.length
+					};
+				});
+				let negativeMoodresult = negativeMoodDays.map((a) => a.count);
+				console.log(negativeMoodresult);
 
-				//console.log(countMood("Anxious", fullData, lastWeek));
+				//negative thoughts
+				const negativeThoughtDays = lastWeek.map((day) => {
+					// find data that matches day
+					const negativeThoughtData = lastWeekData
+						.filter(({ Timestamp }) => {
+							// filter by days where the Timestamp starts with our day
+							return Timestamp.startsWith(day);
+						})
+						.filter(({ Distortion }) => {
+							// filter for days where negativeMoods contains our current Mood
+							return negativeThoughts.includes(Distortion);
+						});
+					//return our new object with a count of those days
+					return {
+						day: day,
+						count: negativeThoughtData.length
+					};
+				});
+				let negativeThoughtresult = negativeThoughtDays.map((a) => a.count);
+				console.log(negativeThoughtresult);
 
-				//function to count thoughts
-				function countThought(thought, lastWeekData, lastWeek) {
-					let count = 0;
-					for (let j = 0; j < lastWeek.length; j++) {
-						for (let i = 0; i < lastWeekData.length; i++) {
-							if (lastWeek[j] === lastWeekData[i].eventDate) {
-								if (lastWeekData[i].Distortion === thought) {
-									count++;
-								}
-							}
-						}
-					}
-					return count;
-				}
-
-				let sumPositiveMoods = [];
-				let sumNegativeMoods = [];
-				let sumNegativeThoughts = [];
-
-				// count positive moods
-				for (let i = 0; i < positiveMoods.length; i++) {
-					let positiveMood = positiveMoods[i];
-
-					sumPositiveMoods.push(
-						countMood(positiveMood, lastWeekData, lastWeek)
-					);
-				}
-				//	console.log(sumPositiveMoods);
-
-				// count negative moods
-				for (let i = 0; i < negativeMoods.length; i++) {
-					let negativeMood = negativeMoods[i];
-
-					sumNegativeMoods.push(
-						countMood(negativeMood, lastWeekData, lastWeek)
-					);
-				}
-				//console.log(sumNegativeMoods);
-
-				// count negative thoughts
-				for (let i = 0; i < negativeThoughts.length; i++) {
-					let negativeThought = negativeThoughts[i];
-
-					sumNegativeThoughts.push(
-						countThought(negativeThought, lastWeekData, lastWeek)
-					);
-				}
-				//console.log(sumNegativeThoughts);
+				//positive moods
+				const positiveMoodDays = lastWeek.map((day) => {
+					// find data that matches day
+					const positiveMoodData = lastWeekData
+						.filter(({ Timestamp }) => {
+							// filter by days where the Timestamp starts with our day
+							return Timestamp.startsWith(day);
+						})
+						.filter(({ Mood }) => {
+							// filter for days where positiveMoods contains our current Mood
+							return positiveMoods.includes(Mood);
+						});
+					//return our new object with a count of those days
+					return {
+						day: day,
+						count: positiveMoodData.length
+					};
+				});
+				let positiveMoodresult = positiveMoodDays.map((a) => a.count);
+				console.log(positiveMoodresult);
 
 				var updatedData = [
-					// DUMMY DATA BUT THIS IS WHAT IT SHOULD LIKE LOOK WITH A COUNT FOR EACH DAY
 					{
 						name: "Positive moods",
-						data: [1, 3, 4, 3, 2, 4, 5]
+						data: positiveMoodresult
 					},
 					{
 						name: "Negative moods",
-						data: [1, 3, 4, 3, 2, 4, 5]
+						data: negativeMoodresult
 					},
 					{
 						name: "Negative Thoughts",
-						data: [1, 3, 4, 3, 2, 4, 5]
+						data: negativeThoughtresult
 					}
 				];
 
