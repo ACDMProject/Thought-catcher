@@ -1,7 +1,7 @@
 import React from "react";
 import Welcome from "./Welcome";
 import HomeCalendar from "./HomeCalendar";
-import Weather from "./Weather";
+import DateTime from "./DateTime";
 import LearnMore from "./LearnMore.js";
 import LetsGo from "./LetsGo.js";
 
@@ -14,7 +14,7 @@ function Home() {
             <Welcome />
           </div>
           <div className="col-md-3">
-            <Weather />
+            <DateTime />
           </div>
         </div>
         <div className="row">
@@ -23,9 +23,6 @@ function Home() {
           </div>
           <div className="col-md-4">
             <LetsGo />
-          </div>
-          <div className="col-md-4">
-            <HomeCalendar />
           </div>
         </div>
       </div>

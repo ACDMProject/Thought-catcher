@@ -24,7 +24,22 @@
 .welcome {
   background-color: #ffba5a;
   border-radius: 5px 20px 5px;
-  height: 70px;
+  height: 15vh;
+  padding: 1rem;
+}
+
+.date-box {
+  background-color: #ffba5a;
+  border-radius: 5px 20px 5px;
+  height: 13vh;
+  width: 20vh;
+  padding: 1rem;
+}
+.time-box {
+  background-color: #ffba5a;
+  border-radius: 5px 20px 5px;
+  height: 12vh;
+  width: 3vh;
   padding: 1rem;
 }
 
