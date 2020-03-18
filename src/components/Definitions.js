@@ -1,11 +1,14 @@
 import React from "react";
+import Header from "./FirstPage/Header";
+import Intro from "./FirstPage/Intro";
+import Explanations from "./FirstPage/Explanations";
 
 function Definitions() {
   return (
-    <div className="Definitions">
-      <h3>
-        This page will contain the defintions of each cognitive distoriton
-      </h3>
+    <div className="container-fluid">
+      <Header />
+      <Intro />
+      <Explanations />
     </div>
   );
 }
