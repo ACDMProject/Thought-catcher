@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import DayPicker from "react-day-picker";
 import "react-day-picker/lib/style.css";
 import DistDiary from "./DistDiary";
+import axios from "axios";
+const Moment = require("moment");
+const MomentRange = require("moment-range");
+const moment = MomentRange.extendMoment(Moment);
+moment().format();
 
 const circleColor = `.DayPicker-Day--highlighted {
   background-color: orange;
   color: white;
 }`;
-
-/// comment for test for merge
 
 const dummyData = (
 	<div className="border border-light">
@@ -32,7 +35,15 @@ export class Diary extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			selectedDay: undefined
+			selectedDay: undefined,
+			data: {
+				date: "",
+				mood: "",
+				intensity: "",
+				notes: "",
+				distortion: "",
+				response: ""
+			}
 		};
 	}
 
@@ -44,6 +55,35 @@ export class Diary extends Component {
 			return;
 		}
 		this.setState({ selectedDay: day });
+	};
+
+	// get data from database and filter for day selected on calendar
+
+	// component life cycle method
+	componentDidMount = () => {
+		axios
+			.get(
+				"https://2xi4uzqzba.execute-api.eu-west-2.amazonaws.com/dev/Thoughts"
+			)
+			.then((response) => {
+				var fullData = response.data.thoughts;
+				//console.log(fullData);
+
+				// add values which extract date and time from timestamp
+				for (let i = 0; i < fullData.length; i++) {
+					let thought = fullData[i];
+					let date = moment.utc(thought.Timestamp).format("YYYY-MM-DD");
+					let time = moment.utc(thought.Timestamp).format("HH:MM");
+					thought.eventDate = date;
+					thought.eventTime = time;
+				}
+				console.log(fullData);
+			})
+
+			.catch(function(error) {
+				// handle error
+				console.error(error);
+			});
 	};
 
 	render() {
@@ -69,7 +109,7 @@ export class Diary extends Component {
 						<DistDiary />
 					</div>
 				</div>
-				<div className="row">{dummyData}</div>
+				<div className="row">{this.state.data}</div>
 			</div>
 		);
 	}
