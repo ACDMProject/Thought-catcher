@@ -1,6 +1,6 @@
 import React from "react";
 import Welcome from "./Welcome";
-import HomeCalendar from "./HomeCalendar";
+// import HomeCalendar from "./HomeCalendar";
 import DateTime from "./DateTime";
 import LearnMore from "./LearnMore.js";
 import LetsGo from "./LetsGo.js";

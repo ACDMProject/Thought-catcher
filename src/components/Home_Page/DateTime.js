@@ -3,9 +3,11 @@ var moment = require("moment");
 moment().format();
 
 function DateTime() {
-  const day = moment().format("dddd");
+  const day = moment()
+    .format("dddd")
+    .toUpperCase();
   const date = moment().format("Do");
-  const month = moment().format("MMMM");
+  const month = moment().format("MMMM YYYY");
 
   const now = moment().format("LT");
 
@@ -19,15 +21,17 @@ function DateTime() {
   setInterval(updateTime, 1000); //calls updatedTime every second
 
   return (
-    <div className="row justify-content-around">
-      <div className="col-6 date-box text-center">
-        <h5 className="mb-0">{day}</h5>
-        <h2 className="mb-0">{date}</h2>
-        <h5>{month}</h5>
+    <div className="row p-0 date-box justify-content-between">
+      <div className="col-7 date-box">
+        <div className="row d-flex pt-3 pl-4 d-flex align-self-center">
+          <h2 className="mb-1">{day}</h2>
+        </div>
+        <div className="row d-flex pt-1 pl-4 d-flex align-self-center">
+          <h5>{date + " " + month}</h5>
+        </div>
       </div>
-      <div className="col-4 time-box text-center ">
-        {" "}
-        <h2>{time}</h2>
+      <div className="col-4 pt-3 pl-0 pr-1 time-box text-center">
+        <h3>{time}</h3>
       </div>
     </div>
   );

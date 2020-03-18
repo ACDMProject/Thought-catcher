@@ -31,16 +31,13 @@
 .date-box {
   background-color: #ffba5a;
   border-radius: 5px 20px 5px;
-  height: 13vh;
-  width: 20vh;
-  padding: 1rem;
+  height: 12vh;
 }
 .time-box {
   background-color: #ffba5a;
   border-radius: 5px 20px 5px;
   height: 12vh;
-  width: 3vh;
-  padding: 1rem;
+  width: 20vh;
 }
 
 /* #catchThought {
