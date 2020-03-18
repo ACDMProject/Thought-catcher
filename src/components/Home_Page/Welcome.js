@@ -1,5 +1,5 @@
 import React from "react";
 function Welcome() {
-  return <h5 id="welcome">Welcome back!</h5>;
+  return <h5 className="welcome">Welcome back!</h5>;
 }
 export default Welcome;

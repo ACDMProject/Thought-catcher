@@ -50,20 +50,22 @@ label {
   display: flex;
   justify-content: space-around;
   list-style: none;
+  font-size: large;
 }
 
 .navbar-brand {
   font-weight: bold;
   margin-left: 40px;
+  font-size: xx-large;
 }
 
 .navbar {
   background-color: #343350;
 }
 
-/* .homeRow {
-  margin-top: 5rem;
-} */
+.home-row {
+  margin: 3em;
+}
 
 .drop {
   width: 50%;
@@ -101,6 +103,17 @@ label {
   height: auto;
 }
 
+.btn-row-next {
+  position: absolute;
+  bottom: 1.5em;
+  right: 1.75em;
+}
+.btn-row-back {
+  position: absolute;
+  bottom: 1.5em;
+  left: 1.75em;
+}
+
 .multiStep {
   background-color: #ced2e8;
   border-radius: 5px 20px 5px;
@@ -108,6 +121,7 @@ label {
   height: 60vh;
   overflow: auto;
   overflow-y: scroll;
+  position: relative;
 }
 
 .btnRow {

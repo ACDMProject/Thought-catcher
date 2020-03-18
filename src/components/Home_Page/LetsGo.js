@@ -1,7 +1,7 @@
 import React from "react";
 function LetsGo() {
   return (
-    <div className="info-box">
+    <div className="info-box shadow-sm">
       <p>
         Thought Catcher is designed to help you identify your negative thinking
         habits and replace them with positive ones!
