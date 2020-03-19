@@ -50,13 +50,13 @@ label {
   display: flex;
   justify-content: space-around;
   list-style: none;
-  font-size: large;
+  font-size: medium;
 }
 
 .navbar-brand {
   font-weight: bold;
   margin-left: 40px;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .navbar {

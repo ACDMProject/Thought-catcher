@@ -10,7 +10,7 @@ function LearnMore() {
         for more detail, you can review each entry you make via the Diary.
       </p>
       <Link to="/diary">
-        <button type="button" className="btn btn-outline-next">
+        <button type="button" className="btn btn-sm btn-outline-next">
           To the diary!
         </button>
       </Link>
