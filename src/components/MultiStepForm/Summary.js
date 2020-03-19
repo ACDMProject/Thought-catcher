@@ -21,10 +21,10 @@ export class Summary extends Component {
     return (
       <div className="multiStep">
         <form>
-          <h4>
+          <h5>
             <u>Confirm:</u>
-          </h4>
-          <ul>
+          </h5>
+          <ul className="list-weight">
             <li>
               <b>Emotion Selected:</b> {emotion}
             </li>
