@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 
-import About from "./components/About";
 import Inputs from "./components/Inputs";
 import Definitions from "./components/Definitions";
 import Home from "./components/Home_Page/Home";
@@ -29,7 +28,6 @@ function App() {
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
           <Route path="/home" exact component={Home} />
-          <Route path="/about" component={About} />
           <Route path="/inputs" component={Inputs} />
           <Route path="/diary" component={Diary} />
           <Route path="/definitions" component={Definitions} />
