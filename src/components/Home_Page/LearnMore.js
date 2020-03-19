@@ -1,16 +1,12 @@
 import React from "react";
 function LearnMore() {
   return (
-    <div className="info-box shadow-sm">
+    <div className="info-box shadow-sm d-flex align-items-end flex-column">
       <p>
-        CBT focuses on how your thoughts affect your moods and teaches you
-        skills for dealing with negative thinking.
+        Click the button below to access your diary. Here you'll be able to look
+        at any thoughts you've logged in the past.
       </p>
-      <p>
-        A good way to kick negative thinking is to catch your thoughts and
-        identify which thinking patterns have been getting you down.
-      </p>
-      <button type="button" className="btn btn-outline-next">
+      <button type="button" className="btn btn-outline-next mb-1">
         Learn more
       </button>
     </div>

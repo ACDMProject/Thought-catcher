@@ -24,8 +24,14 @@
 .welcome {
   background-color: #ffba5a;
   border-radius: 5px 20px 5px;
-  height: 15vh;
-  padding: 1rem;
+  height: 8vh;
+}
+
+.sub-heading {
+  background-color: #ffba5a;
+  border-radius: 5px 20px 5px;
+  height: 10vh;
+  padding: 1em;
 }
 
 .date-box {
@@ -45,12 +51,10 @@
   height: auto;
 } */
 .info-box {
-  margin-top: 40px;
-  padding: 30px;
+  padding: 1.5em;
+  margin: 0em 0em 2em 0em;
   background-color: #ced2e8;
   border-radius: 5px 20px 5px;
-  height: 400px;
-  width: 400px;
 }
 
 .btn-outline-back {

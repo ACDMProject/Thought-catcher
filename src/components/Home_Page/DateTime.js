@@ -21,7 +21,7 @@ function DateTime() {
   setInterval(updateTime, 1000); //calls updatedTime every second
 
   return (
-    <div className="row p-0 date-box justify-content-between">
+    <div className="row p-0 date-box justify-content-between shadow-sm">
       <div className="col-7 date-box">
         <div className="row d-flex pt-3 pl-4 d-flex align-self-center">
           <h2 className="mb-1">{day}</h2>

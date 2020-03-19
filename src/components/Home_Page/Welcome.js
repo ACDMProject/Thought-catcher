@@ -8,14 +8,18 @@ function Welcome() {
 
   let welcomeMessage;
 
-  if (hour <= 11 && timeOfDay === "am") {
+  if (hour <= 11 && timeOfDay === "AM") {
     welcomeMessage = "Good morning";
-  } else if (timeOfDay === "pm" && hour < 6) {
+  } else if (timeOfDay === "PM" && hour < 6) {
     welcomeMessage = "Good afternoon";
   } else {
     welcomeMessage = "Good evening";
   }
 
-  return <h3 className="welcome">{welcomeMessage + ", welcome back!"}</h3>;
+  return (
+    <h3 className="welcome d-flex align-items-center pl-3 mt-2  shadow-sm">
+      {welcomeMessage + " _________!"}
+    </h3>
+  );
 }
 export default Welcome;
