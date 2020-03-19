@@ -15,16 +15,13 @@ function Nav() {
         <Link style={navStyle} to="/home">
           <li>Home</li>
         </Link>
-        <Link style={navStyle} to="/inputs">
-          <li>Inputs</li>
-        </Link>
         <Link style={navStyle} to="/diary">
           <li>Diary</li>
         </Link>
         <Link style={navStyle} to="/definitions">
           <li>Definitions</li>
         </Link>
-        <Link style={navStyle} to="/inputs">
+        <Link style={navStyle} to="/moodscriber">
           <li>Mood Scriber</li>
         </Link>
         <Link style={navStyle} to="/dashboard">
