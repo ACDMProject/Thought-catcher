@@ -8,7 +8,7 @@ import Donut from "../Dashboard/Donut";
 
 function Home() {
   return (
-    <div className="container-fluid hide-scroll">
+    <div className="container-fluid">
       <div className="row pl-4 pr-4 justify-content-between">
         <div className="col-md-4">
           <Welcome />

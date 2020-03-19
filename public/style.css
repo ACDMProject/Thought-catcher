@@ -29,9 +29,6 @@
   font-size: small;
 }
 
-.hide-scroll {
-  overflow: hidden !important;
-}
 .welcome {
   height: 8vh;
 }
