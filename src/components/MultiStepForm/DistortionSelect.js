@@ -41,21 +41,21 @@ class DistortionSelect extends React.Component {
     return (
       <form className="multiStep">
         <div class="form-row">
-          <label htmlFor="cognitiveDropdown">
+          <label className="mb-3" htmlFor="cognitiveDropdown">
             Can you associate this with a congnitive distortion?
           </label>
           <select
-            className="custom-select boxShadows mb-4"
+            className="custom-select mb-4 btn-outline-next"
             id="cognitiveDropdown"
             onChange={handleChange("distortion")}
           >
             {distortionList}
           </select>
         </div>
-        <div class="form-row justify-content-between mt-5">
+        <div class="form-row">
           <button
             type="button"
-            className="btn btn-outline-back"
+            className="btn btn-outline-back btn-row-back"
             onClick={this.back}
           >
             Back
@@ -63,7 +63,7 @@ class DistortionSelect extends React.Component {
 
           <button
             type="button"
-            className="btn btn-outline-next justify-content-end"
+            className="btn btn-outline-next btn-row-next"
             onClick={this.continue}
           >
             Next

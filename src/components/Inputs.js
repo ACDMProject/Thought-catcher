@@ -6,7 +6,7 @@ function Inputs() {
     <div className="container-fluid inputs">
       <div className="row d-flex justify-content-around align-items-center">
         <div className="col-lg-5 ">
-          <h3 className="mt-5 mb-4">Mood Scriber </h3>
+          <h3 className="mt-4 mb-4">Mood Scriber </h3>
           <MasterForm />
         </div>
 

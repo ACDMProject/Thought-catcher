@@ -17,28 +17,28 @@ class MoodTextArea extends React.Component {
     return (
       <form className="multiStep">
         <div className="form-row">
-          <label htmlFor="moodTextArea">
+          <label className="mb-3" htmlFor="moodTextArea">
             Write a bit more about how you're feeling...
           </label>
           <textarea
-            className="form-control boxShadows"
-            id="moodTextArea"
+            className="form-control"
+            id="mood-text-area"
             rows="8"
             value={values.moodLog}
             onChange={handleChange("moodLog")}
           ></textarea>
         </div>
-        <div class="form-row justify-content-between mt-3">
+        <div class="form-row">
           <button
             type="button"
-            className="btn btn-outline-back"
+            className="btn btn-outline-back btn-row-back"
             onClick={this.back}
           >
             Back
           </button>
           <button
             type="button"
-            className="btn btn-outline-next"
+            className="btn btn-outline-next btn-row-next"
             onClick={this.continue}
           >
             Next

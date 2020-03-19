@@ -46,21 +46,23 @@ export class Summary extends Component {
             </li>
           </ul>
           <br />
-          <div className="form-row justify-content-between">
-            <button
-              type="button"
-              className="btn btn-outline-back"
-              onClick={this.back}
-            >
-              Back
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-next "
-              onClick={this.continue}
-            >
-              Submit
-            </button>
+          <div className="form-row">
+            <div class="form-row">
+              <button
+                type="button"
+                className="btn btn-outline-back btn-row-back"
+                onClick={this.back}
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                className="btn btn-outline-next btn-row-next"
+                onClick={this.continue}
+              >
+                Submit
+              </button>
+            </div>
           </div>
         </form>
       </div>
