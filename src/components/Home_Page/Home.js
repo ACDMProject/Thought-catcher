@@ -22,10 +22,12 @@ function Home() {
         <div className="col-md-4">
           <SubHeading />
         </div>
-        <div className="col-md-4 d-flex justify-content-start">
-          <Donut />{" "}
+        <div className="col-md-4 donut-box shadow-sm">
+          <div className="donut-layer d-flex align-items-center">
+            <Donut />
+          </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 p-0">
           <LearnMore />
           <LetsGo />
         </div>

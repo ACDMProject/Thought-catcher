@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 var moment = require("moment");
-moment().format();
 
 function DateTime() {
   const day = moment()
