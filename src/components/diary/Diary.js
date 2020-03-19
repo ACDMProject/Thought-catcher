@@ -36,7 +36,7 @@ export class Diary extends Component {
 		super(props);
 		this.state = {
 			selectedDay: undefined,
-			data: []
+			data: undefined
 		};
 	}
 
@@ -89,7 +89,7 @@ export class Diary extends Component {
 				dataToRender.push(entry);
 			}
 		});
-		console.log(dataToRender);
+		this.setState({ data: dataToRender });
 	};
 
 	// get data from database and filter for day selected on calendar
