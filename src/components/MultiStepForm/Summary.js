@@ -22,7 +22,7 @@ export class Summary extends Component {
       <div className="multiStep">
         <form>
           <h4>
-            <u>Confirm Inputs</u>
+            <u>Confirm:</u>
           </h4>
           <ul>
             <li>

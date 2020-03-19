@@ -5,8 +5,6 @@
 
 #donut {
   max-width: 380px;
-  margin: 35px auto;
-  padding: 0;
 }
 
 #line-column-area {
@@ -21,17 +19,18 @@
   max-height: 40vh;
 }
 
-.welcome {
-  background-color: #ffba5a;
-  border-radius: 5px 20px 5px;
-  height: 8vh;
+.pic-radius {
+  border-radius: 0px 0px 5px 20px;
+}
+.sub-heading {
+  border-radius: 5px 20px 0px 0px;
+  padding: 1.5em;
+  background-color: #ced2e8;
+  font-size: medium;
 }
 
-.sub-heading {
-  background-color: #ffba5a;
-  border-radius: 5px 20px 5px;
-  height: 10vh;
-  padding: 1em;
+.welcome {
+  height: 8vh;
 }
 
 .date-box {
@@ -39,21 +38,29 @@
   border-radius: 5px 20px 5px;
   height: 12vh;
 }
-.time-box {
-  background-color: #ffba5a;
-  border-radius: 5px 20px 5px;
-  height: 12vh;
-  width: 20vh;
+
+overflow-auto {
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-/* #catchThought {
-  max-width: 100%;
-  height: auto;
-} */
 .info-box {
   padding: 1.5em;
   margin: 0em 0em 2em 0em;
   background-color: #ced2e8;
+  border-radius: 5px 20px 5px;
+}
+
+.donut-box {
+  padding: 1.5em;
+  margin: 0em 0em 2em 0em;
+  background-color: #ced2e8;
+  border-radius: 5px 20px 5px;
+}
+
+.donut-layer {
+  padding: 1.5em;
+  background-color: #fffaff;
   border-radius: 5px 20px 5px;
 }
 

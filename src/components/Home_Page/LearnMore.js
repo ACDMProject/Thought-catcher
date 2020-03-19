@@ -1,14 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 function LearnMore() {
   return (
     <div className="info-box shadow-sm d-flex align-items-end flex-column">
-      <p>
-        Click the button below to access your diary. Here you'll be able to look
-        at any thoughts you've logged in the past.
+      <p className="mb-0">
+        Each time you log a thought via the Mood Scriber, we store it in memory.
+        Your dashboard will give you anoverview of your thought patterns, but
+        for more detail, you can review each entry you make via the Diary.
       </p>
-      <button type="button" className="btn btn-outline-next mb-1">
-        Learn more
-      </button>
+      <Link to="/diary">
+        <button type="button" className="btn btn-outline-next">
+          To the diary!
+        </button>
+      </Link>
     </div>
   );
 }

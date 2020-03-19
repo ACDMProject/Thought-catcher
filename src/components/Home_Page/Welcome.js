@@ -1,25 +1,29 @@
 import React from "react";
 var moment = require("moment");
-moment().format();
 
 function Welcome() {
-  const hour = moment().format("hh");
-  const timeOfDay = moment().format("a");
+  const hour = moment().format("H");
+  console.log(hour);
 
-  let welcomeMessage;
-
-  if (hour <= 11 && timeOfDay === "AM") {
-    welcomeMessage = "Good morning";
-  } else if (timeOfDay === "PM" && hour < 6) {
-    welcomeMessage = "Good afternoon";
-  } else {
-    welcomeMessage = "Good evening";
+  let welcomeMessage = "";
+  switch (true) {
+    case hour < 12:
+      welcomeMessage = "Good morning";
+      break;
+    case hour < 18:
+      welcomeMessage = "Good afternoon";
+      break;
+    case hour >= 18:
+      welcomeMessage = "Good evening";
+      break;
+    default:
+      break;
   }
 
   return (
-    <h3 className="welcome d-flex align-items-center pl-3 mt-2  shadow-sm">
+    <h1 className="welcome d-flex align-items-center pl-3 mt-2 pt-3">
       {welcomeMessage + " _________!"}
-    </h3>
+    </h1>
   );
 }
 export default Welcome;

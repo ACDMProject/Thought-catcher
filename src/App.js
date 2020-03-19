@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import Inputs from "./components/Inputs";
+import MoodScriber from "./components/MoodScriber";
 import Definitions from "./components/Definitions";
 import Home from "./components/Home_Page/Home";
 import Diary from "./components/diary/Diary";
@@ -28,7 +28,7 @@ function App() {
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
           <Route path="/home" exact component={Home} />
-          <Route path="/inputs" component={Inputs} />
+          <Route path="/moodscriber" component={MoodScriber} />
           <Route path="/diary" component={Diary} />
           <Route path="/definitions" component={Definitions} />
           <Route path="/dashboard" component={Dashboard} />

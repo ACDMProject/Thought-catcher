@@ -3,12 +3,13 @@ import Welcome from "./Welcome";
 import DateTime from "./DateTime";
 import LearnMore from "./LearnMore.js";
 import LetsGo from "./LetsGo.js";
-import HeatMap from "../Dashboard/HeatMap";
 import SubHeading from "./SubHeading";
+import Donut from "../Dashboard/Donut";
+
 function Home() {
   return (
     <div className="container-fluid">
-      <div className="row pl-4 pr-4 justify-content-between">
+      <div className="row pl-4 pr-4 pt-4 justify-content-between">
         <div className="col-md-4">
           <Welcome />
         </div>
@@ -16,18 +17,19 @@ function Home() {
           <DateTime />
         </div>
       </div>
-      <div className="row pt-3 pl-4 pr-4 mt-4 pb-1 justify-content-between">
-        <div className="col-md-8">
+
+      <div className="row pt-3 pl-4 pr-4 mt-2 pb-1 justify-content-between">
+        <div className="col-md-4">
           <SubHeading />
-          <div className="pt-3">
-            <HeatMap />
+        </div>
+        <div className="col-md-4 donut-box shadow-sm">
+          <div className="donut-layer d-flex align-items-center">
+            <Donut />
           </div>
         </div>
-        <div className="col-md-3">
-          <div className="row">
-            <LearnMore />
-            <LetsGo />
-          </div>
+        <div className="col-md-3 p-0">
+          <LearnMore />
+          <LetsGo />
         </div>
       </div>
     </div>

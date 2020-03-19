@@ -1,9 +1,9 @@
 import React from "react";
 import MasterForm from "./MultiStepForm/MasterForm";
 
-function Inputs() {
+function MoodScriber() {
   return (
-    <div className="container-fluid inputs">
+    <div className="container-fluid moodscriber">
       <div className="row d-flex justify-content-around align-items-center">
         <div className="col-lg-5 ">
           <h3 className="mt-4 mb-4">Mood Scriber </h3>
@@ -23,4 +23,4 @@ function Inputs() {
   );
 }
 
-export default Inputs;
+export default MoodScriber;
