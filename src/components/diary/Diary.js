@@ -122,7 +122,16 @@ export class Diary extends Component {
 
 				{this.state.filteredData.map((item, key) => (
 					<div className="row">
-						<div className="col"> {item.Mood}</div>
+						<strong>Mood: </strong>
+						{item.Mood}
+						<strong>Intensity: </strong>
+						{item.Mood_intensity}
+						<strong>Expansion on mood: </strong>
+						{item.Thoughts}
+						<strong>Distortion: </strong>
+						{item.Distortion}
+						<strong>Response: </strong>
+						{item.Response}
 					</div>
 				))}
 			</div>
