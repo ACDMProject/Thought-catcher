@@ -1,5 +1,16 @@
 import React from "react";
 import "./explanations.css";
+import BlackAndWhite from "../BlackWhite.png";
+import JumpingToConclusions from "../JumpingToConclusions.png";
+import Overgeneralisation from "../Overgeneralisation.png";
+import Shoulds from "../Shoulds.png";
+import MentalFilter from "../MentalFilter.png";
+import Personalisation from "../Personalisation.png";
+import UniversalLabelling from "../UniversalLabelling.png";
+import Catastrophisation from "../Catastrophisation.png";
+import EmotionalReasoning from  "../EmotionalReasoning.png";
+import Dim from "../Dim.png";
+
 
 class Explanations extends React.Component {
   render() {
@@ -9,7 +20,7 @@ class Explanations extends React.Component {
           <h3>1. The 'Black and White' Mindset</h3>
           <h4>
             <div className="img1">
-              <img src="Black-and-White.png" alt="First Mindset" />{" "}
+              <img src={BlackAndWhite} alt="First Mindset" />
             </div>
             You believe in one of the two extremes like failure or success and
             that there is no ‘grey’ areas.
@@ -25,7 +36,7 @@ class Explanations extends React.Component {
 
           <h4>
             <div className="img2">
-              <img src="JumpingToConclusions.png" alt="Second Mindset" />{" "}
+              <img src={JumpingToConclusions} alt="Second Mindset" />{" "}
             </div>
             You make pessimistic interpretations or predictions without any
             supporting evidence. It’s like having a crystal ball that constantly
@@ -45,7 +56,7 @@ class Explanations extends React.Component {
           <h4>
             <div className="img1">
               <img
-                src="Overgeneralisation.png"
+                src={Overgeneralisation}
                 alt="Third Mindset"
                 className="center"
               />
@@ -67,7 +78,7 @@ class Explanations extends React.Component {
           <h4>
             <div className="img2">
               <img
-                src="Catastrophisation.png"
+                src={Catastrophisation}
                 alt="Fourth Mindset"
                 className="center"
               />
@@ -89,7 +100,7 @@ class Explanations extends React.Component {
           <h4>
             <div className="img1">
               <img
-                src="Mental-Filter.png"
+                src={MentalFilter}
                 alt="Fifth Mindset"
                 className="center"
               />
@@ -111,7 +122,7 @@ class Explanations extends React.Component {
           <h4>
             <div className="img2">
               <img
-                src="Diminishing-the-Positives.png"
+                src={Dim}
                 alt="Sixth Mindset"
                 className="center"
               />
@@ -132,7 +143,7 @@ class Explanations extends React.Component {
           <h4>
             <div className="img1">
               <img
-                src="Personalisation.png"
+                src={Personalisation}
                 alt="Seventh Mindset"
                 className="center"
               />
@@ -153,7 +164,7 @@ class Explanations extends React.Component {
 
           <h4>
             <div className="img2">
-              <img src="Shoulds.png" alt="Eighth Mindset" className="center" />
+              <img src={Shoulds} alt="Eighth Mindset" className="center" />
             </div>
             You follow a bunch of rules about how someone ‘should’ behave, when
             you break one of these rules you feel either angry or guilty that
@@ -172,7 +183,7 @@ class Explanations extends React.Component {
           <h4>
             <div className="img1">
               <img
-                src="Emotional-Reasoning.png"
+                src={EmotionalReasoning}
                 alt="Nineth Mindset"
                 className="center"
               />
@@ -190,7 +201,7 @@ class Explanations extends React.Component {
           <h4>
             <div className="img2">
               <img
-                src="Universal-Labelling.png"
+                src={UniversalLabelling}
                 alt="Tenth Mindset"
                 className="center"
               />
