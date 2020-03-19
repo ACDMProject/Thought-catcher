@@ -1,95 +1,23 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
 import ReactApexChart from "react-apexcharts";
-
-/*
-          // this function will generate output in this format
-          // data = [
-              [timestamp, 23],
-              [timestamp, 33],
-              [timestamp, 12]
-              ...
-          ]
-          */
-function generateData(baseval, count, yrange) {
-	var i = 0;
-	var series = [];
-	while (i < count) {
-		var x = Math.floor(Math.random() * (750 - 1 + 1)) + 1;
-		var y =
-			Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
-		var z = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
-
-		series.push([x, y, z]);
-		baseval += 86400000;
-		i++;
-	}
-	return series;
-}
-// data format for buble chart is [
-//     [xaxis,yaxis,size],[xaxis,yaxis,size]
-// ]
-// e.g. we can try to have [date, time of day, mood intensity] with colour representing the type of mood
-// need to update y-axis to be in time format
+import axios from "axios";
+import _ from "lodash";
+var moment = require("moment");
+moment().format();
 
 class Bubble extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			series: [
-				{
-					name: "Anxious",
-					data: [
-						["02-04-2020 GMT", 9, 5],
-						["02-03-2020 GMT", 11, 3],
-						["02-07-2020 GMT", 13, 1],
-						["02-09-2020 GMT", 14, 4],
-						["02-15-2020 GMT", 17, 1],
-						["02-16-2020 GMT", 20, 1],
-						["02-17-2020 GMT", 22, 5]
-					]
-				},
-				{
-					name: "Overwhelmed",
-					data: [
-						["02-04-2020 GMT", 9, 5],
-						["02-08-2020 GMT", 12, 3],
-						["02-18-2020 GMT", 15, 1],
-						["02-19-2020 GMT", 16, 4],
-						["02-20-2020 GMT", 18, 2],
-						["02-27-2020 GMT", 22, 1],
-						["02-28-2020 GMT", 23, 5]
-					]
-				},
-				{
-					name: "Excited",
-					data: [
-						["02-04-2020 GMT", 6, 5],
-						["02-05-2020 GMT", 12, 3],
-						["02-09-2020 GMT", 13, 5],
-						["02-21-2020 GMT", 14, 3],
-						["02-27-2020 GMT", 17, 1],
-						["02-28-2020 GMT", 24, 2]
-					]
-				},
-				{
-					name: "Angry",
-					data: [
-						["02-09-2020 GMT", 10, 5],
-						["02-12-2020 GMT", 12, 3],
-						["02-13-2020 GMT", 15, 5],
-						["02-19-2020 GMT", 15, 3],
-						["02-11-2020 GMT", 21, 1],
-						["02-02-2020 GMT", 24, 2]
-					]
-				}
-			],
+			series: [],
 			options: {
 				chart: {
 					height: 350,
 					type: "bubble"
 				},
+				colors: ["#2E93fA", "#66DA26", "#546E7A", "#E91E63", "#FF9800"],
 				dataLabels: {
 					enabled: false
 				},
@@ -100,16 +28,18 @@ class Bubble extends Component {
 					text: "Monthly moods"
 				},
 				xaxis: {
-					tickAmount: 12,
+					tickAmount: 6,
 					type: "datetime"
 				},
 				yaxis: {
-					max: 24
-					// labels: {
-					// 	formatter: function(val) {
-					// 		return val + ":00";
-					// 	}
-					//}
+					show: true,
+					tickAmount: 8,
+					min: 6,
+					labels: {
+						formatter: function(val) {
+							return val + ":00";
+						}
+					}
 				},
 				tooltip: {
 					x: {
@@ -120,17 +50,101 @@ class Bubble extends Component {
 					y: {
 						formatter: undefined,
 						title: {
-							formatter: (seriesName) => seriesName + " - time"
+							formatter: (seriesName) => seriesName
 						}
 					},
 					z: {
+						show: true,
 						formatter: undefined,
 						title: "Intensity: "
 					}
+				},
+				legend: {
+					showForNullSeries: false,
+					showForZeroSeries: false
 				}
 			}
 		};
 	}
+
+	// component life cycle method
+	componentDidMount = () => {
+		axios
+			.get(
+				"https://2xi4uzqzba.execute-api.eu-west-2.amazonaws.com/dev/Thoughts"
+			)
+			.then((response) => {
+				// handle success
+
+				let fullData = response.data.thoughts;
+				//console.log(fullData);
+				for (let i = 0; i < fullData.length; i++) {
+					let thought = fullData[i];
+					let date = moment.utc(thought.Timestamp).format("YYYY-MM-DD");
+					let time = moment.utc(thought.Timestamp).format("HH:MM");
+					thought.eventDate = date;
+					thought.eventTime = time;
+				}
+
+				//create last month in dates
+				var end = moment().format("YYYY-MM-DD");
+				var start = moment()
+					.subtract(1, "months")
+					.format("YYYY-MM-DD");
+				const range = moment.range(start, end);
+
+				console.log(start, end);
+
+				//filter data to be in range of last month
+
+				var lastMonthData = fullData.filter(function(entry) {
+					return range.contains(moment(entry.eventDate)) === true;
+				});
+
+				console.log(lastMonthData);
+
+				const moods = [
+					"Neutral",
+					"Stressed",
+					"Anxious",
+					"Sad",
+					"Angry",
+					"Overwhelmed",
+					"Exhausted",
+					"Happy",
+					"Excited",
+					"Inspired",
+					"Calm"
+				];
+
+				const plottable = moods.map((name) => {
+					// Filter the data to just data for this mood name.
+					const matches = lastMonthData.filter((datum) => datum.Mood === name);
+					// Format the data into a list of datetimes for this mood.
+					const data = matches.map((record) => {
+						// The library wants time and intentisty to be non-string
+						// The library wants things in MM-DD-YYYY format.
+						const [year, month, day] = record.eventDate.split("-");
+						const [hour, minute] = record.eventTime.split(":").map(Number);
+						const intensityInt = parseInt(record.Mood_intensity);
+						return [`${month}-${day}-${year}`, hour, intensityInt];
+					});
+					// All the records for this mood.
+					return { name, data };
+				});
+
+				console.log(plottable);
+
+				this.setState({
+					series: plottable
+				});
+			})
+
+			.catch(function(error) {
+				// handle error
+				console.error(error);
+			});
+	};
 
 	render() {
 		return (

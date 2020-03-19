@@ -15,33 +15,35 @@ class DistortionTextArea extends React.Component {
     const { values, handleChange } = this.props;
 
     return (
-      <form>
-        <div className="form-group mt-3">
-          <label htmlFor="distortionTextArea">
+      <form className="multiStep">
+        <div className="form-row">
+          <label className="mb-3" htmlFor="distortionTextArea">
             Write a rational response to yourself:
           </label>
           <textarea
-            className="form-control"
-            id="distortionTextArea"
-            rows="4"
+            className="form-control shadow-sm"
+            id="dist-text-area"
+            rows="8"
             value={values.response}
             onChange={handleChange("response")}
           ></textarea>
         </div>
-        <button
-          type="button"
-          className="btn btn-outline-secondary"
-          onClick={this.back}
-        >
-          Back
-        </button>
-        <button
-          type="button"
-          className="btn btn-outline-primary"
-          onClick={this.continue}
-        >
-          Next
-        </button>
+        <div class="form-row">
+          <button
+            type="button"
+            className="btn btn-outline-back btn-row-back"
+            onClick={this.back}
+          >
+            Back
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-next btn-row-next"
+            onClick={this.continue}
+          >
+            Next
+          </button>
+        </div>
       </form>
     );
   }

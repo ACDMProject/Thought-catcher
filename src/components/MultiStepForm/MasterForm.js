@@ -36,7 +36,6 @@ class MasterForm extends Component {
 
   handleRadioChange = e => {
     this.setState({ selectedIntensity: e.target.value });
-    console.log(this.state.selectedIntensity);
   };
 
   //handle change within the fields

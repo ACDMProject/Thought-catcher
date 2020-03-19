@@ -4,16 +4,16 @@ import Login from "./Login";
 function LandingPage() {
   return (
     <div className="container-fluid">
-      <div className="row">
-        <div className="col-lg-7 align-self-center">
+      <div className="row align-items-center">
+        <div className="col-lg-7">
           <img
             src="/images/tspCatchThoughtCrop.png"
             alt="catchThought"
             id="catchThought"
-            className="img-fluid"
+            className="img-fluid rounded mx-auto d-block"
           />
         </div>
-        <div className="col-lg-4 align-self-center login-col">
+        <div className="col-lg-4 login-col">
           <Login />
         </div>
       </div>

@@ -14,11 +14,36 @@
   margin: 35px auto;
 }
 
-#welcome {
+#mood-text-area {
+  max-height: 40vh;
+}
+#dist-text-area {
+  max-height: 40vh;
+}
+
+.welcome {
   background-color: #ffba5a;
   border-radius: 5px 20px 5px;
-  height: 70px;
-  padding: 1rem;
+  height: 8vh;
+}
+
+.sub-heading {
+  background-color: #ffba5a;
+  border-radius: 5px 20px 5px;
+  height: 10vh;
+  padding: 1em;
+}
+
+.date-box {
+  background-color: #ffba5a;
+  border-radius: 5px 20px 5px;
+  height: 12vh;
+}
+.time-box {
+  background-color: #ffba5a;
+  border-radius: 5px 20px 5px;
+  height: 12vh;
+  width: 20vh;
 }
 
 overflow-auto {
@@ -30,37 +55,64 @@ overflow-auto {
   height: auto;
 } */
 .info-box {
-  margin-top: 40px;
-  padding: 30px;
-  border: 3px solid;
-  border-color: #ced2e8;
-  background-color: #f7f9ff;
+  padding: 1.5em;
+  margin: 0em 0em 2em 0em;
+  background-color: #ced2e8;
   border-radius: 5px 20px 5px;
-  height: 400px;
-  width: 400px;
 }
 
-.btn-default {
-  background-color: #6c2988;
-  border: 2px solid #ffba5a;
-  color: #ffba5a;
+.btn-outline-back {
+  background-color: #ced2e8;
+  border: 1px solid #74788c;
+  color: #74788c;
 }
 
-.btn-default:active,
-.btn-default:focus {
-  background-color: #581774 !important;
-  border: 2px solid #ffba5a !important;
+.btn-outline-back:active,
+.btn-outline-back:focus,
+.btn-outline-back:hover {
+  background-color: #74788c;
+  border: #74788c 1px solid;
+  color: white;
   box-shadow: none;
-
-  color: #ffba5a !important;
 }
 
-.btn-default:hover {
-  background-color: #581774 !important;
-  border: 2px solid #ffba5a !important;
+.btn-outline-next {
+  background-color: #ced2e8;
+  border: 1px solid #261943;
+  color: #261943;
+}
+
+.btn-outline-next:active,
+.btn-outline-next:focus,
+.btn-outline-next:hover {
+  background-color: #261943;
+  border: #261943 1px solid;
+  color: white;
   box-shadow: none;
-  color: #ffba5a !important;
 }
+/* .btn-outline-select,
+.btn-outline-select:focus {
+  background-color: #ced2e8 !important;
+  border: 1px solid #261943 !important;
+  color: #261943 !important;
+}
+
+.btn-outline-select:active,
+.btn-outline-select:hover {
+  background: #261943 !important;
+  border: 1px solid #261943 !important;
+  color: white !important;
+} */
+
+/* select option:checked {
+  background: #261943 !important;
+  border: 1px solid #261943 !important;
+  color: white !important;
+} */
+
+/* .btn-outline-select:checked {
+  color: #261943 !important;
+} */
 
 .btn-simple {
   background-color: #faf9f9;
