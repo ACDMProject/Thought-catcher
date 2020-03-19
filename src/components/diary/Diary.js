@@ -36,28 +36,9 @@ export class Diary extends Component {
 		super(props);
 		this.state = {
 			selectedDay: undefined,
-			data: {
-				date: "",
-				mood: "",
-				intensity: "",
-				notes: "",
-				distortion: "",
-				response: ""
-			}
+			data: []
 		};
 	}
-
-	//modified so that when you click the selected date again, selectDay gets set to undefined
-	//if statement in return method that toggles what's displayed
-	handleDayClick = (day, { selected }) => {
-		if (selected) {
-			this.setState({ selectedDay: undefined });
-			return;
-		}
-		this.setState({ selectedDay: day });
-	};
-
-	// get data from database and filter for day selected on calendar
 
 	// component life cycle method
 	componentDidMount = () => {
@@ -77,7 +58,10 @@ export class Diary extends Component {
 					thought.eventDate = date;
 					thought.eventTime = time;
 				}
-				console.log(fullData);
+
+				this.setState({
+					data: fullData
+				});
 			})
 
 			.catch(function(error) {
@@ -85,6 +69,30 @@ export class Diary extends Component {
 				console.error(error);
 			});
 	};
+
+	//modified so that when you click the selected date again, selectDay gets set to undefined
+	//if statement in return method that toggles what's displayed
+	handleDayClick = (day, { selected }) => {
+		if (selected) {
+			this.setState({ selectedDay: undefined });
+			return;
+		}
+		this.setState({ selectedDay: day });
+
+		///filter data to match the date selected
+		let data = this.state.data;
+
+		var dataToRender = [];
+		data.forEach(function(entry) {
+			let dayFormatted = moment(day).format("YYYY-MM-DD");
+			if (entry.eventDate === dayFormatted) {
+				dataToRender.push(entry);
+			}
+		});
+		console.log(dataToRender);
+	};
+
+	// get data from database and filter for day selected on calendar
 
 	render() {
 		return (
@@ -109,7 +117,7 @@ export class Diary extends Component {
 						<DistDiary />
 					</div>
 				</div>
-				<div className="row">{this.state.data}</div>
+				<div className="row">{dummyData}</div>
 			</div>
 		);
 	}
