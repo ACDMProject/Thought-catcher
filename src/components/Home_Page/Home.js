@@ -7,8 +7,8 @@ import HeatMap from "../Dashboard/HeatMap";
 import SubHeading from "./SubHeading";
 function Home() {
   return (
-    <div className="container-fluid LandingPage">
-      <div className="row pt-3 pl-4 pr-4 justify-content-between">
+    <div className="container-fluid">
+      <div className="row pl-4 pr-4 justify-content-between">
         <div className="col-md-4">
           <Welcome />
         </div>
