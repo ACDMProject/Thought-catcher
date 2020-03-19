@@ -36,7 +36,8 @@ export class Diary extends Component {
 		super(props);
 		this.state = {
 			selectedDay: undefined,
-			data: undefined
+			data: [],
+			filteredData: []
 		};
 	}
 
@@ -60,7 +61,8 @@ export class Diary extends Component {
 				}
 
 				this.setState({
-					data: fullData
+					data: fullData,
+					filteredData: fullData
 				});
 			})
 
@@ -89,7 +91,7 @@ export class Diary extends Component {
 				dataToRender.push(entry);
 			}
 		});
-		this.setState({ data: dataToRender });
+		this.setState({ filteredData: dataToRender });
 	};
 
 	// get data from database and filter for day selected on calendar
@@ -117,7 +119,12 @@ export class Diary extends Component {
 						<DistDiary />
 					</div>
 				</div>
-				<div className="row">{dummyData}</div>
+
+				{this.state.filteredData.map((item, key) => (
+					<div className="row">
+						<div className="col"> {item.Mood}</div>
+					</div>
+				))}
 			</div>
 		);
 	}
