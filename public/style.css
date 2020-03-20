@@ -26,7 +26,7 @@
   border-radius: 5px 20px 0px 0px;
   padding: 1.5em;
   background-color: #ced2e8;
-  font-size: medium;
+  font-size: small;
 }
 
 .welcome {
@@ -45,10 +45,11 @@ overflow-auto {
 }
 
 .info-box {
-  padding: 1.5em;
-  margin: 0em 0em 2em 0em;
+  padding: 1.25em;
+  margin: 0em 0em 1em 0em;
   background-color: #ced2e8;
   border-radius: 5px 20px 5px;
+  font-size: small;
 }
 
 .donut-box {
@@ -93,29 +94,6 @@ overflow-auto {
   color: white;
   box-shadow: none;
 }
-/* .btn-outline-select,
-.btn-outline-select:focus {
-  background-color: #ced2e8 !important;
-  border: 1px solid #261943 !important;
-  color: #261943 !important;
-}
-
-.btn-outline-select:active,
-.btn-outline-select:hover {
-  background: #261943 !important;
-  border: 1px solid #261943 !important;
-  color: white !important;
-} */
-
-/* select option:checked {
-  background: #261943 !important;
-  border: 1px solid #261943 !important;
-  color: white !important;
-} */
-
-/* .btn-outline-select:checked {
-  color: #261943 !important;
-} */
 
 .btn-simple {
   background-color: #faf9f9;

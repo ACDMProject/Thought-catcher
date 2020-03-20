@@ -21,9 +21,9 @@ function Welcome() {
   }
 
   return (
-    <h1 className="welcome d-flex align-items-center pl-3 mt-2 pt-3">
+    <h3 className="welcome d-flex align-items-center pl-1">
       {welcomeMessage + " _________!"}
-    </h1>
+    </h3>
   );
 }
 export default Welcome;

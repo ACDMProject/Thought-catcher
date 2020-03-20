@@ -15,22 +15,22 @@ export class Summary extends Component {
   render() {
     //now we can use values & handleChange instead of this.props
     const {
-      values: { emotion, intensity, moodLog, distortion, response }
+      values: { emotion, selectedIntensity, moodLog, distortion, response }
     } = this.props;
 
     return (
       <div className="multiStep">
         <form>
-          <h4>
+          <h5>
             <u>Confirm:</u>
-          </h4>
-          <ul>
+          </h5>
+          <ul className="list-weight">
             <li>
               <b>Emotion Selected:</b> {emotion}
             </li>
             <li>
               {" "}
-              <b>Intensity Selected:</b> {intensity}
+              <b>Intensity Selected:</b> {selectedIntensity}
             </li>
             <li>
               {" "}

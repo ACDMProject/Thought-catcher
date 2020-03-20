@@ -40,3 +40,13 @@ h5 {
   margin: auto;
   padding: 50px;
 }
+
+.img1, .img2 {
+  max-width: 50%;
+  height: auto;
+  width: auto;
+  float: left;
+  margin-right:15px;
+}
+
+
