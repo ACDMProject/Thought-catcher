@@ -145,3 +145,56 @@ label {
 #PopoverFocus10 {
   margin: 1rem;
 }
+
+/* COGNITIVE DISRUPTIONS title - position and colour change */
+.title {
+  grid-area: header;
+  text-align: center;
+
+  font-family: "Titillium Web", sans-serif;
+
+  letter-spacing: 2px;
+  margin: 30px 0px 80px;
+  margin-bottom: 40px;
+}
+
+.wrapper-style-1 {
+  vertical-align: baseline;
+  max-width: 750px;
+  margin: auto;
+  padding: 20px;
+}
+
+.wrapper-style-2 {
+  vertical-align: baseline;
+  max-width: 750px;
+  margin: auto;
+  padding: 20px;
+}
+
+.img1,
+.img2 {
+  max-width: 25%;
+  height: auto;
+  width: auto;
+  float: left;
+  margin-right: 15px;
+}
+
+/* LOGO - position of the picture */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+/* SLOGAN - position and colour change */
+.slogan {
+  text-align: center;
+  color: #6c757d;
+  margin-top: -10px;
+  font-size: calc(0.1vw + 0.9rem);
+}
+
+
