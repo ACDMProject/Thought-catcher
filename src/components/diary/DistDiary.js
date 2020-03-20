@@ -8,6 +8,11 @@ class DistDiary extends Component {
 			<div className="row">
 				<div className="col justify-content-around">
 					<FirstFive />
+				
+				</div>
+				<div className="col justify-content-around">
+					
+					<SecondFive />
 				</div>
 			</div>
 		);
