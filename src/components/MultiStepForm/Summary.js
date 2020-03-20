@@ -15,7 +15,7 @@ export class Summary extends Component {
   render() {
     //now we can use values & handleChange instead of this.props
     const {
-      values: { emotion, intensity, moodLog, distortion, response }
+      values: { emotion, selectedIntensity, moodLog, distortion, response }
     } = this.props;
 
     return (
@@ -30,7 +30,7 @@ export class Summary extends Component {
             </li>
             <li>
               {" "}
-              <b>Intensity Selected:</b> {intensity}
+              <b>Intensity Selected:</b> {selectedIntensity}
             </li>
             <li>
               {" "}
