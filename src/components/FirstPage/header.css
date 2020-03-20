@@ -19,15 +19,15 @@
 /* SLOGAN - position and colour change */
 .slogan {
   text-align: center;
-  color: hsl(30 100% 70% / 0.6);
+  color:  #6c757d;
   margin-top: -10px;
   font-size: calc(0.1vw + 0.9rem);
 }
 
 /* LOG IN BUTTON: btn-sign-in*/
 
-.btn-sign-in {
-  display: inline-block;
+ .btn-sign-in {
+ /* display: inline-block;
   border-radius: 4px;
   background-color: #f4511e;
   border: none;
@@ -35,11 +35,29 @@
   text-align: center;
   font-size: 28px;
   padding: 20px;
-  width: 200px;
+  width: 100px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+*/
+margin: 1rem;    
+color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
 
 .btn-sign-in span {
   cursor: pointer;
@@ -79,19 +97,21 @@
 /* SIGN UP BUTTON: btn-sign-in*/
 
 .btn-sign-up {
+  color: #fff;
+  margin: 1rem;
+  background-color: #6c757d;
+  border-color: #6c757d;
   display: inline-block;
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #ffffff;
+  font-weight: 400;
   text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
 
 .btn-sign-up span {
   cursor: pointer;

@@ -6,7 +6,6 @@ import Explanations from "./FirstPage/Explanations";
 function Definitions() {
   return (
     <div className="container-fluid">
-      <Header />
       <Intro />
       <Explanations />
     </div>
