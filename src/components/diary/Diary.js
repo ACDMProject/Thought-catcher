@@ -119,27 +119,32 @@ export class Diary extends Component {
 						<DistDiary />
 					</div>
 				</div>
-
-				{this.state.filteredData.map((item, key) => (
-					<p>
-						<br />
-						<strong>Mood: </strong>
-						{item.Mood}
-						<br />
-						<strong>Intensity: </strong>
-						{item.Mood_intensity}
-						<br />
-						<strong>Expansion on mood: </strong>
-						{item.Thoughts}
-						<br />
-						<strong>Distortion: </strong>
-						{item.Distortion}
-						<br />
-						<strong>Response: </strong>
-						{item.Response}
-						<br />
-					</p>
-				))}
+				{this.state.selectedDay ? (
+					<div>
+						{this.state.filteredData.map((item, key) => (
+							<p>
+								<br />
+								<strong>Mood: </strong>
+								{item.Mood}
+								<br />
+								<strong>Intensity: </strong>
+								{item.Mood_intensity}
+								<br />
+								<strong>Expansion on mood: </strong>
+								{item.Thoughts}
+								<br />
+								<strong>Distortion: </strong>
+								{item.Distortion}
+								<br />
+								<strong>Response: </strong>
+								{item.Response}
+								<br />
+							</p>
+						))}
+					</div>
+				) : (
+					<p> </p>
+				)}
 			</div>
 		);
 	}
