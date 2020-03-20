@@ -16,26 +16,42 @@ const FirstFive = (props) => {
 				</Button>{" "}
 				<UncontrolledPopover
 					trigger="focus"
-					placement="bottom"
+					placement="left"
 					target="PopoverFocus1"
 				>
 					<PopoverHeader>All or nothing thinking</PopoverHeader>
-					<PopoverBody>Text on all or nothing</PopoverBody>
+					<PopoverBody>You believe in one of the two extremes,  failure or success, and
+           				 that there is no ‘grey’ areas.</PopoverBody>
 				</UncontrolledPopover>
 			</div>
+
+
 			<div>
 				<Button id="PopoverFocus2" type="button">
-					All or nothing
+				Jumping to Conclusions
 				</Button>{" "}
 				<UncontrolledPopover
 					trigger="focus"
 					placement="bottom"
 					target="PopoverFocus2"
 				>
-					<PopoverHeader>All or nothing thinking</PopoverHeader>
-					<PopoverBody>Text on something else</PopoverBody>
+					<PopoverHeader>Jumping to Conclusions</PopoverHeader>
+					<PopoverBody>You make pessimistic interpretations or predictions without any
+            			supporting evidence.</PopoverBody>
 				</UncontrolledPopover>
 			</div>
+
+
+
+
+
+
+
+
+
+
+
+			
 		</React.Fragment>
 	);
 };
