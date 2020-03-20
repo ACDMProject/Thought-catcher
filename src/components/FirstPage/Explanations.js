@@ -18,7 +18,7 @@ class Explanations extends React.Component {
       <div className="container">
 
         <section id="one" className="wrapper-style-1">
-          <h3>1. 'Black and White' Mind</h3>
+          <h3>1. All or Nothing</h3>
           <h5>
             <div className="img1">
               <img src={BlackAndWhite} alt="First Mindset" className= "center"/>
@@ -81,7 +81,7 @@ class Explanations extends React.Component {
 
 
         <section id="four" className="wrapper-style-2">
-          <h3>4. Catastrophisation</h3>
+          <h3>4. Catastrophising</h3>
 
           <h5>
             <div className="img2">
@@ -106,7 +106,7 @@ class Explanations extends React.Component {
 
 
         <section id="five" className="wrapper-style-2">
-          <h3>5. Mental Filter</h3>
+          <h3>5. Mental Filtering</h3>
 
           <h5>
             <div className="img1">
@@ -131,7 +131,7 @@ class Explanations extends React.Component {
 
 
         <section id="six" className="wrapper-style-2">
-          <h3>6. Diminishing the Positives</h3>
+          <h3>6. Disqualifying the Positive</h3>
 
           <h5>
             <div className="img2">
@@ -141,7 +141,7 @@ class Explanations extends React.Component {
                 className="center"
               />
             </div>
-            You disqualify all the positives, coming up with several reasons why
+            You remove all the positives, coming up with several reasons why
             the positive events in your life do not count.
           </h5>
 
@@ -179,13 +179,13 @@ class Explanations extends React.Component {
 
 
         <section id="eight" className="wrapper-style-2">
-          <h3>8. Shoulds</h3>
+          <h3>8. Shoulds and Oughts</h3>
 
           <h5>
             <div className="img2">
               <img src={Shoulds} alt="Eighth Mindset" className="center" />
             </div>
-            You follow a bunch of rules about how someone ‘should’ behave, when
+            You follow a bunch of rules about how someone ‘should’ and ‘ought’ to behave, when
             you break one of these rules you feel either angry or guilty that
             you’ve failed.
           </h5>
@@ -221,7 +221,7 @@ class Explanations extends React.Component {
 
 
         <section id="ten" className="wrapper-style-2">
-          <h3>10. Universal Labelling</h3>
+          <h3>10. Labelling</h3>
 
           <h5>
             <div className="img2">
