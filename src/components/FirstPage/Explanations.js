@@ -1,5 +1,4 @@
 import React from "react";
-import "./explanations.css";
 import BlackAndWhite from "./BlackWhite.png";
 import JumpingToConclusions from "./JumpingToConclusions.png";
 import Overgeneralisation from "./Overgeneralisation.png";

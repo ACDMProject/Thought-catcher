@@ -1,5 +1,4 @@
 import React from "react";
-import "./intro.css";
 
 class Intro extends React.Component {
   render() {
