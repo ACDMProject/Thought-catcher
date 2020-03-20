@@ -98,7 +98,7 @@ export class Diary extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="container-fluid">
 				<div className="row">
 					<div className="col-4 Diary">
 						<h3>This is the Diary Page</h3>
@@ -121,18 +121,24 @@ export class Diary extends Component {
 				</div>
 
 				{this.state.filteredData.map((item, key) => (
-					<div className="row">
+					<p>
+						<br />
 						<strong>Mood: </strong>
 						{item.Mood}
+						<br />
 						<strong>Intensity: </strong>
 						{item.Mood_intensity}
+						<br />
 						<strong>Expansion on mood: </strong>
 						{item.Thoughts}
+						<br />
 						<strong>Distortion: </strong>
 						{item.Distortion}
+						<br />
 						<strong>Response: </strong>
 						{item.Response}
-					</div>
+						<br />
+					</p>
 				))}
 			</div>
 		);
