@@ -23,7 +23,7 @@ const FirstFive = (props) => {
 				>
 					<PopoverHeader>All or nothing thinking</PopoverHeader>
 					
-					<PopoverBody>You believe in one of the two extremes,  failure or success, and
+					<PopoverBody>Believing in one of  two extremes,  failure or success, and
            				 that there is no ‘grey’ areas.
 					</PopoverBody>
 				
@@ -44,7 +44,7 @@ const FirstFive = (props) => {
 				>
 					<PopoverHeader>Jumping to Conclusions</PopoverHeader>
 					
-					<PopoverBody>You make pessimistic interpretations or predictions without any
+					<PopoverBody>Making pessimistic interpretations or predictions without any
             			supporting evidence.
 					</PopoverBody>
 				
@@ -65,8 +65,8 @@ const FirstFive = (props) => {
 				>
 					<PopoverHeader>Overgeneralisation</PopoverHeader>
 					
-					<PopoverBody> You come to a general conclusion based on a specific single
-          			  incident. This creates an overview that you may choose to follow.
+					<PopoverBody> Coming to a general conclusion based on a specific single
+          			  incident. 
 					</PopoverBody>
 				
 				</UncontrolledPopover>
@@ -84,8 +84,7 @@ const FirstFive = (props) => {
 				>
 					<PopoverHeader>Catastrophising</PopoverHeader>
 					
-					<PopoverBody> You view an unfavourable outcome to an event and then decide that if
-            		this outcome does happen, the results will be a disaster.
+					<PopoverBody> Viewing an unfavourable outcome to an event as a complete disaster.
 					</PopoverBody>
 				
 				</UncontrolledPopover>
@@ -103,7 +102,7 @@ const FirstFive = (props) => {
 				>
 					<PopoverHeader>Mental Filtering</PopoverHeader>
 				
-					<PopoverBody> You take the negative details and magnify them while also filtering
+					<PopoverBody> Taking negative details and magnifying them while also filtering
 					out all positives of a situation.
 					</PopoverBody>
 				
