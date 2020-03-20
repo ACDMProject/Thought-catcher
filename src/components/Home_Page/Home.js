@@ -1,30 +1,35 @@
 import React from "react";
 import Welcome from "./Welcome";
-import HomeCalendar from "./HomeCalendar";
-import Weather from "./Weather";
+import DateTime from "./DateTime";
 import LearnMore from "./LearnMore.js";
 import LetsGo from "./LetsGo.js";
+import SubHeading from "./SubHeading";
+import Donut from "../Dashboard/Donut";
 
 function Home() {
   return (
-    <div className="container-fluid LandingPage">
-      <div className="row homeRow">
-        <div className="col-4">
+    <div className="container-fluid">
+      <div className="row pl-4 pr-4 justify-content-between">
+        <div className="col-md-4">
           <Welcome />
         </div>
-        <div className="col-3">
-          <Weather />
+        <div className="col-md-3">
+          <DateTime />
         </div>
       </div>
-      <div className="row">
-        <div className="col-4">
+
+      <div className="row pt-3 pl-4 pr-4 pb-1 justify-content-between">
+        <div className="col-md-4">
+          <SubHeading />
+        </div>
+        <div className="col-md-4 donut-box shadow-sm">
+          <div className="donut-layer d-flex align-items-center">
+            <Donut />
+          </div>
+        </div>
+        <div className="col-md-3 p-0">
           <LearnMore />
-        </div>
-        <div className="col-4">
           <LetsGo />
-        </div>
-        <div className="col-4">
-          <HomeCalendar />
         </div>
       </div>
     </div>

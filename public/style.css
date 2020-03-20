@@ -5,8 +5,6 @@
 
 #donut {
   max-width: 380px;
-  margin: 35px auto;
-  padding: 0;
 }
 
 #line-column-area {
@@ -14,26 +12,57 @@
   margin: 35px auto;
 }
 
-#welcome {
-  background-color: #ffba5a;
-  border-radius: 5px 20px 5px;
-  height: 70px;
-  padding: 1rem;
+#mood-text-area {
+  max-height: 40vh;
+}
+#dist-text-area {
+  max-height: 40vh;
 }
 
-/* #catchThought {
-  max-width: 100%;
-  height: auto;
-} */
-.info-box {
-  margin-top: 40px;
-  padding: 30px;
-  border: 3px solid;
-  border-color: #ced2e8;
-  background-color: #f7f9ff;
+.pic-radius {
+  border-radius: 0px 0px 5px 20px;
+}
+.sub-heading {
+  border-radius: 5px 20px 0px 0px;
+  padding: 1.5em;
+  background-color: #ced2e8;
+  font-size: small;
+}
+
+.welcome {
+  height: 8vh;
+}
+
+.date-box {
+  background-color: #ffba5a;
   border-radius: 5px 20px 5px;
-  height: 400px;
-  width: 400px;
+  height: 12vh;
+}
+
+overflow-auto {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.info-box {
+  padding: 1.25em;
+  margin: 0em 0em 1em 0em;
+  background-color: #ced2e8;
+  border-radius: 5px 20px 5px;
+  font-size: small;
+}
+
+.donut-box {
+  padding: 1.5em;
+  margin: 0em 0em 2em 0em;
+  background-color: #ced2e8;
+  border-radius: 5px 20px 5px;
+}
+
+.donut-layer {
+  padding: 1.5em;
+  background-color: #fffaff;
+  border-radius: 5px 20px 5px;
 }
 
 .btn-outline-back {
