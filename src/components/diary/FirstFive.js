@@ -1,123 +1,28 @@
 import React, { Component } from "react";
+import { useState } from "react";
+import {
+	Button,
+	UncontrolledPopover,
+	PopoverHeader,
+	PopoverBody
+} from "reactstrap";
 
-export class FirstFive extends Component {
-  render() {
-    //   function toggleRight = () => {
-    //     example-popover.popover()({
-    //         container: 'this is the popout'
-    //     })
-    //   }
-
-    return (
-      <div className="row">
-        <div className="col-3">
-          <button
-            type="button"
-            class="btn btn-secondary m-4"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="right"
-            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          >
-            Popover on right
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary m-4"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="right"
-            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          >
-            Popover on right
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary m-4"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="right"
-            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          >
-            Popover on right
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary m-4"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="right"
-            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          >
-            Popover on right
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary m-4"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="right"
-            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          >
-            Popover on right
-          </button>
-        </div>
-
-        <div className="col-3">
-          <button
-            type="button"
-            class="btn btn-secondary m-4"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="right"
-            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          >
-            Popover on right
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary m-4"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="right"
-            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          >
-            Popover on right
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary m-4"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="right"
-            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          >
-            Popover on right
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary m-4"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="right"
-            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          >
-            Popover on right
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary m-4"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="right"
-            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          >
-            Popover on right
-          </button>
-        </div>
-      </div>
-    );
-  }
-}
+const FirstFive = (props) => {
+	return (
+		<div>
+			<Button id="PopoverFocus" type="button">
+				All or nothing
+			</Button>{" "}
+			<UncontrolledPopover
+				trigger="focus"
+				placement="bottom"
+				target="PopoverFocus"
+			>
+				<PopoverHeader>All or nothing thinking</PopoverHeader>
+				<PopoverBody>Text on all or nothing</PopoverBody>
+			</UncontrolledPopover>
+		</div>
+	);
+};
 
 export default FirstFive;
