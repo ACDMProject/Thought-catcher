@@ -20,7 +20,7 @@ const FirstFive = (props) => {
 					target="PopoverFocus1"
 				>
 					<PopoverHeader>All or nothing thinking</PopoverHeader>
-					<PopoverBody>Text on all or nothing</PopoverBody>
+					<PopoverBody>Text on distrotion</PopoverBody>
 				</UncontrolledPopover>
 			</div>
 			<div>
