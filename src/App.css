@@ -132,3 +132,16 @@ label {
 .btnRow {
   height: 100vh;
 }
+
+#PopoverFocus1,
+#PopoverFocus2,
+#PopoverFocus3,
+#PopoverFocus4,
+#PopoverFocus5,
+#PopoverFocus6,
+#PopoverFocus7,
+#PopoverFocus8,
+#PopoverFocus9,
+#PopoverFocus10 {
+  margin: 1rem;
+}
