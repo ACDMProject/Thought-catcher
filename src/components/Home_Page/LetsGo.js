@@ -14,7 +14,7 @@ function LetsGo() {
         there's never any pressure to memorise them!
       </p>
       <Link to="/definitions">
-        <button type="button" className="btn btn-outline-next">
+        <button type="button" className="btn btn-sm btn-outline-next">
           Take a look!
         </button>
       </Link>

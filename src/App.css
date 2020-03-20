@@ -21,7 +21,7 @@ li {
 }
 
 label {
-  font-size: large;
+  font-size: medium;
 }
 
 .custom-select:focus {
@@ -39,7 +39,7 @@ label {
   padding: 2rem;
   margin-right: auto;
   margin-left: auto;
-  height: 85vh;
+  height: 80vh;
   overflow: auto;
   overflow-y: scroll;
 }
@@ -50,13 +50,13 @@ label {
   display: flex;
   justify-content: space-around;
   list-style: none;
-  font-size: large;
+  font-size: medium;
 }
 
 .navbar-brand {
   font-weight: bold;
   margin-left: 40px;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .navbar {
@@ -118,10 +118,15 @@ label {
   background-color: #ced2e8;
   border-radius: 5px 20px 5px;
   padding: 2em;
-  height: 60vh;
+  height: 55vh;
   overflow: auto;
   overflow-y: scroll;
   position: relative;
+}
+
+.list-weight {
+  font-size: small;
+  padding-left: 0;
 }
 
 .btnRow {

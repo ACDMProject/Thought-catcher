@@ -6,7 +6,7 @@ function MoodScriber() {
     <div className="container-fluid moodscriber">
       <div className="row d-flex justify-content-around align-items-center">
         <div className="col-lg-5 ">
-          <h3 className="mt-4 mb-4">Mood Scriber </h3>
+          <h4 className="mt-1 mb-4">Mood Scriber </h4>
           <MasterForm />
         </div>
 
