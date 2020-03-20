@@ -1,5 +1,7 @@
 import React from "react";
 import "./header.css";
+import Logo from "../Logo.png";
+
 
 class Header extends React.Component {
   render() {
@@ -9,7 +11,7 @@ class Header extends React.Component {
           <div className="content">
             <div className="image">
               <img
-                src="Final_Logo-background.png"
+                src={Logo}
                 alt="Logo"
                 className="img-fluid mx-auto d-block"
               />
