@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Register from "./Register";
 import uuidv4 from "uuid/v4";
 import axios from "axios";
@@ -15,41 +16,30 @@ export default function Login() {
   function handleSubmit(e) {
     e.preventDefault();
   }
-  function submit(e){
-		e.preventDefault();
-			this.props.submit();
-	};
 
+  const history = useHistory();
+  function login() {
+    /// connect to backend
+    axios
+      .get("https://2xi4uzqzba.execute-api.eu-west-2.amazonaws.com/dev/Users")
+      // handle success
+      .then(response => {
+        const users = response.data.users;
+        console.log(users);
 
-  submit = () => {
-		//variable to be sent
-		const loginToAdd = {
-			userId: uuidv4(),
-			email: this.state.email,
-			password: this.password
-		};
-		/// connect to backend
-		axios
-			.post(
-				"https://2xi4uzqzba.execute-api.eu-west-2.amazonaws.com/dev/Thoughts",
-				loginToAdd
-			)
-			// handle success
-			.then((response) => {
-				// Get current list
-				const newUser = this.state.users;
-				// Add the new user to the array by pushing
-				newUser.push(loginToAdd);
-				// Update state
-				this.setState({
-					thoughts: newUser
-				});
-			})
-			// handle error
-			.catch((error) => {
-				console.error(error);
-			});
-	};
+        for (let i = 0; i < users.length; i++) {
+          let user = users[i];
+          if (user.email === email && user.password === password) {
+            history.push("/home");
+          }
+        }
+      })
+      // handle error
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
   return !newUser ? (
     <form onSubmit={handleSubmit}>
       <p className="headers text-sm-center text-lg-left ">
@@ -97,8 +87,7 @@ export default function Login() {
           type="submit"
           className="btn btnLogin btn-lg btn-block btn-shape "
           disabled={!validateForm()}
-          onClick={this.submit}
-          onClick={e => alert= "clicked"}
+          onClick={login}
         >
           Login
         </button>
