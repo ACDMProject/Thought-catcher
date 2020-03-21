@@ -43,7 +43,7 @@ export default function Register() {
     /// connect to backend
     axios
       .post(
-        "https://2xi4uzqzba.execute-api.eu-west-2.amazonaws.com/dev/Thoughts",
+        "https://2xi4uzqzba.execute-api.eu-west-2.amazonaws.com/dev/Users",
         loginToAdd
       )
       // handle success
