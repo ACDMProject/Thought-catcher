@@ -144,6 +144,8 @@ label {
 #PopoverFocus9,
 #PopoverFocus10 {
   margin: 1rem;
+  background-color:#ced2e8;
+  color: #343350;
 }
 
 /* COGNITIVE DISRUPTIONS title - position and colour change */
