@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import Chart from "react-apexcharts";
+import React from "react";
 import ReactApexChart from "react-apexcharts";
 import axios from "axios";
 const Moment = require("moment");
