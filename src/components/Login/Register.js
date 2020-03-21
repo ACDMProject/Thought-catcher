@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Login from "./Login";
+import uuidv4 from "uuid/v4";
+import axios from "axios";
 
 export default function Register() {
   const [firstName, setFirstName] = useState("");
@@ -29,6 +31,37 @@ export default function Register() {
     );
   }
 
+  function submit () {
+    //variable to be sent
+    const loginToAdd = {
+      userId: uuidv4(),
+      email: this.state.setEmail,
+      password: this.state.setPassword,
+      firstName: this.statesetFirstName,
+      lastName: this.state.setLastName,
+    };
+    /// connect to backend
+    axios
+      .post(
+        "https://2xi4uzqzba.execute-api.eu-west-2.amazonaws.com/dev/Thoughts",
+        loginToAdd
+      )
+      // handle success
+      .then((response) => {
+        // Get current list
+        const newUser = this.state.users;
+        // Add the new user to the array by pushing
+        newUser.push(loginToAdd);
+        // Update state
+        this.setState({
+          users: newUser
+        });
+      })
+      // handle error
+      .catch((error) => {
+        console.error(error);
+      });
+  }
   function signUp() {
     return (
       <React.Fragment>
@@ -100,7 +133,7 @@ export default function Register() {
             <button
               type="button"
               className="btn btn-md btn-simple p-0 m-1"
-              onClick={e => setNewUser(true)}
+              onClick={e => submit}
             >
               Login
             </button>
