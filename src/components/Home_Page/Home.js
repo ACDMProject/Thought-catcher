@@ -23,7 +23,7 @@ function Home() {
           <SubHeading />
         </div>
         <div className="col-md-4 donut-box shadow-sm">
-          <div className="donut-layer d-flex align-items-center">
+          <div className="donut-layer">
             <Donut />
           </div>
         </div>
