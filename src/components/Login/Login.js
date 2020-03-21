@@ -5,13 +5,13 @@ import uuidv4 from "uuid/v4";
 import axios from "axios";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [newUser, setNewUser] = useState(null);
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [newUser, setNewUser] = useState(null);
 
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
+	function validateForm() {
+		return email.length > 0 && password.length > 0;
+	}
 
   function handleSubmit(e) {
     e.preventDefault();
