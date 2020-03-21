@@ -23,22 +23,14 @@ export default function Register() {
     e.preventDefault();
   }
 
-  function login() {
-    return (
-      <React.Fragment>
-        <Login />
-      </React.Fragment>
-    );
-  }
-
-  function submit () {
+  function submit() {
     //variable to be sent
     const loginToAdd = {
       userId: uuidv4(),
       email: this.state.setEmail,
       password: this.state.setPassword,
       firstName: this.statesetFirstName,
-      lastName: this.state.setLastName,
+      lastName: this.state.setLastName
     };
     /// connect to backend
     axios
@@ -47,7 +39,7 @@ export default function Register() {
         loginToAdd
       )
       // handle success
-      .then((response) => {
+      .then(response => {
         // Get current list
         const newUser = this.state.users;
         // Add the new user to the array by pushing
@@ -58,7 +50,7 @@ export default function Register() {
         });
       })
       // handle error
-      .catch((error) => {
+      .catch(error => {
         console.error(error);
       });
   }
@@ -144,6 +136,6 @@ export default function Register() {
   }
 
   return (
-    <React.Fragment>{newUser === null ? signUp() : login()}</React.Fragment>
+    <React.Fragment>{newUser === null ? signUp() : <Login />}</React.Fragment>
   );
 }
