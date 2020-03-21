@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./FirstPage/Header";
 import Intro from "./FirstPage/Intro";
 import Explanations from "./FirstPage/Explanations";
 
