@@ -38,15 +38,6 @@ export default function Login() {
 						alert("login succsseful!");
 					}
 				}
-
-				// // Get current list
-				// const newUser = this.state.users;
-				// // Add the new user to the array by pushing
-				// newUser.push(loginToAdd);
-				// // Update state
-				// this.setState({
-				// 	thoughts: newUser
-				// });
 			})
 			// handle error
 			.catch((error) => {
