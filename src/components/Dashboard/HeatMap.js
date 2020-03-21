@@ -127,7 +127,7 @@ class HeatMap extends React.Component {
 					"Mental filtering",
 					"Disqualifying the Positive",
 					"Personalisation",
-					"Shoulds and Oughts",
+					"Shoulds & Oughts",
 					"Emotional Reasoning",
 					"Labelling",
 					"Unsure"
