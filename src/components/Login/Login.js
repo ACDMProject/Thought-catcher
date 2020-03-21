@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Register from "./Register";
 import uuidv4 from "uuid/v4";
 import axios from "axios";
@@ -16,14 +17,8 @@ export default function Login() {
 		e.preventDefault();
 	}
 
+	const history = useHistory();
 	function login() {
-		//variable to be sent
-		// const login = {
-		// 	userId: uuidv4(),
-		// 	email: email,
-		// 	password: password
-		// };
-
 		/// connect to backend
 		axios
 			.get("https://2xi4uzqzba.execute-api.eu-west-2.amazonaws.com/dev/Users")
@@ -35,7 +30,7 @@ export default function Login() {
 				for (let i = 0; i < users.length; i++) {
 					let user = users[i];
 					if (user.email === email && user.password === password) {
-						alert("login succsseful!");
+						history.push("/home");
 					}
 				}
 			})
