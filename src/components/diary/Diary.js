@@ -13,23 +13,23 @@ const circleColor = `.DayPicker-Day--highlighted {
   color: white;
 }`;
 
-const dummyData = (
-	<div className="border border-light">
-		<h6>
-			<u>DD/MM/YY</u>
-			<br /> <strong>Mood:</strong> Happy
-			<br />
-			<strong>Intensity:</strong> 3
-			<br />
-			<strong>Expansion on Mood:</strong> No problems today, feeling very
-			positive.
-			<br />
-			<strong>Distortion: </strong>None
-			<br />
-			<strong>Response: </strong> N/A
-		</h6>
-	</div>
-);
+// const dummyData = (
+// 	<div className="border border-light">
+// 		<h6>
+// 			<u>DD/MM/YY</u>
+// 			<br /> <strong>Mood:</strong> Happy
+// 			<br />
+// 			<strong>Intensity:</strong> 3
+// 			<br />
+// 			<strong>Expansion on Mood:</strong> No problems today, feeling very
+// 			positive.
+// 			<br />
+// 			<strong>Distortion: </strong>None
+// 			<br />
+// 			<strong>Response: </strong> N/A
+// 		</h6>
+// 	</div>
+// );
 
 export class Diary extends Component {
 	constructor(props) {

@@ -1,5 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+![Thought Catcher Logo](/src/components/Logo.png)
 # Thought Catcher
 
 This was a group project to create an application that could be used in conjunction with Cognitive Behaviour Therapies, to track thought patterns and moods.
