@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo.png";
 
 function Nav() {
   const navStyle = {
@@ -8,8 +9,7 @@ function Nav() {
 
   return (
     <nav className="navbar p-2">
-      <a className="navbar-brand" href="/" style={navStyle}>
-        Thought Catcher
+      <a><img src={Logo} width="180"  class="d-inline-block align-top" alt="logo Thought Catcher"/>
       </a>
       <ul className="nav-links my-auto">
         <Link style={navStyle} to="/home">
