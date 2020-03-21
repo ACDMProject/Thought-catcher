@@ -48,6 +48,7 @@ class MasterForm extends Component {
 			Response: this.state.response,
 			Mood_intensity: this.state.selectedIntensity
 		};
+
 		/// connect to backend
 		axios
 			.post(
@@ -69,6 +70,12 @@ class MasterForm extends Component {
 			.catch((error) => {
 				console.error(error);
 			});
+
+		// go to success page
+		const { step } = this.state;
+		this.setState({
+			step: step + 1
+		});
 	};
 
 	handleRadioChange = (e) => {
