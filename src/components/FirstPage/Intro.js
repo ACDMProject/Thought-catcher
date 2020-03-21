@@ -1,17 +1,15 @@
 import React from "react";
-import "./intro.css";
 
 class Intro extends React.Component {
   render() {
     return (
       <div class="container">
-        <h1 class="title">Cognitive Distortions</h1>
+        <h3 class="title">Cognitive Distortions</h3>
 
-        <h2>Have you ever convinced yourself of something that isn’t true?</h2>
-        <h2>
-          Ever made excuses about yourself that stopped your growth and
+        <h5>Have you ever convinced yourself of something that isn’t true?
+        Ever made excuses about yourself that stopped your growth and
           development in life?
-        </h2>
+        </h5>
 
         <p>
           {" "}
@@ -21,7 +19,7 @@ class Intro extends React.Component {
           used to strengthen negative thinking.
         </p>
 
-        <h2>Let Thought Catcher help you embark in this new journey.</h2>
+        <h5>Let Thought Catcher help you embark in this new journey.</h5>
 
         <p>There are ten cognitive distortions that you should understand:</p>
       </div>

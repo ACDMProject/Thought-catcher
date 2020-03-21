@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import Chart from "react-apexcharts";
 import ReactApexChart from "react-apexcharts";
 import axios from "axios";
-import _ from "lodash";
+
 var moment = require("moment");
 moment().format();
 
@@ -125,7 +124,7 @@ class Bubble extends Component {
 						// The library wants time and intentisty to be non-string
 						// The library wants things in MM-DD-YYYY format.
 						const [year, month, day] = record.eventDate.split("-");
-						const [hour, minute] = record.eventTime.split(":").map(Number);
+						const [hour] = record.eventTime.split(":").map(Number);
 						const intensityInt = parseInt(record.Mood_intensity);
 						return [`${month}-${day}-${year}`, hour, intensityInt];
 					});
