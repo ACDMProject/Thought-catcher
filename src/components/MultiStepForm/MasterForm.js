@@ -41,7 +41,6 @@ class MasterForm extends Component {
 		//variable to be sent
 		const thoughtToLog = {
 			uuid: uuidv4(),
-			Timestamp: "",
 			Mood: this.state.emotion,
 			Thoughts: this.state.moodLog,
 			Distortion: this.state.distortion,
