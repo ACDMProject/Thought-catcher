@@ -15,13 +15,7 @@ export default function Login() {
   function handleSubmit(e) {
     e.preventDefault();
   }
-  function submit(e){
-		e.preventDefault();
-			this.props.submit();
-	};
-
-
-  submit = () => {
+  function submit() {
 		//variable to be sent
 		const loginToAdd = {
 			userId: uuidv4(),
@@ -97,8 +91,7 @@ export default function Login() {
           type="submit"
           className="btn btnLogin btn-lg btn-block btn-shape "
           disabled={!validateForm()}
-          onClick={this.submit}
-          onClick={e => alert= "clicked"}
+          onClick={this.submit,(e => alert= "clicked")}
         >
           Login
         </button>
