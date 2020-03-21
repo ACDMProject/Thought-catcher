@@ -1,6 +1,5 @@
 import React from "react";
-import "./header.css";
-import Logo from "../Logo.png";
+
 
 
 class Header extends React.Component {
@@ -9,13 +8,7 @@ class Header extends React.Component {
       <div>
         <header id="header">
           <div className="content">
-            <div className="image">
-              <img
-                src={Logo}
-                alt="Logo"
-                className="img-fluid mx-auto d-block"
-              />
-            </div>
+           
             <h6 className="slogan">
               a place to write and understand your thoughs...
             </h6>
@@ -23,7 +16,7 @@ class Header extends React.Component {
               <ul className="actions">
                 <div className="btn-group">
                   <button type="button" className="btn-sign-in">
-                    <span>Log in</span>
+                    <div>Log in</div>
                   </button>
                   <button type="button" className="btn-sign-up">
                     <span>Sign up</span>
