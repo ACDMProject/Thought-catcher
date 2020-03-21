@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Login from "./Login";
 import uuidv4 from "uuid/v4";
 import axios from "axios";
@@ -31,6 +32,7 @@ export default function Register() {
 		);
 	}
 
+	const history = useHistory();
 	function submit() {
 		//variable to be sent
 		const loginToAdd = {
@@ -48,14 +50,7 @@ export default function Register() {
 			)
 			// handle success
 			.then((response) => {
-				// Get current list
-				const newUser = this.state.users;
-				// Add the new user to the array by pushing
-				newUser.push(loginToAdd);
-				// Update state
-				this.setState({
-					users: newUser
-				});
+				history.push("/home");
 			})
 			// handle error
 			.catch((error) => {
