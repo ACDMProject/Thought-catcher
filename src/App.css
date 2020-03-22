@@ -5,9 +5,18 @@
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 100%;
-  padding-top: 1rem;
+  padding-top: 0em;
   text-align: left;
   background-color: #343350;
+}
+
+.col-container {
+  display: table; /* Make the container element behave like a table */
+  width: 100%; /* Set full-width to expand the whole page */
+}
+
+.col {
+  display: table-cell; /* Make elements inside the container behave like table cells */
 }
 
 body {
@@ -40,16 +49,23 @@ label {
   margin-right: auto;
   margin-left: auto;
   height: 80vh;
-  overflow: auto;
-  overflow-y: scroll;
+}
+
+.container-diary {
+  background-color: #faf9f9;
+  border-radius: 53px 53px 0px 0px;
+  padding: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  height: 80vh;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .nav-links {
-  font-size: 1rem;
-  width: 50%;
+  width: 45%;
   display: flex;
-  justify-content: space-around;
-  list-style: none;
+  justify-content: space-between;
   font-size: medium;
 }
 
@@ -144,7 +160,7 @@ label {
 #PopoverFocus9,
 #PopoverFocus10 {
   margin: 1rem;
-  background-color:#ced2e8;
+  background-color: #ced2e8;
   color: #343350;
 }
 
@@ -199,4 +215,21 @@ label {
   font-size: calc(0.1vw + 0.9rem);
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-image: none;
+}
 
+.carousel-control-next-icon:after {
+  content: ">";
+  font-size: 55px;
+  color: purple;
+}
+
+.carousel-control-prev-icon:after {
+  content: "<";
+  font-size: 55px;
+  color: purple;
+}

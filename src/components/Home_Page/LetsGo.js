@@ -10,8 +10,7 @@ function LetsGo() {
         bit more about each one.
       </p>
       <p className="mb-0">
-        They'll always be there for you to refer back to any time you need, so
-        there's never any pressure to memorise them!
+        They'll always be there for you to refer back to any time you need.
       </p>
       <Link to="/definitions">
         <button type="button" className="btn btn-sm btn-outline-next">

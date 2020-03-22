@@ -8,10 +8,16 @@ function Nav() {
   };
 
   return (
-    <nav className="navbar p-2">
-      <img src={Logo} width="180"  class="d-inline-block align-top" alt="logo Thought Catcher"/>
-      
-      <ul className="nav-links my-auto">
+    <nav className="navbar p-2 ml-5">
+      <a class="navbar-brand" href="/">
+        <img
+          src={Logo}
+          width="150"
+          class="d-inline-block align-top"
+          alt="logo Thought Catcher"
+        />
+      </a>
+      <ul className="nav-links my-auto mr-5">
         <Link style={navStyle} to="/home">
           <li>Home</li>
         </Link>

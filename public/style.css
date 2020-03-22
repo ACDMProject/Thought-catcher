@@ -39,7 +39,7 @@
   height: 12vh;
 }
 
-overflow-auto {
+.overflow {
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -53,16 +53,16 @@ overflow-auto {
 }
 
 .donut-box {
-  padding: 1.5em;
-  margin: 0em 0em 2em 0em;
+  padding: 1em;
+  margin: 0em 0em 1em 0em;
   background-color: #ced2e8;
   border-radius: 5px 20px 5px;
 }
 
 .donut-layer {
-  padding: 1.5em;
   background-color: #fffaff;
   border-radius: 5px 20px 5px;
+  margin: 0em 0em 1em 0em;
 }
 
 .btn-outline-back {
