@@ -13,7 +13,7 @@ function LandingPage() {
             className="img-fluid rounded mx-auto d-block"
           />
         </div>
-        <div className="col-lg-4 login-col">
+        <div className="col-lg-4">
           <Login />
         </div>
       </div>

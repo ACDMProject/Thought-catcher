@@ -5,13 +5,13 @@ import uuidv4 from "uuid/v4";
 import axios from "axios";
 
 export default function Login() {
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
-	const [newUser, setNewUser] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [newUser, setNewUser] = useState(null);
 
-	function validateForm() {
-		return email.length > 0 && password.length > 0;
-	}
+  function validateForm() {
+    return email.length > 0 && password.length > 0;
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -41,7 +41,7 @@ export default function Login() {
   }
 
   return !newUser ? (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} classname="ml-3 mr-3">
       <p className="headers text-sm-center text-lg-left ">
         Let's catch some thoughts!
       </p>

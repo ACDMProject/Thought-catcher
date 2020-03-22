@@ -5,24 +5,24 @@ import uuidv4 from "uuid/v4";
 import axios from "axios";
 
 export default function Register() {
-	const [firstName, setFirstName] = useState("");
-	const [lastName, setLastName] = useState("");
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
-	const [newUser, setNewUser] = useState(null);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [newUser, setNewUser] = useState(null);
 
-	function validateForm() {
-		return (
-			firstName.length > 0 &&
-			lastName.length > 0 &&
-			email.length > 0 &&
-			password.length > 0
-		);
-	}
+  function validateForm() {
+    return (
+      firstName.length > 0 &&
+      lastName.length > 0 &&
+      email.length > 0 &&
+      password.length > 0
+    );
+  }
 
-	function handleSubmit(e) {
-		e.preventDefault();
-	}
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
 
   const history = useHistory();
   function submit() {
