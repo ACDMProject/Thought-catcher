@@ -93,9 +93,17 @@ label {
 }
 
 .loginForm {
-  padding: 1rem;
+  font-size: small;
+  line-height: 1em;
 }
 
+label {
+  font-size: small;
+}
+
+input::placeholder {
+  font-size: small;
+}
 .btnLogin {
   border-radius: 81% 19% 73% 27% / 69% 30% 70% 31%;
   width: 70%;
