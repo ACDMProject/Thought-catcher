@@ -17,9 +17,9 @@ const carousel = {
 function Dashboard() {
   return (
     <div className="container-fluid">
-      <div className="row ">
+      <div className="row m-1">
         <div className="col">
-          <h3>Welcome to your Dashboard!</h3>
+          <h4>Welcome to your Dashboard!</h4>
         </div>
       </div>
       <div class="row mb-3 justify-content-around">

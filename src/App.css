@@ -51,9 +51,15 @@ label {
   height: 80vh;
 }
 
-.scrolling {
-  overflow: auto;
-  overflow-y: scroll;
+.container-diary {
+  background-color: #faf9f9;
+  border-radius: 53px 53px 0px 0px;
+  padding: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  height: 80vh;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .nav-links {

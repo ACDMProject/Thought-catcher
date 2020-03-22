@@ -8,29 +8,6 @@ const MomentRange = require("moment-range");
 const moment = MomentRange.extendMoment(Moment);
 moment().format();
 
-const circleColor = `.DayPicker-Day--highlighted {
-  background-color: orange;
-  color: white;
-}`;
-
-// const dummyData = (
-// 	<div className="border border-light">
-// 		<h6>
-// 			<u>DD/MM/YY</u>
-// 			<br /> <strong>Mood:</strong> Happy
-// 			<br />
-// 			<strong>Intensity:</strong> 3
-// 			<br />
-// 			<strong>Expansion on Mood:</strong> No problems today, feeling very
-// 			positive.
-// 			<br />
-// 			<strong>Distortion: </strong>None
-// 			<br />
-// 			<strong>Response: </strong> N/A
-// 		</h6>
-// 	</div>
-// );
-
 export class Diary extends Component {
   constructor(props) {
     super(props);
@@ -98,52 +75,64 @@ export class Diary extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-4 Diary">
-            <style>{circleColor} </style>
+      <div className="container-fluid container-diary">
+        <div className="row m-3 justify-content-around ">
+          <div className="col-4">
+            <h4>Check out your diary!</h4>
 
-            <DayPicker
-              onDayClick={this.handleDayClick}
-              selectedDays={this.state.selectedDay}
-              className="mt-3"
-            />
+            <div className="donut-box">
+              <DayPicker
+                onDayClick={this.handleDayClick}
+                selectedDays={this.state.selectedDay}
+                className="mt-3 mb-0 donut-layer"
+              />
+              {this.state.selectedDay ? (
+                <React.Fragment>
+                  <p className="mb-0 ml-3 mt-2">
+                    You're viewing {this.state.selectedDay.toLocaleDateString()}
+                  </p>
+                  <p className="mb-0 ml-3">
+                    <b>Scroll down to view your entries.</b>
+                  </p>
+                </React.Fragment>
+              ) : (
+                <p className="mb-0 mt-2 ml-3">
+                  <b>Please select a day.</b>
+                </p>
+              )}
+            </div>
+
             {this.state.selectedDay ? (
-              <p>You clicked {this.state.selectedDay.toLocaleDateString()}</p>
+              <div>
+                {this.state.filteredData.map((item, key) => (
+                  <p>
+                    <br />
+                    <strong>Mood: </strong>
+                    {item.Mood}
+                    <br />
+                    <strong>Intensity: </strong>
+                    {item.Mood_intensity}
+                    <br />
+                    <strong>Expansion on mood: </strong>
+                    {item.Thoughts}
+                    <br />
+                    <strong>Distortion: </strong>
+                    {item.Distortion}
+                    <br />
+                    <strong>Response: </strong>
+                    {item.Response}
+                    <br />
+                  </p>
+                ))}
+              </div>
             ) : (
-              <p>Please select a day.</p>
+              <p> </p>
             )}
           </div>
-          <div className="col-8">
+          <div className="col-6">
             <DistDiary />
           </div>
         </div>
-        {this.state.selectedDay ? (
-          <div>
-            {this.state.filteredData.map((item, key) => (
-              <p>
-                <br />
-                <strong>Mood: </strong>
-                {item.Mood}
-                <br />
-                <strong>Intensity: </strong>
-                {item.Mood_intensity}
-                <br />
-                <strong>Expansion on mood: </strong>
-                {item.Thoughts}
-                <br />
-                <strong>Distortion: </strong>
-                {item.Distortion}
-                <br />
-                <strong>Response: </strong>
-                {item.Response}
-                <br />
-              </p>
-            ))}
-          </div>
-        ) : (
-          <p> </p>
-        )}
       </div>
     );
   }

@@ -39,7 +39,7 @@
   height: 12vh;
 }
 
-overflow-auto {
+.overflow {
   overflow-x: hidden;
   overflow-y: scroll;
 }
