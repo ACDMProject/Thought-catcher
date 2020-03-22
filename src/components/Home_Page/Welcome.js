@@ -8,22 +8,20 @@ function Welcome() {
   let welcomeMessage = "";
   switch (true) {
     case hour < 12:
-      welcomeMessage = "Good morning";
+      welcomeMessage = "Good morning!";
       break;
     case hour < 18:
-      welcomeMessage = "Good afternoon";
+      welcomeMessage = "Good afternoon!";
       break;
     case hour >= 18:
-      welcomeMessage = "Good evening";
+      welcomeMessage = "Good evening!";
       break;
     default:
       break;
   }
 
   return (
-    <h3 className="welcome d-flex align-items-center pl-1">
-      {welcomeMessage + " _________!"}
-    </h3>
+    <h3 className="welcome d-flex align-items-center">{welcomeMessage}</h3>
   );
 }
 export default Welcome;

@@ -32,122 +32,121 @@ const circleColor = `.DayPicker-Day--highlighted {
 // );
 
 export class Diary extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			selectedDay: undefined,
-			data: [],
-			filteredData: []
-		};
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedDay: undefined,
+      data: [],
+      filteredData: []
+    };
+  }
 
-	// component life cycle method
-	componentDidMount = () => {
-		axios
-			.get(
-				"https://2xi4uzqzba.execute-api.eu-west-2.amazonaws.com/dev/Thoughts"
-			)
-			.then((response) => {
-				var fullData = response.data.thoughts;
-				//console.log(fullData);
+  // component life cycle method
+  componentDidMount = () => {
+    axios
+      .get(
+        "https://2xi4uzqzba.execute-api.eu-west-2.amazonaws.com/dev/Thoughts"
+      )
+      .then(response => {
+        var fullData = response.data.thoughts;
+        //console.log(fullData);
 
-				// add values which extract date and time from timestamp
-				for (let i = 0; i < fullData.length; i++) {
-					let thought = fullData[i];
-					let date = moment.utc(thought.Timestamp).format("YYYY-MM-DD");
-					let time = moment.utc(thought.Timestamp).format("HH:MM");
-					thought.eventDate = date;
-					thought.eventTime = time;
-				}
+        // add values which extract date and time from timestamp
+        for (let i = 0; i < fullData.length; i++) {
+          let thought = fullData[i];
+          let date = moment.utc(thought.Timestamp).format("YYYY-MM-DD");
+          let time = moment.utc(thought.Timestamp).format("HH:MM");
+          thought.eventDate = date;
+          thought.eventTime = time;
+        }
 
-				this.setState({
-					data: fullData,
-					filteredData: fullData
-				});
-			})
+        this.setState({
+          data: fullData,
+          filteredData: fullData
+        });
+      })
 
-			.catch(function(error) {
-				// handle error
-				console.error(error);
-			});
-	};
+      .catch(function(error) {
+        // handle error
+        console.error(error);
+      });
+  };
 
-	//modified so that when you click the selected date again, selectDay gets set to undefined
-	//if statement in return method that toggles what's displayed
-	handleDayClick = (day, { selected }) => {
-		if (selected) {
-			this.setState({ selectedDay: undefined });
-			return;
-		}
-		this.setState({ selectedDay: day });
+  //modified so that when you click the selected date again, selectDay gets set to undefined
+  //if statement in return method that toggles what's displayed
+  handleDayClick = (day, { selected }) => {
+    if (selected) {
+      this.setState({ selectedDay: undefined });
+      return;
+    }
+    this.setState({ selectedDay: day });
 
-		///filter data to match the date selected
-		let data = this.state.data;
+    ///filter data to match the date selected
+    let data = this.state.data;
 
-		var dataToRender = [];
-		data.forEach(function(entry) {
-			let dayFormatted = moment(day).format("YYYY-MM-DD");
-			if (entry.eventDate === dayFormatted) {
-				dataToRender.push(entry);
-			}
-		});
-		this.setState({ filteredData: dataToRender });
-	};
+    var dataToRender = [];
+    data.forEach(function(entry) {
+      let dayFormatted = moment(day).format("YYYY-MM-DD");
+      if (entry.eventDate === dayFormatted) {
+        dataToRender.push(entry);
+      }
+    });
+    this.setState({ filteredData: dataToRender });
+  };
 
-	// get data from database and filter for day selected on calendar
+  // get data from database and filter for day selected on calendar
 
-	render() {
-		return (
-			<div className="container-fluid">
-				<div className="row">
-					<div className="col-4 Diary">
-						<h3>This is the Diary Page</h3>
-						<style>{circleColor} </style>
+  render() {
+    return (
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-4 Diary">
+            <style>{circleColor} </style>
 
-						<DayPicker
-							onDayClick={this.handleDayClick}
-							selectedDays={this.state.selectedDay}
-							className="mt-3"
-						/>
-						{this.state.selectedDay ? (
-							<p>You clicked {this.state.selectedDay.toLocaleDateString()}</p>
-						) : (
-							<p>Please select a day.</p>
-						)}
-					</div>
-					<div className="col-8">
-						<DistDiary />
-					</div>
-				</div>
-				{this.state.selectedDay ? (
-					<div>
-						{this.state.filteredData.map((item, key) => (
-							<p>
-								<br />
-								<strong>Mood: </strong>
-								{item.Mood}
-								<br />
-								<strong>Intensity: </strong>
-								{item.Mood_intensity}
-								<br />
-								<strong>Expansion on mood: </strong>
-								{item.Thoughts}
-								<br />
-								<strong>Distortion: </strong>
-								{item.Distortion}
-								<br />
-								<strong>Response: </strong>
-								{item.Response}
-								<br />
-							</p>
-						))}
-					</div>
-				) : (
-					<p> </p>
-				)}
-			</div>
-		);
-	}
+            <DayPicker
+              onDayClick={this.handleDayClick}
+              selectedDays={this.state.selectedDay}
+              className="mt-3"
+            />
+            {this.state.selectedDay ? (
+              <p>You clicked {this.state.selectedDay.toLocaleDateString()}</p>
+            ) : (
+              <p>Please select a day.</p>
+            )}
+          </div>
+          <div className="col-8">
+            <DistDiary />
+          </div>
+        </div>
+        {this.state.selectedDay ? (
+          <div>
+            {this.state.filteredData.map((item, key) => (
+              <p>
+                <br />
+                <strong>Mood: </strong>
+                {item.Mood}
+                <br />
+                <strong>Intensity: </strong>
+                {item.Mood_intensity}
+                <br />
+                <strong>Expansion on mood: </strong>
+                {item.Thoughts}
+                <br />
+                <strong>Distortion: </strong>
+                {item.Distortion}
+                <br />
+                <strong>Response: </strong>
+                {item.Response}
+                <br />
+              </p>
+            ))}
+          </div>
+        ) : (
+          <p> </p>
+        )}
+      </div>
+    );
+  }
 }
 
 export default Diary;

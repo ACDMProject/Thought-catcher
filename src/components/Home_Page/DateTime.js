@@ -21,7 +21,7 @@ function DateTime() {
 
   return (
     <div className="row date-box justify-content-between shadow-sm">
-      <div className="col-6">
+      <div className="col-7">
         <div className="row d-flex pt-3 pl-4  d-flex align-self-center">
           <h5 className="font-weight-bold align-items-end">{day}</h5>
         </div>
@@ -29,7 +29,7 @@ function DateTime() {
           <h6>{date + " " + month}</h6>
         </div>
       </div>
-      <div className="col-6 d-flex align-self-center justify-content-end pr-3">
+      <div className="col-5 d-flex align-self-center justify-content-end pr-3">
         <h5>{time}</h5>
       </div>
     </div>

@@ -57,11 +57,9 @@ label {
 }
 
 .nav-links {
-  font-size: 1rem;
-  width: 50%;
+  width: 45%;
   display: flex;
-  justify-content: space-around;
-  list-style: none;
+  justify-content: space-between;
   font-size: medium;
 }
 
