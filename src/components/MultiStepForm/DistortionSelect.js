@@ -1,6 +1,7 @@
 import React from "react";
 
 const distortions = [
+  { id: 0, name: "" },
   { id: 1, name: "All or Nothing" },
   { id: 2, name: "Jumping to Conclusions" },
   { id: 3, name: "Overgeneralisation" },
