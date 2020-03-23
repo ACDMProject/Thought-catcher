@@ -2,7 +2,6 @@ import React from "react";
 // import NumberRadio from "./NumberRadio";
 
 const emotions = [
-  { id: 0, name: "" },
   { id: 1, name: "Happy" },
   { id: 2, name: "Excited" },
   { id: 3, name: "Inspired" },
