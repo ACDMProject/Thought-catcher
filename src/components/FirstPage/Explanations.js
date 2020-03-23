@@ -26,8 +26,8 @@ class Explanations extends React.Component {
             that there is no ‘grey’ areas.
           </h6>
           <p>
-            Example: although you passed your driving test, you had two minor
-            faults and you feel like you failed because you did pass perfectly.
+            Example: you passed your driving test, however, you had two minor
+            faults and you feel like you failed because you didn't pass perfectly.
           </p>
         </section>
 
@@ -47,7 +47,7 @@ class Explanations extends React.Component {
 
           <p>
             Example: you’re wearing a shirt that makes you feel uncomfortable
-            and may immediately assume that everyone is commenting on it behind your back.
+            and so you may immediately assume that everyone is commenting on it behind your back.
           </p>
         </section>
 
@@ -66,12 +66,12 @@ class Explanations extends React.Component {
               />
             </div>
             You come to a general conclusion based on a specific single
-            incident. This creates an overview that you may choose to follow.
+            incident. This may create a conclusion that you may choose to follow.
           </h6>
 
           <p>
             {" "}
-            Example: you fail an exam, conclude you’re a failure and decide if
+            Example: you fail a college exam, conclude you’re a failure and decide if
             you should drop out.
           </p>
         </section>
@@ -96,7 +96,7 @@ class Explanations extends React.Component {
 
           <p>
             Example: you feel like you fail when you try something new, so you
-            believe that you will fail at everything you try that you don’t have
+            believe you will fail at everything you try that you don’t have
             any experience in.
           </p>
         </section>
@@ -116,7 +116,7 @@ class Explanations extends React.Component {
               />
             </div>
             You take the negative details and magnify them while also filtering
-            out all positives of a situation.
+            out all of the positives of a situation.
           </h6>
           <p>
             {" "}
@@ -146,7 +146,7 @@ class Explanations extends React.Component {
 
           <p>
             Example: you believe you got ‘lucky’ and that is the reason why you
-            got promoted, not because of your successes.{" "}
+            got promoted, not because of how hard you've worked throughout the year.{" "}
           </p>
         </section>
 
@@ -170,7 +170,7 @@ class Explanations extends React.Component {
 
           <p>
             Example: you’re having a retirement party and because your brother
-            was late, you feel like this caused your guessed to not enjoy it.{" "}
+            was late, you feel like this caused your guests to not enjoy it.{" "}
           </p>
         </section>
 
@@ -191,7 +191,7 @@ class Explanations extends React.Component {
 
           <p>
             Example: you should eat healthy and that you shouldn’t eat any
-            takeaways.{" "}
+            takeaways, so when you do, you feel guilty for not following a healthy lifestyle.{" "}
           </p>
         </section>
 
