@@ -27,7 +27,7 @@ class Explanations extends React.Component {
           </h6>
           <p>
             Example: you passed your driving test, however, you had two minor
-            faults and you feel like you failed because you didn't pass perfectly.
+            faults. As a result, you feel like you've failed because you didn't pass perfectly.
           </p>
         </section>
 
@@ -72,7 +72,7 @@ class Explanations extends React.Component {
           <p>
             {" "}
             Example: you fail a college exam, conclude you’re a failure and decide if
-            you should drop out.
+            you should drop out of college.
           </p>
         </section>
 
