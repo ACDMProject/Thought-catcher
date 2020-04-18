@@ -17,12 +17,6 @@ The entries are then visible in the diary page and are graphically represented i
 
 ![Thought Catcher Logo](/src/TC_dashboard.jpeg)
 
-## Summary
-
-- [Built With](#built-with)
-- [Authors](#authors)
-- [Acknowledgments](#Acknowledgments)
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine. 
