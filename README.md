@@ -31,11 +31,14 @@ and
 ```
 npm install 
 ```
+This will pull all the relevant dependencies you may need. 
 
 ```
 npm start
 ```
-This will pull all the relevant dependencies you may need. 
+The application will then be accessible at:
+
+[http://localhost:3000](http://localhost:3000)
 
 ## Built With
 
