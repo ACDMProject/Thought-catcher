@@ -3,7 +3,19 @@
 ![Thought Catcher Logo](/src/components/Logo.png)
 # Thought Catcher
 
-This was a group project to create an application that could be used in conjunction with Cognitive Behaviour Therapies, to track thought patterns and moods.
+This was a group project to create an application that could be used in conjunction with Cognitive Behavioural Therapy (CBT), to track thought patterns and moods.
+
+Thought Catcher is designed to give you a basic understanding of CBT and to give you a place to keep notes on your recent thoughts and moods. 
+
+![Thought Catcher Logo](/src/TC_home.jpeg)
+
+The Mood Scriber takes you through a step by step process to log your moods and thoughts.
+
+![Thought Catcher Logo](/src/TC_scriber.jpeg)
+
+The entries are then visible in the diary page and are graphically represented in the Dashboard. The Dashboard displays your entries from the past week or month.
+
+![Thought Catcher Logo](/src/TC_dashboard.jpeg)
 
 ## Summary
 
