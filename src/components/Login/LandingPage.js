@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "./Login";
+import tspCatchThoughtCrop from "./tspCatchThoughtCrop.png";
 
 function LandingPage() {
 	return (
@@ -7,7 +8,7 @@ function LandingPage() {
 			<div className="row align-items-center">
 				<div className="col-lg-7">
 					<img
-						src="/images/tspcatchthoughtcrop.PNG"
+						src={tspCatchThoughtCrop}
 						alt="catchThought"
 						id="catchThought"
 						className="img-fluid rounded mx-auto d-block"
