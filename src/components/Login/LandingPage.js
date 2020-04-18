@@ -7,7 +7,7 @@ function LandingPage() {
 			<div className="row align-items-center">
 				<div className="col-lg-7">
 					<img
-						src="../images/tspCatchThoughtCrop.png"
+						src="/images/tspcatchthoughtcrop.png"
 						alt="catchThought"
 						id="catchThought"
 						className="img-fluid rounded mx-auto d-block"
