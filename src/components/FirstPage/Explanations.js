@@ -26,8 +26,8 @@ class Explanations extends React.Component {
             that there is no ‘grey’ areas.
           </h6>
           <p>
-            Example: although you passed your driving test, you had two minor
-            faults and you feel like you failed because you did pass perfectly.
+            Example: You passed your driving test, however, you had two minor
+            faults. As a result, you feel like you have failed because you did not pass perfectly.
           </p>
         </section>
 
@@ -46,8 +46,8 @@ class Explanations extends React.Component {
           </h6>
 
           <p>
-            Example: you’re wearing a shirt that makes you feel uncomfortable
-            and may immediately assume that everyone is commenting on it behind your back.
+            Example: You’re wearing a shirt that makes you feel uncomfortable
+            and so, you may immediately assume that everyone is commenting on it behind your back.
           </p>
         </section>
 
@@ -66,13 +66,13 @@ class Explanations extends React.Component {
               />
             </div>
             You come to a general conclusion based on a specific single
-            incident. This creates an overview that you may choose to follow.
+            incident. This may create a conclusion that you may choose to follow.
           </h6>
 
           <p>
             {" "}
-            Example: you fail an exam, conclude you’re a failure and decide if
-            you should drop out.
+            Example: You fail a college exam, conclude you’re a failure and decide if
+            you should drop out of college.
           </p>
         </section>
 
@@ -95,9 +95,8 @@ class Explanations extends React.Component {
           </h6>
 
           <p>
-            Example: you feel like you fail when you try something new, so you
-            believe that you will fail at everything you try that you don’t have
-            any experience in.
+            Example: You feel like you fail when trying something new. As a result, you
+            form a belief where failure is imminent whenever you lack experience.
           </p>
         </section>
 
@@ -116,11 +115,11 @@ class Explanations extends React.Component {
               />
             </div>
             You take the negative details and magnify them while also filtering
-            out all positives of a situation.
+            out all the positives of a situation.
           </h6>
           <p>
             {" "}
-            Example: you’re a Youtuber and one of your videos attract loads of
+            Example: You’re a Youtuber and one of your videos attract loads of
             positive comments from your fans, however, you notice a bad comment
             and you only focus on that.{" "}
           </p>
@@ -145,8 +144,8 @@ class Explanations extends React.Component {
           </h6>
 
           <p>
-            Example: you believe you got ‘lucky’ and that is the reason why you
-            got promoted, not because of your successes.{" "}
+            Example: You believe you got ‘lucky’ and that is the reason why you
+            got promoted, not because of how hard you have worked throughout the year.{" "}
           </p>
         </section>
 
@@ -165,12 +164,12 @@ class Explanations extends React.Component {
             </div>
             You believe that everything others say or do is some kind of direct,
             personal reaction to you. You often compare yourself to others and
-            you take things personally even when it was not meant that way.
+            take things personally even when it was not meant that way.
           </h6>
 
           <p>
-            Example: you’re having a retirement party and because your brother
-            was late, you feel like this caused your guessed to not enjoy it.{" "}
+            Example: You’re having a retirement party and because your brother
+            was late, you feel like this caused your guests to not enjoy it.{" "}
           </p>
         </section>
 
@@ -185,12 +184,11 @@ class Explanations extends React.Component {
               <img src={Shoulds} alt="Eighth Mindset" className="center" />
             </div>
             You follow a bunch of rules about how someone ‘should’ and ‘ought’ to behave, when
-            you break one of these rules you feel either angry or guilty that
-            you’ve failed.
+            you break one of these rules you feel either angry or guilty for failing.
           </h6>
 
           <p>
-            Example: you should eat healthy and that you shouldn’t eat any
+            Example: You should eat healthy and that you shouldn’t eat any
             takeaways.{" "}
           </p>
         </section>
@@ -236,9 +234,9 @@ class Explanations extends React.Component {
           </h6>
 
           <p>
-            Example: you mislabel your colleague as ‘difficult and rude’ when
+            Example: You mislabel your colleague as ‘difficult and rude’ when
             you met him once at a company conference without bothering to
-            understand any context around why.{" "}
+            understand any context around why. He might have had a bad day. {" "}
           </p>
         </section>
 
