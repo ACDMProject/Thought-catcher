@@ -21,7 +21,7 @@ The entries are then visible in the diary page and are graphically represented i
 
 These instructions will get you a copy of the project up and running on your local machine. 
 
-Simply follow the below instructions if using a Linux operating system or Windows Ubuntu:
+[Node.js](https://nodejs.org/en/) must be installed if not already.
 
 ```
 $ git clone https://github.com/ACDMProject/thought-catcher.git
@@ -30,6 +30,10 @@ and
 
 ```
 npm install 
+```
+
+```
+npm start
 ```
 This will pull all the relevant dependencies you may need. 
 
