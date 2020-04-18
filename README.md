@@ -3,9 +3,11 @@
 ![Thought Catcher Logo](/src/components/Logo.png)
 # Thought Catcher
 
-This was a group project to create an application that could be used in conjunction with Cognitive Behavioural Therapy (CBT), to track thought patterns and moods.
+This was a group project to create an application that could be used in conjunction with Cognitive Behavioural Therapy (CBT), to track thinking patterns and moods.
 
 Thought Catcher is designed to give you a basic understanding of CBT and to give you a place to keep notes on your recent thoughts and moods. 
+
+The hosted version of the application is available here: https://acdmproject.github.io/Thought-catcher/
 
 ![Thought Catcher Logo](/src/TC_home.jpeg)
 
