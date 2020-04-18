@@ -7,7 +7,7 @@ This was a group project to create an application that could be used in conjunct
 
 Thought Catcher is designed to give you a basic understanding of CBT and to give you a place to keep notes on your recent thoughts and moods. 
 
-The hosted version of the application is available here: https://acdmproject.github.io/Thought-catcher/
+The hosted version of the application is available (https://acdmproject.github.io/Thought-catcher/) where you can test the application without signing up by navigating around the site through the nav bar.
 
 ![Thought Catcher Logo](/src/TC_home.jpeg)
 
