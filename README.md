@@ -7,9 +7,9 @@ This was a group project to create an application that could be used in conjunct
 
 Thought Catcher is designed to give you a basic understanding of CBT and to give you a place to keep notes on your recent thoughts and moods. 
 
-The hosted version of the application is available (https://acdmproject.github.io/Thought-catcher/) where you can test the application without signing up by navigating around the site through the nav bar.
+The hosted version of the application is available here: https://acdmproject.github.io/Thought-catcher/, where you can test the application without signing up by navigating around the site through the nav bar.
 
-
+![Thought Catcher home](/src/TC_home.jpeg)
 
 The Mood Scriber takes you through a step by step process to log your moods and thoughts.
 
@@ -17,7 +17,7 @@ The Mood Scriber takes you through a step by step process to log your moods and 
 
 The entries are then visible in the diary page and are graphically represented in the Dashboard. The Dashboard displays your entries from the past week or month.
 
-
+![Thought Catcher home](/src/TC_dashboard.jpeg)
 
 ![Thought Catcher heatmap](/src/TC_heatmap.jpeg)
 
